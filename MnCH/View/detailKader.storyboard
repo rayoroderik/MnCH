@@ -46,7 +46,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="BLo-hZ-nCZ" userLabel="Cell" customClass="detailKaderTableViewCell">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="82" id="BLo-hZ-nCZ" userLabel="Cell" customClass="detailKaderTableViewCell">
                                                 <rect key="frame" x="0.0" y="28" width="334" height="82"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BLo-hZ-nCZ" id="afD-Eg-xHS">
@@ -81,12 +81,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iRV-3B-txH"/>
-                        <connections>
-                            <outlet property="detailKaderTableView" destination="kvz-p0-NoS" id="NKj-3D-1hD"/>
-                        </connections>
                     </view>
                     <connections>
-                        <outlet property="detailKaderTableView" destination="kvz-p0-NoS" id="lLh-jU-wuJ"/>
+                        <outlet property="detailKaderTableView" destination="kvz-p0-NoS" id="YVy-s7-YnB"/>
                         <segue destination="1Sw-2R-zPo" kind="show" identifier="goToChildProfile" id="Zve-wr-nOL"/>
                     </connections>
                 </viewController>

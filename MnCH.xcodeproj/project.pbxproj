@@ -24,6 +24,7 @@
 		A6BB1E3A213D45B50001228B /* addChild.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6BB1E39213D45B50001228B /* addChild.storyboard */; };
 		A6BB1E3F213D56280001228B /* kaderMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB1E3E213D56280001228B /* kaderMainTableViewCell.swift */; };
 		A6BB1E41213D63310001228B /* detailKaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB1E40213D63310001228B /* detailKaderTableViewCell.swift */; };
+		A6BB1E43213D81220001228B /* staffMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB1E42213D81220001228B /* staffMainTableViewCell.swift */; };
 		A6E35F16213D307000AD6F3A /* kaderLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E35F15213D307000AD6F3A /* kaderLogin.storyboard */; };
 		A6E35F18213D308D00AD6F3A /* kaderLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E35F17213D308D00AD6F3A /* kaderLoginViewController.swift */; };
 		A6E35F1C213D315300AD6F3A /* staffLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E35F1B213D315300AD6F3A /* staffLogin.storyboard */; };
@@ -52,6 +53,7 @@
 		A6BB1E39213D45B50001228B /* addChild.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = addChild.storyboard; sourceTree = "<group>"; };
 		A6BB1E3E213D56280001228B /* kaderMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kaderMainTableViewCell.swift; sourceTree = "<group>"; };
 		A6BB1E40213D63310001228B /* detailKaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailKaderTableViewCell.swift; sourceTree = "<group>"; };
+		A6BB1E42213D81220001228B /* staffMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staffMainTableViewCell.swift; sourceTree = "<group>"; };
 		A6E35F15213D307000AD6F3A /* kaderLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = kaderLogin.storyboard; sourceTree = "<group>"; };
 		A6E35F17213D308D00AD6F3A /* kaderLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kaderLoginViewController.swift; sourceTree = "<group>"; };
 		A6E35F1B213D315300AD6F3A /* staffLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = staffLogin.storyboard; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				A6BB1E40213D63310001228B /* detailKaderTableViewCell.swift */,
 				A6E35F1D213D317900AD6F3A /* staffLoginViewController.swift */,
 				A61103FC213D33C20046BB44 /* staffMainViewController.swift */,
+				A6BB1E42213D81220001228B /* staffMainTableViewCell.swift */,
 				A6E35F17213D308D00AD6F3A /* kaderLoginViewController.swift */,
 				A6E35F20213D31FC00AD6F3A /* kaderMainViewController.swift */,
 				A6BB1E3E213D56280001228B /* kaderMainTableViewCell.swift */,
@@ -300,6 +303,7 @@
 				A61103F8213D334C0046BB44 /* childProfileViewController.swift in Sources */,
 				A6E35F21213D31FC00AD6F3A /* kaderMainViewController.swift in Sources */,
 				A6BB1E41213D63310001228B /* detailKaderTableViewCell.swift in Sources */,
+				A6BB1E43213D81220001228B /* staffMainTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

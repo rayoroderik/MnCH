@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		150BB223ED99C02E40A893EB /* Pods_MnCH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B04E10CFA3D26B2E2B0A2D3E /* Pods_MnCH.framework */; };
+		50A47F8B213D40330076EAF5 /* detailKader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A47F8A213D40330076EAF5 /* detailKader.storyboard */; };
+		50A47F8D213D40680076EAF5 /* detailKaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A47F8C213D40680076EAF5 /* detailKaderViewController.swift */; };
 		A3B3CC9C213D0C600009E1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3CC9B213D0C600009E1FD /* AppDelegate.swift */; };
 		A3B3CC9E213D0C600009E1FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3CC9D213D0C600009E1FD /* ViewController.swift */; };
 		A3B3CCA1213D0C600009E1FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B3CC9F213D0C600009E1FD /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50A47F8A213D40330076EAF5 /* detailKader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = detailKader.storyboard; sourceTree = "<group>"; };
+		50A47F8C213D40680076EAF5 /* detailKaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailKaderViewController.swift; sourceTree = "<group>"; };
 		6AD5D120ABC1B3001524BD39 /* Pods-MnCH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MnCH.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MnCH/Pods-MnCH.debug.xcconfig"; sourceTree = "<group>"; };
 		A3B3CC98213D0C600009E1FD /* MnCH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MnCH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B3CC9B213D0C600009E1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +72,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		50A47F8E213D40780076EAF5 /* detailKader */ = {
+			isa = PBXGroup;
+			children = (
+				50A47F8C213D40680076EAF5 /* detailKaderViewController.swift */,
+				50A47F8A213D40330076EAF5 /* detailKader.storyboard */,
+			);
+			path = detailKader;
+			sourceTree = "<group>";
+		};
 		5A698E8FDE8ADDF2BF05DEB5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +115,7 @@
 				A3B3CC9D213D0C600009E1FD /* ViewController.swift */,
 				A3B3CC9F213D0C600009E1FD /* Main.storyboard */,
 				A3B3CCA2213D0C610009E1FD /* Assets.xcassets */,
+				50A47F8E213D40780076EAF5 /* detailKader */,
 				A3B3CCA4213D0C610009E1FD /* LaunchScreen.storyboard */,
 				A3B3CCA7213D0C610009E1FD /* Info.plist */,
 				A6E35F1A213D313700AD6F3A /* staffLogin */,
@@ -223,6 +237,7 @@
 				A6E35F1C213D315300AD6F3A /* staffLogin.storyboard in Resources */,
 				A3B3CCA3213D0C610009E1FD /* Assets.xcassets in Resources */,
 				A61103FF213D33D70046BB44 /* staffMain.storyboard in Resources */,
+				50A47F8B213D40330076EAF5 /* detailKader.storyboard in Resources */,
 				A61103FA213D335B0046BB44 /* childProfile.storyboard in Resources */,
 				A3B3CCA1213D0C600009E1FD /* Main.storyboard in Resources */,
 				A6E35F23213D323400AD6F3A /* kaderMain.storyboard in Resources */,
@@ -284,6 +299,7 @@
 				A61103FD213D33C20046BB44 /* staffMainViewController.swift in Sources */,
 				A6E35F18213D308D00AD6F3A /* kaderLoginViewController.swift in Sources */,
 				A6E35F1E213D317900AD6F3A /* staffLoginViewController.swift in Sources */,
+				50A47F8D213D40680076EAF5 /* detailKaderViewController.swift in Sources */,
 				A3B3CC9E213D0C600009E1FD /* ViewController.swift in Sources */,
 				A3B3CC9C213D0C600009E1FD /* AppDelegate.swift in Sources */,
 				A61103F8213D334C0046BB44 /* childProfileViewController.swift in Sources */,

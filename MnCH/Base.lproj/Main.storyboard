@@ -30,7 +30,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="V8x-0N-xLO"/>
                                                 </constraints>
-                                                <state key="normal" title="Kader"/>
+                                                <state key="normal" title="Kader">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZo-e9-mP0">
                                                 <rect key="frame" x="0.0" y="90" width="275" height="50"/>
@@ -38,7 +40,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="OnZ-q5-Yix"/>
                                                 </constraints>
-                                                <state key="normal" title="Hope"/>
+                                                <state key="normal" title="Hope">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                             </button>
                                         </subviews>
                                     </stackView>

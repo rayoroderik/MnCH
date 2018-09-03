@@ -54,6 +54,9 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInClick:" destination="4B5-91-nRL" eventType="touchUpInside" id="DQ5-9a-sFJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -76,13 +79,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qMq-rB-eEr"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6L9-kP-BK0"/>
                     <connections>
-                        <segue destination="i7N-3P-pVY" kind="show" id="yZH-Kh-3kA"/>
+                        <segue destination="i7N-3P-pVY" kind="show" identifier="goToKaderMain" id="yZH-Kh-3kA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sar-gU-kHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-302" y="11"/>
+            <point key="canvasLocation" x="639.20000000000005" y="10.344827586206897"/>
         </scene>
         <!--kaderMain-->
         <scene sceneID="Nbi-do-g3K">
@@ -90,7 +94,7 @@
                 <viewControllerPlaceholder storyboardName="kaderMain" id="i7N-3P-pVY" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jqe-Ne-GdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="346" y="11"/>
+            <point key="canvasLocation" x="1288" y="10.344827586206897"/>
         </scene>
     </scenes>
 </document>

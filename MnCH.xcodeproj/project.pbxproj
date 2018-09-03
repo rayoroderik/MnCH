@@ -21,7 +21,6 @@
 		A61103FD213D33C20046BB44 /* staffMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61103FC213D33C20046BB44 /* staffMainViewController.swift */; };
 		A61103FF213D33D70046BB44 /* staffMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A61103FE213D33D70046BB44 /* staffMain.storyboard */; };
 		A62D4390213DA0CD00A299FD /* signUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62D438F213DA0CD00A299FD /* signUp.storyboard */; };
-		A62D4394213DA10C00A299FD /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62D4393213DA10C00A299FD /* signUpViewController.swift */; };
 		A62D4396213DA15600A299FD /* addHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62D4395213DA15600A299FD /* addHistory.storyboard */; };
 		A62D4398213DA16400A299FD /* addHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62D4397213DA16400A299FD /* addHistoryViewController.swift */; };
 		A6BB1E38213D45AF0001228B /* addChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB1E37213D45AF0001228B /* addChildViewController.swift */; };
@@ -54,7 +53,6 @@
 		A61103FC213D33C20046BB44 /* staffMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staffMainViewController.swift; sourceTree = "<group>"; };
 		A61103FE213D33D70046BB44 /* staffMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = staffMain.storyboard; sourceTree = "<group>"; };
 		A62D438F213DA0CD00A299FD /* signUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = signUp.storyboard; sourceTree = "<group>"; };
-		A62D4393213DA10C00A299FD /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		A62D4395213DA15600A299FD /* addHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = addHistory.storyboard; sourceTree = "<group>"; };
 		A62D4397213DA16400A299FD /* addHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addHistoryViewController.swift; sourceTree = "<group>"; };
 		A6BB1E37213D45AF0001228B /* addChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addChildViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 		50A47F8E213D40780076EAF5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A62D4393213DA10C00A299FD /* signUpViewController.swift */,
 				A62D4397213DA16400A299FD /* addHistoryViewController.swift */,
 				A6BB1E37213D45AF0001228B /* addChildViewController.swift */,
 				50A47F8C213D40680076EAF5 /* detailKaderViewController.swift */,
@@ -311,7 +308,6 @@
 				A6BB1E38213D45AF0001228B /* addChildViewController.swift in Sources */,
 				A6E35F1E213D317900AD6F3A /* staffLoginViewController.swift in Sources */,
 				A6BB1E3F213D56280001228B /* kaderMainTableViewCell.swift in Sources */,
-				A62D4394213DA10C00A299FD /* signUpViewController.swift in Sources */,
 				50A47F8D213D40680076EAF5 /* detailKaderViewController.swift in Sources */,
 				A62D4398213DA16400A299FD /* addHistoryViewController.swift in Sources */,
 				A3B3CC9E213D0C600009E1FD /* ViewController.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 
 class detailKaderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var detailKaderTableView: UITableView!
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
@@ -19,7 +19,6 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! detailKaderTableViewCell
 //        cell.lblNamaBayi.text = "Nama Anak \(indexPath.row)"
-        
         
         return cell
     }

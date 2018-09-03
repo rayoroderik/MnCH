@@ -19,6 +19,8 @@
 		A61103FA213D335B0046BB44 /* childProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A61103F9213D335B0046BB44 /* childProfile.storyboard */; };
 		A61103FD213D33C20046BB44 /* staffMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61103FC213D33C20046BB44 /* staffMainViewController.swift */; };
 		A61103FF213D33D70046BB44 /* staffMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A61103FE213D33D70046BB44 /* staffMain.storyboard */; };
+		A6BB1E38213D45AF0001228B /* addChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB1E37213D45AF0001228B /* addChildViewController.swift */; };
+		A6BB1E3A213D45B50001228B /* addChild.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6BB1E39213D45B50001228B /* addChild.storyboard */; };
 		A6E35F16213D307000AD6F3A /* kaderLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E35F15213D307000AD6F3A /* kaderLogin.storyboard */; };
 		A6E35F18213D308D00AD6F3A /* kaderLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E35F17213D308D00AD6F3A /* kaderLoginViewController.swift */; };
 		A6E35F1C213D315300AD6F3A /* staffLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E35F1B213D315300AD6F3A /* staffLogin.storyboard */; };
@@ -42,6 +44,8 @@
 		A61103F9213D335B0046BB44 /* childProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = childProfile.storyboard; sourceTree = "<group>"; };
 		A61103FC213D33C20046BB44 /* staffMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staffMainViewController.swift; sourceTree = "<group>"; };
 		A61103FE213D33D70046BB44 /* staffMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = staffMain.storyboard; sourceTree = "<group>"; };
+		A6BB1E37213D45AF0001228B /* addChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addChildViewController.swift; sourceTree = "<group>"; };
+		A6BB1E39213D45B50001228B /* addChild.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = addChild.storyboard; sourceTree = "<group>"; };
 		A6E35F15213D307000AD6F3A /* kaderLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = kaderLogin.storyboard; sourceTree = "<group>"; };
 		A6E35F17213D308D00AD6F3A /* kaderLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kaderLoginViewController.swift; sourceTree = "<group>"; };
 		A6E35F1B213D315300AD6F3A /* staffLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = staffLogin.storyboard; sourceTree = "<group>"; };
@@ -115,9 +119,10 @@
 				A3B3CC9D213D0C600009E1FD /* ViewController.swift */,
 				A3B3CC9F213D0C600009E1FD /* Main.storyboard */,
 				A3B3CCA2213D0C610009E1FD /* Assets.xcassets */,
-				50A47F8E213D40780076EAF5 /* detailKader */,
 				A3B3CCA4213D0C610009E1FD /* LaunchScreen.storyboard */,
 				A3B3CCA7213D0C610009E1FD /* Info.plist */,
+				A6BB1E36213D45800001228B /* addChild */,
+				50A47F8E213D40780076EAF5 /* detailKader */,
 				A6E35F1A213D313700AD6F3A /* staffLogin */,
 				A61103FB213D33750046BB44 /* staffMain */,
 				A6E35F19213D309500AD6F3A /* kaderLogin */,
@@ -134,6 +139,15 @@
 				A61103FE213D33D70046BB44 /* staffMain.storyboard */,
 			);
 			path = staffMain;
+			sourceTree = "<group>";
+		};
+		A6BB1E36213D45800001228B /* addChild */ = {
+			isa = PBXGroup;
+			children = (
+				A6BB1E37213D45AF0001228B /* addChildViewController.swift */,
+				A6BB1E39213D45B50001228B /* addChild.storyboard */,
+			);
+			path = addChild;
 			sourceTree = "<group>";
 		};
 		A6E35F19213D309500AD6F3A /* kaderLogin */ = {
@@ -237,6 +251,7 @@
 				A6E35F1C213D315300AD6F3A /* staffLogin.storyboard in Resources */,
 				A3B3CCA3213D0C610009E1FD /* Assets.xcassets in Resources */,
 				A61103FF213D33D70046BB44 /* staffMain.storyboard in Resources */,
+				A6BB1E3A213D45B50001228B /* addChild.storyboard in Resources */,
 				50A47F8B213D40330076EAF5 /* detailKader.storyboard in Resources */,
 				A61103FA213D335B0046BB44 /* childProfile.storyboard in Resources */,
 				A3B3CCA1213D0C600009E1FD /* Main.storyboard in Resources */,
@@ -298,6 +313,7 @@
 			files = (
 				A61103FD213D33C20046BB44 /* staffMainViewController.swift in Sources */,
 				A6E35F18213D308D00AD6F3A /* kaderLoginViewController.swift in Sources */,
+				A6BB1E38213D45AF0001228B /* addChildViewController.swift in Sources */,
 				A6E35F1E213D317900AD6F3A /* staffLoginViewController.swift in Sources */,
 				50A47F8D213D40680076EAF5 /* detailKaderViewController.swift in Sources */,
 				A3B3CC9E213D0C600009E1FD /* ViewController.swift in Sources */,

@@ -53,23 +53,19 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="301" height="81.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEo-zh-0b9">
-                                                            <rect key="frame" x="98" y="26" width="199" height="28"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r5f-Rm-ngL">
+                                                            <rect key="frame" x="15" y="7" width="66" height="66"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nama Bayi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOQ-c7-vTO">
+                                                            <rect key="frame" x="89" y="30" width="101" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Izc-Bz-NBR">
-                                                            <rect key="frame" x="15" y="8" width="66" height="64"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        </imageView>
                                                     </subviews>
                                                 </tableViewCellContentView>
-                                                <connections>
-                                                    <outlet property="childImg" destination="Izc-Bz-NBR" id="C1r-0u-eMd"/>
-                                                    <outlet property="lblName" destination="WEo-zh-0b9" id="OwH-NU-bS3"/>
-                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -86,9 +82,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iRV-3B-txH"/>
                         <connections>
-                            <outlet property="childImg" destination="Izc-Bz-NBR" id="RGF-4K-CcU"/>
                             <outlet property="detailKaderTableView" destination="kvz-p0-NoS" id="NKj-3D-1hD"/>
-                            <outlet property="lblName" destination="WEo-zh-0b9" id="nob-Mn-xeU"/>
                         </connections>
                     </view>
                     <connections>

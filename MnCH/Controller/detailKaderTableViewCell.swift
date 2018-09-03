@@ -9,8 +9,6 @@
 import UIKit
 
 class detailKaderTableViewCell: UITableViewCell {
-    @IBOutlet weak var childImg: UIImageView!
-    @IBOutlet weak var lblName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

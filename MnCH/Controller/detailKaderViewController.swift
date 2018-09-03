@@ -18,7 +18,7 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! detailKaderTableViewCell
-        cell.lblName.text = "Nama Anak \(indexPath.row)"
+//        cell.lblNamaBayi.text = "Nama Anak \(indexPath.row)"
         
         
         return cell

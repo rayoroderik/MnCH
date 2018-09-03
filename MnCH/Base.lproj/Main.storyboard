@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,14 +15,52 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MnCH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Amh-HV-hgd">
+                                <rect key="frame" x="50" y="336" width="275" height="140"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="jgM-JV-rY9">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="140"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhF-Ar-0Qh">
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
+                                                <color key="backgroundColor" red="0.26594999580000001" green="0.65992279970000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="V8x-0N-xLO"/>
+                                                </constraints>
+                                                <state key="normal" title="Kader">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZo-e9-mP0">
+                                                <rect key="frame" x="0.0" y="90" width="275" height="50"/>
+                                                <color key="backgroundColor" red="0.26594999580000001" green="0.65992279970000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="OnZ-q5-Yix"/>
+                                                </constraints>
+                                                <state key="normal" title="Hope">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Amh-HV-hgd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1e1-B0-xZH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Amh-HV-hgd" secondAttribute="trailing" constant="50" id="5XJ-Fm-mbj"/>
+                            <constraint firstItem="Amh-HV-hgd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jrS-EY-U6k"/>
+                            <constraint firstItem="Amh-HV-hgd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="zMS-kB-XDc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="MTx-RD-o2A" kind="show" id="ZzQ-or-ogp"/>
-                        <segue destination="pfc-6Z-q11" kind="show" id="5v6-Du-DZl"/>
+                        <segue destination="MTx-RD-o2A" kind="show" identifier="goToKaderLogin" id="ZzQ-or-ogp"/>
+                        <segue destination="pfc-6Z-q11" kind="show" identifier="goToStaffLogin" id="5v6-Du-DZl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -34,7 +72,7 @@
                 <viewControllerPlaceholder storyboardName="kaderLogin" id="MTx-RD-o2A" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGv-er-aaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="742" y="293"/>
+            <point key="canvasLocation" x="736" y="-140"/>
         </scene>
         <!--staffLogin-->
         <scene sceneID="TPn-8I-ZOy">

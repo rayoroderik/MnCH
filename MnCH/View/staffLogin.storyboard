@@ -80,7 +80,7 @@
                         <viewLayoutGuide key="safeArea" id="llC-uh-ddd"/>
                     </view>
                     <connections>
-                        <segue destination="qsi-TT-z9r" kind="show" id="GWr-Ew-aAj"/>
+                        <segue destination="qsi-TT-z9r" kind="show" identifier="goToStaffMain" id="GWr-Ew-aAj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pcn-VI-rtx" userLabel="First Responder" sceneMemberID="firstResponder"/>

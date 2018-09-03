@@ -54,17 +54,17 @@
                         <viewLayoutGuide key="safeArea" id="2fl-c6-LF5"/>
                     </view>
                     <connections>
-                        <segue destination="snV-0O-nBC" kind="show" id="hJg-lR-ius"/>
+                        <segue destination="snV-0O-nBC" kind="show" identifier="goToDetailKader" id="hJg-lR-ius"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8M-KF-zH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="101.59999999999999" y="180.29556650246306"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--detailKader-->
         <scene sceneID="oPa-CO-dgv">
             <objects>
-                <viewControllerPlaceholder id="snV-0O-nBC" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="detailKader" id="snV-0O-nBC" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBY-Zo-Fax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="884" y="154"/>

@@ -23,6 +23,10 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
         
         return cell
     }
+        
+    func tableView(_ tableView: UITableView , didSelectRowAt: IndexPath){
+        self.performSegue(withIdentifier: "goToChildProfile", sender: nil)
+    }
     
 
     override func viewDidLoad() {

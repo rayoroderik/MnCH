@@ -76,13 +76,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		50A47F8E213D40780076EAF5 /* detailKader */ = {
+		50A47F8E213D40780076EAF5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A6BB1E37213D45AF0001228B /* addChildViewController.swift */,
 				50A47F8C213D40680076EAF5 /* detailKaderViewController.swift */,
-				50A47F8A213D40330076EAF5 /* detailKader.storyboard */,
+				A6E35F1D213D317900AD6F3A /* staffLoginViewController.swift */,
+				A61103FC213D33C20046BB44 /* staffMainViewController.swift */,
+				A6E35F17213D308D00AD6F3A /* kaderLoginViewController.swift */,
+				A6E35F20213D31FC00AD6F3A /* kaderMainViewController.swift */,
+				A61103F7213D334C0046BB44 /* childProfileViewController.swift */,
 			);
-			path = detailKader;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5A698E8FDE8ADDF2BF05DEB5 /* Pods */ = {
@@ -121,69 +126,32 @@
 				A3B3CCA2213D0C610009E1FD /* Assets.xcassets */,
 				A3B3CCA4213D0C610009E1FD /* LaunchScreen.storyboard */,
 				A3B3CCA7213D0C610009E1FD /* Info.plist */,
-				A6BB1E36213D45800001228B /* addChild */,
-				50A47F8E213D40780076EAF5 /* detailKader */,
-				A6E35F1A213D313700AD6F3A /* staffLogin */,
-				A61103FB213D33750046BB44 /* staffMain */,
-				A6E35F19213D309500AD6F3A /* kaderLogin */,
-				A6E35F1F213D319200AD6F3A /* kaderMain */,
-				A6E35F24213D328C00AD6F3A /* childProfile */,
+				A6BB1E3B213D52B70001228B /* Model */,
+				A6BB1E36213D45800001228B /* View */,
+				50A47F8E213D40780076EAF5 /* Controller */,
 			);
 			path = MnCH;
 			sourceTree = "<group>";
 		};
-		A61103FB213D33750046BB44 /* staffMain */ = {
+		A6BB1E36213D45800001228B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A61103FC213D33C20046BB44 /* staffMainViewController.swift */,
-				A61103FE213D33D70046BB44 /* staffMain.storyboard */,
-			);
-			path = staffMain;
-			sourceTree = "<group>";
-		};
-		A6BB1E36213D45800001228B /* addChild */ = {
-			isa = PBXGroup;
-			children = (
-				A6BB1E37213D45AF0001228B /* addChildViewController.swift */,
 				A6BB1E39213D45B50001228B /* addChild.storyboard */,
-			);
-			path = addChild;
-			sourceTree = "<group>";
-		};
-		A6E35F19213D309500AD6F3A /* kaderLogin */ = {
-			isa = PBXGroup;
-			children = (
-				A6E35F17213D308D00AD6F3A /* kaderLoginViewController.swift */,
-				A6E35F15213D307000AD6F3A /* kaderLogin.storyboard */,
-			);
-			path = kaderLogin;
-			sourceTree = "<group>";
-		};
-		A6E35F1A213D313700AD6F3A /* staffLogin */ = {
-			isa = PBXGroup;
-			children = (
-				A6E35F1D213D317900AD6F3A /* staffLoginViewController.swift */,
+				50A47F8A213D40330076EAF5 /* detailKader.storyboard */,
 				A6E35F1B213D315300AD6F3A /* staffLogin.storyboard */,
-			);
-			path = staffLogin;
-			sourceTree = "<group>";
-		};
-		A6E35F1F213D319200AD6F3A /* kaderMain */ = {
-			isa = PBXGroup;
-			children = (
-				A6E35F20213D31FC00AD6F3A /* kaderMainViewController.swift */,
+				A61103FE213D33D70046BB44 /* staffMain.storyboard */,
+				A6E35F15213D307000AD6F3A /* kaderLogin.storyboard */,
 				A6E35F22213D323400AD6F3A /* kaderMain.storyboard */,
-			);
-			path = kaderMain;
-			sourceTree = "<group>";
-		};
-		A6E35F24213D328C00AD6F3A /* childProfile */ = {
-			isa = PBXGroup;
-			children = (
-				A61103F7213D334C0046BB44 /* childProfileViewController.swift */,
 				A61103F9213D335B0046BB44 /* childProfile.storyboard */,
 			);
-			path = childProfile;
+			path = View;
+			sourceTree = "<group>";
+		};
+		A6BB1E3B213D52B70001228B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

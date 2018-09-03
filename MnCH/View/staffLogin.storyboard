@@ -54,6 +54,9 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInClick:" destination="Ofn-zk-3KC" eventType="touchUpInside" id="qQE-Wd-uph"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -77,7 +80,7 @@
                         <viewLayoutGuide key="safeArea" id="llC-uh-ddd"/>
                     </view>
                     <connections>
-                        <segue destination="qsi-TT-z9r" kind="show" id="GWr-Ew-aAj"/>
+                        <segue destination="qsi-TT-z9r" kind="show" identifier="goToStaffMain" id="GWr-Ew-aAj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pcn-VI-rtx" userLabel="First Responder" sceneMemberID="firstResponder"/>

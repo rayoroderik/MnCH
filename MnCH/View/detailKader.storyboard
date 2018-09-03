@@ -87,7 +87,7 @@
                     </view>
                     <connections>
                         <outlet property="detailKaderTableView" destination="kvz-p0-NoS" id="lLh-jU-wuJ"/>
-                        <segue destination="1Sw-2R-zPo" kind="show" id="Zve-wr-nOL"/>
+                        <segue destination="1Sw-2R-zPo" kind="show" identifier="goToChildProfile" id="Zve-wr-nOL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTA-P5-mKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

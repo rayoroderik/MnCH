@@ -10,9 +10,15 @@ import UIKit
 
 class kaderSignUpViewController: UIViewController {
 
+    @IBOutlet weak var addressTV: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.addressTV.layer.cornerRadius = 5
+        self.addressTV.layer.borderColor = #colorLiteral(red: 0.8666666667, green: 0.8666666667, blue: 0.8666666667, alpha: 1)
+        self.addressTV.layer.borderWidth = 0.5
+        
         // Do any additional setup after loading the view.
     }
 

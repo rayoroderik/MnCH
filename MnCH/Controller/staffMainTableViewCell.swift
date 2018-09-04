@@ -16,6 +16,8 @@ class staffMainTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        imgKader.layer.cornerRadius = imgKader.layer.frame.height/2
+        imgKader.clipsToBounds = true
         
     }
 

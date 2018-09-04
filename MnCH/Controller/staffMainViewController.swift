@@ -11,7 +11,6 @@ import UIKit
 class staffMainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var kaderTableView: UITableView!
-    @IBOutlet weak var staffArea: UILabel!
     
     var listKader = [KaderModel]()
     var selectedIndex: Int!
@@ -39,7 +38,6 @@ class staffMainViewController: UIViewController, UITableViewDelegate, UITableVie
             }
         
             let kaderIDs = snap.value as! [String:Any]
-            self.staffArea.text = "\(tempArea)"
             
             for (key, _) in kaderIDs{
                 let tempSingleKader = kaderIDs[key] as! [String:Any]

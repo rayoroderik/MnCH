@@ -16,7 +16,8 @@ class kaderMainTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        childImage.layer.cornerRadius = childImage.frame.height/2
+        childImage.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ck3-1p-s3j">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hello" translatesAutoresizingMaskIntoConstraints="NO" id="ck3-1p-s3j">
                                 <rect key="frame" x="125" y="64" width="125" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ck3-1p-s3j" secondAttribute="height" multiplier="1:1" id="wog-w0-WaO"/>
@@ -89,7 +89,6 @@
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Alamat" translatesAutoresizingMaskIntoConstraints="NO" id="2Bs-hh-mkv">
                                 <rect key="frame" x="50" y="519" width="275" height="121"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="121" id="7hm-Dy-R0K"/>
                                 </constraints>
@@ -163,4 +162,7 @@
             <point key="canvasLocation" x="429" y="5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hello" width="2280" height="958"/>
+    </resources>
 </document>

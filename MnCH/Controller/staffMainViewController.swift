@@ -67,5 +67,11 @@ class staffMainViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "goToDetailKader", sender: nil)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? detailKaderViewController{
+            let ip = sender as! IndexPath
+            dest.kader = self.listKader[ip.row]
+        }
+    }
 }

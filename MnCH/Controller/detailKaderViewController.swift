@@ -14,45 +14,61 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var lblKaderName: UILabel!
     @IBOutlet weak var lblKaderPhone: UILabel!
     
+    var kader: KaderModel!
+    var listBabies = [BabyModel]()
     
-    var kaderArray = [String]()
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         detailKaderTableView.delegate = self
         detailKaderTableView.dataSource = self
-    
+        
+        lblKaderName.text = kader?.kaderName
+        lblKaderPhone.text = kader?.kaderPhone
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return kader!.kaderBabies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! detailKaderTableViewCell
-        //        cell.lblNamaBayi.text = "Nama Anak \(indexPath.row)"
+//        cell.lblBabyName.
         
         return cell
+    }
+    
+    func getData(){
+
+        for babyID in self.kader.kaderBabies{
+            FirebaseReferences.databaseRef.child("babies/\(babyID)").observeSingleEvent(of: .value) { (snap) in
+                let tempSingleBaby = snap.value as! [String:Any]
+                
+                var tempBabyCheck: [String] = []
+                if let tempBabyCheckDict: [String:String] = tempSingleBaby["babyCheck"] as? [String:String]{
+                    for (checkID, _) in tempBabyCheckDict{
+                        tempBabyCheck.append(checkID)
+                    }
+                }
+                
+                let url = URL(string: tempSingleBaby["babyPhoto"] as! String)
+                let data = try? Data(contentsOf: url!)
+                
+                if let imageData = data{
+                    let image = UIImage(data: imageData)
+                    
+                    self.listBabies.append(BabyModel(babyName: tempSingleBaby["babyName"] as! String, babyAddress: tempSingleBaby["babyAddress"] as! String, dobString: tempSingleBaby["dobString"] as! String, gender: tempSingleBaby["gender"] as! String, momName: tempSingleBaby["momName"] as! String, momPhone: tempSingleBaby["momPhone"] as! String, babyID: babyID))
+                }
+                
+            }
+        }
+        
+        
     }
     
     func tableView(_ tableView: UITableView , didSelectRowAt: IndexPath){
         self.performSegue(withIdentifier: "goToChildProfile", sender: nil)
     }
     
-    func getData(){
-        FirebaseReferences.databaseRef.child("kaders").observeSingleEvent(of: .value) { (snap) in
-        let tempPlaces = snap.value as! [String:Any]
-        
-        for (key, _) in tempPlaces{
-            let tempKaders = tempPlaces[key] as! [String:Any]
-
-            for (key, _) in tempKaders{
-                let tempSingleKader = tempKaders[key] as! [String:Any]
-//                self.kaderArray.append(tempSingleKader["kaderPhone"] as! String)
-            }
-        }
-        }
-    }
+    
 }

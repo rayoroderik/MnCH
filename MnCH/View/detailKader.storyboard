@@ -72,6 +72,10 @@
                                                         </label>
                                                     </subviews>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="imgBaby" destination="r5f-Rm-ngL" id="LKd-Cq-HSv"/>
+                                                    <outlet property="lblBabyName" destination="XOQ-c7-vTO" id="rhR-aO-g5b"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>

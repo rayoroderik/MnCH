@@ -31,9 +31,31 @@ class kaderSignUpViewController: UIViewController, UIPickerViewDelegate {
         self.addressTV.layer.borderWidth = 0.5
         
         addPickerArea()
-        
+    
         // Do any additional setup after loading the view.
     }
+    
+//    func testUploadImage(){
+//        let data = UIImageJPEGRepresentation(#imageLiteral(resourceName: "hello"), 0.1)
+//        let tempRef = FirebaseReferences.storageRef.child("test/hello.jpeg")
+//
+//        let _ = tempRef.putData(data!, metadata: nil) { (metadata, error) in
+//            if error != nil{
+//                print("ERROR - \(error?.localizedDescription)")
+//                return
+//            }
+//            print("success upload to storage")
+//            // You can also access to download URL after upload.
+//            tempRef.downloadURL { (url, error) in
+//                guard let downloadURL = url else {
+//                    // Uh-oh, an error occurred!
+//                    return
+//                }
+//
+//                print(downloadURL)
+//            }
+//        }
+//    }
     
 //    var tempArray: [String] = []{
 //        didSet{

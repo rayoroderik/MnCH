@@ -12,4 +12,5 @@ import Firebase
 
 struct FirebaseReferences {
     static let databaseRef: DatabaseReference = Database.database().reference()
+    static let storageRef: StorageReference = Storage.storage().reference()
 }

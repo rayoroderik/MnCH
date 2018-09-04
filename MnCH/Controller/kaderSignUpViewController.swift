@@ -81,11 +81,28 @@ class kaderSignUpViewController: UIViewController, UIPickerViewDelegate {
 //        }
 //    }
     
-    var childDict: [String:Int] = ["adi":10, "steven":10000]
-    
 
     @IBAction func daftarButtonClicked(_ sender: Any) {
-        let phoneInput = self.phoneTextField.text
+        
+        if (self.nameTextField.text == "" || self.addressTV.text == "" || self.phoneTextField.text == "" || self.areaTF.text == "" || self.passwordTextField.text == "" || self.confirmPasswordTextField.text == ""){
+            
+            let alert = UIAlertController(title: "Pendaftaran Gagal", message: "Mohon isi semua field!", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+                return
+            }
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        else if (self.passwordTextField.text != self.confirmPasswordTextField.text){
+            let alert = UIAlertController(title: "Pendaftaran Gagal", message: "Kata sandi tidak sesuai!", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+                return
+            }
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
         
         FirebaseReferences.databaseRef.observeSingleEvent(of: .value) { (snap) in
             if (snap.hasChildren() == false){
@@ -107,9 +124,16 @@ class kaderSignUpViewController: UIViewController, UIPickerViewDelegate {
                             
                             let kaderPhone: String = tempSingleKader["kaderPhone"] as! String
                             
-                            if (kaderPhone == phoneInput){
+                            if (kaderPhone == self.phoneTextField.text){
                                 // udah ada yg pernah pake phonenya
                                 print("udah ada")
+                                
+                                let alert = UIAlertController(title: "Pendaftaran Gagal", message: "Nomor telfon sudah pernah terdaftar!", preferredStyle: .alert)
+                                let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+                                    return
+                                }
+                                alert.addAction(okAction)
+                                self.present(alert, animated: true, completion: nil)
                                 return
                             }
                         }
@@ -124,16 +148,26 @@ class kaderSignUpViewController: UIViewController, UIPickerViewDelegate {
     }
     
     func register(){
-        let tempPhone = self.phoneTextField.text
+        
         let uniqueID = UUID().uuidString
         
         var tempKader: [String:Any] = [:]
         
-        tempKader["kaderPhone"] = tempPhone
         tempKader["kaderName"] = self.nameTextField.text
+        tempKader["kaderPhone"] = self.phoneTextField.text
+        tempKader["kaderAddress"] = self.addressTV.text
+        tempKader["kaderArea"] = self.areaTF.text
+        tempKader["kaderBabies"] = ""
+        
         
         FirebaseReferences.databaseRef.child("kaders/pedongkelan/\(uniqueID)").setValue(tempKader)
         
+        let alert = UIAlertController(title: "Pendaftaran Berhasil", message: "Anda telah mendaftar di ____!", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+            return
+        }
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
         print("registered")
     }
     

@@ -37,5 +37,8 @@ class kaderMainViewController: UIViewController, UITableViewDelegate, UITableVie
         kaderMainTableView.dataSource = self
 
     }
-
+    @IBAction func moveToAddChild(_ sender: Any) {
+        performSegue(withIdentifier: "kaderMainToaddChild", sender: nil)
+    }
+    
 }

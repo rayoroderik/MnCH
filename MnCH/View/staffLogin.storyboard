@@ -18,51 +18,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OrD-Oc-wFU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homebg" translatesAutoresizingMaskIntoConstraints="NO" id="OrD-Oc-wFU">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="267" id="a1W-kU-4I8"/>
+                                </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yUc-O9-ncf">
-                                <rect key="frame" x="20" y="287" width="335" height="197"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yUc-O9-ncf">
+                                <rect key="frame" x="20" y="287" width="335" height="231"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masuk Akun sebagai Hope" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6r-3h-Vdx">
-                                        <rect key="frame" x="81.666666666666671" y="0.0" width="171.66666666666663" height="17"/>
+                                        <rect key="frame" x="20" y="0.0" width="295" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No. Handphone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ckw-lY-uJ0">
-                                        <rect key="frame" x="0.0" y="32" width="335" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No. Handphone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ckw-lY-uJ0">
+                                        <rect key="frame" x="0.0" y="37" width="335" height="36"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kata Sandi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ii5-7b-Y4Y">
-                                        <rect key="frame" x="0.0" y="77" width="335" height="30"/>
+                                        <rect key="frame" x="0.0" y="93" width="335" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIW-wn-iR8">
-                                        <rect key="frame" x="117.66666666666666" y="122" width="100" height="30"/>
-                                        <color key="backgroundColor" red="0.26594999580000001" green="0.65992279970000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIW-wn-iR8">
+                                        <rect key="frame" x="117.66666666666666" y="143" width="100" height="40"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Gnf-Ns-1Np"/>
                                             <constraint firstAttribute="width" constant="100" id="uoh-bM-W9o"/>
                                         </constraints>
-                                        <state key="normal" title="Masuk">
+                                        <state key="normal" title="Masuk" image="masuk button">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="signInClick:" destination="Ofn-zk-3KC" eventType="touchUpInside" id="2Yr-Tb-wFy"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAa-gV-Kza">
-                                        <rect key="frame" x="117.66666666666666" y="167" width="100" height="30"/>
-                                        <color key="backgroundColor" red="0.26594999580000001" green="0.65992279970000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAa-gV-Kza">
+                                        <rect key="frame" x="117.66666666666666" y="203" width="100" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="W3S-ue-l36"/>
                                         </constraints>
-                                        <state key="normal" title="Daftar">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <state key="normal" title="BUAT AKUN">
+                                            <color key="titleColor" red="0.26594999580000001" green="0.65992279970000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
                                             <action selector="signUpClick:" destination="Ofn-zk-3KC" eventType="touchUpInside" id="0Lp-lu-oMl"/>
@@ -71,12 +74,13 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ckw-lY-uJ0" firstAttribute="leading" secondItem="yUc-O9-ncf" secondAttribute="leading" id="12u-Wh-mLq"/>
+                                    <constraint firstItem="y6r-3h-Vdx" firstAttribute="leading" secondItem="yUc-O9-ncf" secondAttribute="leading" constant="20" id="Dhf-FJ-6nB"/>
                                     <constraint firstItem="ii5-7b-Y4Y" firstAttribute="leading" secondItem="yUc-O9-ncf" secondAttribute="leading" id="QAv-Ou-M4X"/>
                                     <constraint firstAttribute="trailing" secondItem="ckw-lY-uJ0" secondAttribute="trailing" id="jl9-cS-zdE"/>
                                     <constraint firstAttribute="trailing" secondItem="ii5-7b-Y4Y" secondAttribute="trailing" id="uU9-Kg-yXr"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ca5-U6-fim">
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ca5-U6-fim">
                                 <rect key="frame" x="50" y="728" width="275" height="30"/>
                                 <state key="normal" title="Masuk sebagai Kader"/>
                                 <connections>
@@ -89,7 +93,7 @@
                             <constraint firstAttribute="trailing" secondItem="OrD-Oc-wFU" secondAttribute="trailing" id="AnR-kj-7uy"/>
                             <constraint firstItem="Ca5-U6-fim" firstAttribute="leading" secondItem="llC-uh-ddd" secondAttribute="leading" constant="50" id="XoG-ZR-aD8"/>
                             <constraint firstItem="llC-uh-ddd" firstAttribute="trailing" secondItem="Ca5-U6-fim" secondAttribute="trailing" constant="50" id="Ycj-8a-BPB"/>
-                            <constraint firstItem="llC-uh-ddd" firstAttribute="bottom" secondItem="yUc-O9-ncf" secondAttribute="bottom" constant="294" id="Yhu-nj-bXY"/>
+                            <constraint firstItem="Ca5-U6-fim" firstAttribute="top" secondItem="yUc-O9-ncf" secondAttribute="bottom" constant="210" id="YeW-9j-DLs"/>
                             <constraint firstItem="OrD-Oc-wFU" firstAttribute="top" secondItem="wh4-gK-SVN" secondAttribute="top" id="du7-LN-abz"/>
                             <constraint firstItem="yUc-O9-ncf" firstAttribute="leading" secondItem="wh4-gK-SVN" secondAttribute="leading" constant="20" id="e1D-xc-MhN"/>
                             <constraint firstItem="yUc-O9-ncf" firstAttribute="top" secondItem="OrD-Oc-wFU" secondAttribute="bottom" constant="20" id="hNW-m8-qhQ"/>
@@ -136,4 +140,8 @@
             <point key="canvasLocation" x="769" y="343"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="homebg" width="750" height="524"/>
+        <image name="masuk button" width="314" height="114"/>
+    </resources>
 </document>

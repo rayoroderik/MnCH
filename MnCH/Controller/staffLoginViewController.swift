@@ -21,22 +21,39 @@ class staffLoginViewController: UIViewController {
             let staffIDs = snap.value as! [String:Any]
             let hashedPassword = SHA1.hexString(from: self.passTextField.text!)
             
-            // ambil list of staffs
+            // ambil semua nomor hp staff
+            var allStaffPhone = [String]()
             for (key, _) in staffIDs{
                 let tempSingleStaff = staffIDs[key] as! [String:Any]
                 let staffPhone: String = tempSingleStaff["staffPhone"] as! String
-                let staffPass: String = tempSingleStaff["staffPass"] as! String
-                if (staffPhone == self.phoneTextField.text) && (staffPass == hashedPassword){
-                    self.performSegue(withIdentifier: "staffLoginTostaffMain", sender: nil)
+                allStaffPhone.append(staffPhone)
+                if allStaffPhone.contains(self.phoneTextField.text!){
+                    for (key, _) in staffIDs{
+                        let tempSingleStaff = staffIDs[key] as! [String:Any]
+                        let staffPhone: String = tempSingleStaff["staffPhone"] as! String
+                        let staffPass: String = tempSingleStaff["staffPass"] as! String
+                        
+                        
+                        if (staffPhone == self.phoneTextField.text) && (staffPass == hashedPassword){
+                            self.performSegue(withIdentifier: "staffLoginTostaffMain", sender: nil)
+                        }else{
+                            let alert = UIAlertController(title: "Masuk Gagal", message: "Kata sandi salah!", preferredStyle: .alert)
+                            let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+                                return
+                            }
+                            alert.addAction(okAction)
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                    }
                 }else{
-                    let alert = UIAlertController(title: "Masuk Gagal", message: "Nomor handphone atau kata sandi salah!", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Masuk Gagal", message: "Nomor handphone tidak ada!", preferredStyle: .alert)
                     let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
                         return
                     }
                     alert.addAction(okAction)
                     self.present(alert, animated: true, completion: nil)
                 }
-            }
+        }
         })
     }
     

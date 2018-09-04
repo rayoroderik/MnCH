@@ -21,5 +21,7 @@ class staffLoginViewController: UIViewController {
     @IBAction func moveToKaderLogin(_ sender: Any) {
         performSegue(withIdentifier: "staffLoginTomain", sender: nil)
     }
-    
+    @IBAction func signUpClick(_ sender: Any) {
+        performSegue(withIdentifier: "staffLoginToStaffSignUp", sender: nil)
+    }
 }

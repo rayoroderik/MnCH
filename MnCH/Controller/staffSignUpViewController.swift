@@ -8,28 +8,155 @@
 
 import UIKit
 
-class staffSignUpViewController: UIViewController {
-
+class staffSignUpViewController: UIViewController, UIPickerViewDelegate {
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var passTextField: UITextField!
+    @IBOutlet weak var verifyPassTextField: UITextField!
+    @IBOutlet weak var areaPicker: UITextField!
+    
+    var dataArea = ["Pedongkelan", "Kali Baru", "Cilincing", "Marunda", "Rusunawa Albo", "Tanah Merah"]
+    var pickerArea = UIPickerView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        addPickerArea()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func signUpClicked(_ sender: Any) {
+        
+        if (self.nameTextField.text == "" || self.phoneTextField.text == "" || self.passTextField.text == "" || self.verifyPassTextField.text == "" ||
+            self.areaPicker.text == ""){
+            
+            let alert = UIAlertController(title: "Pendaftaran Gagal", message: "Mohon isi semua field!", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+                return
+            }
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        else if (self.passTextField.text != self.verifyPassTextField.text){
+            let alert = UIAlertController(title: "Pendaftaran Gagal", message: "Kata sandi tidak sesuai!", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+                return
+            }
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        FirebaseReferences.databaseRef.child("staffs").observeSingleEvent(of: .value) { (snap) in
+            if (snap == nil || snap.hasChildren() == false){
+                // belom ada yg kedaftar
+                self.register()
+            }
+            else{
+                // udh ada yg daftar
+                FirebaseReferences.databaseRef.child("staffs").observeSingleEvent(of: .value, with: { (snap) in
+                    let staffIDs = snap.value as! [String:Any]
+                    
+                    // ambil list of staffs
+                    for (key, _) in staffIDs{
+                        let tempSingleStaff = staffIDs[key] as! [String:Any]
+                        let staffPhone: String = tempSingleStaff["staffPhone"] as! String
+                        if (staffPhone == self.phoneTextField.text){
+                            // udah ada yg pernah pake phonenya
+                            print("udah ada")
+                            
+                            let alert = UIAlertController(title: "Pendaftaran Gagal", message: "Nomor telfon sudah pernah terdaftar!", preferredStyle: .alert)
+                            let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+                                return
+                            }
+                            alert.addAction(okAction)
+                            self.present(alert, animated: true, completion: nil)
+                            return
+                        }
+                    }
+                    // aman
+                    self.register()
+                })
+            }
+    }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func register(){
+        
+        let uniqueID = UUID().uuidString
+        
+        var tempStaff: [String:Any] = [:]
+        
+        tempStaff["staffName"] = self.nameTextField.text
+        tempStaff["staffPhone"] = self.phoneTextField.text
+        tempStaff["staffArea"] = self.areaPicker.text
+        
+        FirebaseReferences.databaseRef.child("staffs/\(uniqueID)").setValue(tempStaff)
+        
+        let alert = UIAlertController(title: "Pendaftaran Berhasil", message: "Anda telah mendaftar di ____!", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+            return
+        }
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+        print("registered")
     }
-    */
+}
 
+extension staffSignUpViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    //banyaknya data pickerview
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        var toReturn: Int = 0
+        if pickerView == pickerArea {
+            toReturn = dataArea.count
+        }
+        
+        return toReturn
+    }
+    
+    //ketika pickerview dipilih
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if pickerView == pickerArea {
+            self.areaPicker.text = dataArea[row]
+        }
+    }
+    
+    
+    //title data pickerview
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        var toReturn: String = ""
+        if pickerView == pickerArea {
+            toReturn = dataArea[row]
+        }
+        return toReturn
+    }
+    
+    
+    //func panggil pickerview area
+    func addPickerArea (){
+        pickerArea.delegate = self
+        pickerArea.dataSource = self
+        areaPicker.inputView = pickerArea
+        
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneClick))
+        //toolbar.setItems([doneButton], animated: true)
+        toolbar.items = [flexible, doneButton]
+        
+        areaPicker.inputView = pickerArea
+        areaPicker.inputAccessoryView = toolbar
+        
+        
+    }
+    
+    @objc func doneClick(){
+        self.view.endEditing(true)
+    }
 }

@@ -164,6 +164,10 @@ class kaderSignUpViewController: UIViewController, UIPickerViewDelegate {
         
         let alert = UIAlertController(title: "Pendaftaran Berhasil", message: "Anda telah mendaftar di ____!", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+            
+            GlobalKader.loginState = true
+            GlobalKader.kader = KaderModel(kaderName: self.nameTextField.text!, kaderPhone: self.phoneTextField.text!, kaderAddress: self.addressTV.text!, kaderArea: self.areaTF.text!, kaderBabies: [], kaderID: uniqueID)
+            
             return
         }
         alert.addAction(okAction)

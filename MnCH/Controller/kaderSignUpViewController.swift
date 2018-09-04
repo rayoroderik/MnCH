@@ -13,6 +13,10 @@ class kaderSignUpViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var addressTV: UITextView!
     @IBOutlet weak var areaTF: UITextField!
     
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
     
     
     //untuk pickerview
@@ -30,14 +34,87 @@ class kaderSignUpViewController: UIViewController, UIPickerViewDelegate {
         
         // Do any additional setup after loading the view.
     }
+    
+//    var tempArray: [String] = []{
+//        didSet{
+//            print(tempArray)
+//        }
+//    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+//    func tampilin(){
+//        FirebaseReferences.databaseRef.child("kaders").observeSingleEvent(of: .value) { (snap) in
+//            let tempPlaces = snap.value as! [String:Any]
+//
+//            for (key, _) in tempPlaces{
+//                let tempKaders = tempPlaces[key] as! [String:Any]
+//
+//                for (key, _) in tempKaders{
+//                    let tempSingleKader = tempKaders[key] as! [String:Any]
+//
+//                    self.tempArray.append(tempSingleKader["kaderPhone"] as! String)
+//
+//                }
+//
+//            }
+//        }
+//    }
+    
+    var childDict: [String:Int] = ["adi":10, "steven":10000]
     
 
-
+    @IBAction func daftarButtonClicked(_ sender: Any) {
+        let phoneInput = self.phoneTextField.text
+        
+        FirebaseReferences.databaseRef.observeSingleEvent(of: .value) { (snap) in
+            if (snap.hasChildren() == false){
+                // belom ada yg kedaftar
+                self.register()
+            }
+            else{
+                // udh ada yg daftar
+                FirebaseReferences.databaseRef.child("kaders").observeSingleEvent(of: .value, with: { (snap) in
+                    let tempPlaces = snap.value as! [String:Any]
+                    
+                    // ambil list of kaders dari 1 place
+                    for (key, _) in tempPlaces{
+                        let tempKaders = tempPlaces[key] as! [String:Any]
+                        
+                        // ambil single kader dari list of kaders
+                        for (key, _) in tempKaders{
+                            let tempSingleKader = tempKaders[key] as! [String:Any]
+                            
+                            let kaderPhone: String = tempSingleKader["kaderPhone"] as! String
+                            
+                            if (kaderPhone == phoneInput){
+                                // udah ada yg pernah pake phonenya
+                                print("udah ada")
+                                return
+                            }
+                        }
+                    }
+                    
+                    // aman
+                    self.register()
+                    
+                })
+            }
+        }
+    }
+    
+    func register(){
+        let tempPhone = self.phoneTextField.text
+        let uniqueID = UUID().uuidString
+        
+        var tempKader: [String:Any] = [:]
+        
+        tempKader["kaderPhone"] = tempPhone
+        tempKader["kaderName"] = self.nameTextField.text
+        
+        FirebaseReferences.databaseRef.child("kaders/pedongkelan/\(uniqueID)").setValue(tempKader)
+        
+        print("registered")
+    }
+    
 
 }
 

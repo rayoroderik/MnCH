@@ -14,6 +14,7 @@
 		8503D54E213E24C9005DE254 /* CheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D54D213E24C9005DE254 /* CheckModel.swift */; };
 		8503D550213E298E005DE254 /* KaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D54F213E298E005DE254 /* KaderModel.swift */; };
 		8503D552213E2C72005DE254 /* StaffModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D551213E2C72005DE254 /* StaffModel.swift */; };
+		8503D554213E449F005DE254 /* FirebaseReferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D553213E449F005DE254 /* FirebaseReferences.swift */; };
 		85B770F5213D713000D67BE1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85B770F4213D713000D67BE1 /* GoogleService-Info.plist */; };
 		A3B3CC9C213D0C600009E1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3CC9B213D0C600009E1FD /* AppDelegate.swift */; };
 		A3B3CC9E213D0C600009E1FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3CC9D213D0C600009E1FD /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 		8503D54D213E24C9005DE254 /* CheckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckModel.swift; sourceTree = "<group>"; };
 		8503D54F213E298E005DE254 /* KaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaderModel.swift; sourceTree = "<group>"; };
 		8503D551213E2C72005DE254 /* StaffModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffModel.swift; sourceTree = "<group>"; };
+		8503D553213E449F005DE254 /* FirebaseReferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReferences.swift; sourceTree = "<group>"; };
 		85B770F4213D713000D67BE1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3B3CC98213D0C600009E1FD /* MnCH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MnCH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B3CC9B213D0C600009E1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				8503D54D213E24C9005DE254 /* CheckModel.swift */,
 				8503D54F213E298E005DE254 /* KaderModel.swift */,
 				8503D551213E2C72005DE254 /* StaffModel.swift */,
+				8503D553213E449F005DE254 /* FirebaseReferences.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				A6BB1E3F213D56280001228B /* kaderMainTableViewCell.swift in Sources */,
 				50A47F8D213D40680076EAF5 /* detailKaderViewController.swift in Sources */,
 				A62D4398213DA16400A299FD /* addHistoryViewController.swift in Sources */,
+				8503D554213E449F005DE254 /* FirebaseReferences.swift in Sources */,
 				A3B3CC9E213D0C600009E1FD /* ViewController.swift in Sources */,
 				A62D43A0213E1E9900A299FD /* kaderSignUpViewController.swift in Sources */,
 				A3B3CC9C213D0C600009E1FD /* AppDelegate.swift in Sources */,

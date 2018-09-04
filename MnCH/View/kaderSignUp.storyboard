@@ -76,6 +76,9 @@
                                         <state key="normal" title="Daftarkan">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="daftarButtonClicked:" destination="Iig-Rs-hc8" eventType="touchUpInside" id="rj7-MI-9II"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -107,6 +110,10 @@
                     <connections>
                         <outlet property="addressTV" destination="OTn-jW-clc" id="bDL-AZ-31G"/>
                         <outlet property="areaTF" destination="5Tn-Eo-fYw" id="5Ah-rg-lF8"/>
+                        <outlet property="confirmPasswordTextField" destination="5p2-Ab-sql" id="QWl-L2-QI2"/>
+                        <outlet property="nameTextField" destination="BP7-Z5-mjV" id="wfv-I8-S9p"/>
+                        <outlet property="passwordTextField" destination="VCk-XU-Mjj" id="SKo-Mi-zqj"/>
+                        <outlet property="phoneTextField" destination="mlc-lY-WIb" id="nOm-Ni-N61"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3X-Fn-TVD" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -160,7 +160,7 @@ class kaderSignUpViewController: UIViewController, UIPickerViewDelegate {
         tempKader["kaderBabies"] = ""
         
         
-        FirebaseReferences.databaseRef.child("kaders/pedongkelan/\(uniqueID)").setValue(tempKader)
+        FirebaseReferences.databaseRef.child("kaders/\(self.areaTF.text!)/\(uniqueID)").setValue(tempKader)
         
         let alert = UIAlertController(title: "Pendaftaran Berhasil", message: "Anda telah mendaftar di ____!", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in

@@ -12,17 +12,17 @@ import Foundation
 class BabyModel {
     var babyName: String
     var babyAddress: String
-    var dob: Date
     var dobString: String
     var gender: String
     var momName: String
     var momPhone: String
+    var babyCheck: [CheckModel] = []
     var babyID: String
     
-    init(babyName: String, babyAddress: String,dob: Date, dobString: String, gender: String, momName: String, momPhone: String, babyID: String) {
+    
+    init(babyName: String, babyAddress: String, dobString: String, gender: String, momName: String, momPhone: String, babyID: String) {
         self.babyName = babyName
         self.babyAddress = babyAddress
-        self.dob = dob
         self.dobString = dobString
         self.gender = gender
         self.momName = momName

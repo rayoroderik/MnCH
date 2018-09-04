@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import Firebase
 
 class kaderMainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var kaderMainTableView: UITableView!
+    var totalBaby = 0
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        print("sekarang \(totalBaby)")
+        return totalBaby
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -31,11 +36,25 @@ class kaderMainViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
 
+    func getTotalBaby()
+    {
+        FirebaseReferences.databaseRef.child("kaders/pedongkelan/testKaderID/kaderBaby").observeSingleEvent(of: .value) { (snapshot) in
+            if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
+                self.totalBaby = snapshots.count
+                print(self.totalBaby)
+                DispatchQueue.main.async(execute: {
+                    self.kaderMainTableView.delegate = self
+                    self.kaderMainTableView.dataSource = self
+                    self.kaderMainTableView.reloadData()
+                })
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        kaderMainTableView.delegate = self
-        kaderMainTableView.dataSource = self
-
+        getTotalBaby()
+        
     }
     @IBAction func moveToAddChild(_ sender: Any) {
         performSegue(withIdentifier: "kaderMainToaddChild", sender: nil)

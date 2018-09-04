@@ -21,24 +21,36 @@ class addChildViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var tahunLahirTF: UITextField!
     @IBOutlet weak var textFieldPlaceHolder: UITextField!
     let pickImage = UIImagePickerController()
+    var gambarBayi = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        
+        textFieldPlaceHolder.isEnabled = false
         
         babyAddressTF.text = "Alamat"
-        babyAddressTF.textColor = .gray
+        babyAddressTF.textColor = .lightGray
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         pickBabyImage.isUserInteractionEnabled = true
-//        let addressTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(addressTapped(addressTapGestureRecognizer:)))
-//        babyAddressTF.addGestureRecognizer(addressTapGestureRecognizer)
-//        pickBabyImage.addGestureRecognizer(tapGestureRecognizer)
+    pickBabyImage.addGestureRecognizer(tapGestureRecognizer)
         pickImage.delegate = self
+        babyAddressTF.delegate = self
         // Do any additional setup after loading the view.
     }
     
     @IBAction func addBaby(_ sender: Any) {
-        addNewBaby()
+        if self.babyNameTF.text == nil || self.babyAddressTF == nil || self.jenisKelaminTF.text == nil || self.momNameTF.text == nil || self.momPhoneTF.text == nil || self.hariLahirTF.text == nil || self.bulanLahirTF.text == nil || self.tahunLahirTF.text == nil {
+            let alert = UIAlertController(title: "Gagal", message: "Mohon isi semua kotak terlebih dahulu", preferredStyle: .alert)
+            let okaction = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(okaction)
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+        else {
+            testUploadImage()
+        }
+        
     }
     
     
@@ -70,20 +82,46 @@ class addChildViewController: UIViewController, UIImagePickerControllerDelegate,
         present(pickImage, animated: true, completion: nil)
     }
     
-    func textViewDidBeginEditing(textView: UITextView) {
-        if textView.textColor == .gray {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == .lightGray {
             textView.text = nil
             textView.textColor = .black
         }
     }
-    
-    func textViewDidEndEditing(textView: UITextView) {
+
+    func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
             textView.text = "Alamat"
-            textView.textColor = .gray
+            textView.textColor = .lightGray
         }
     }
     
+        func testUploadImage(){
+            let uploadImg = pickBabyImage.image
+            let data = UIImageJPEGRepresentation(uploadImg!, 0.1)
+            let tempRef = FirebaseReferences.storageRef.child("test/\(self.babyNameTF.text!).jpeg")
+
+            let _ = tempRef.putData(data!, metadata: nil) { (metadata, error) in
+                if error != nil{
+                    print("ERROR - \(error?.localizedDescription)")
+                    return
+                }
+                print("success upload to storage")
+                // You can also access to download URL after upload.
+                tempRef.downloadURL { (url, error) in
+                    guard let downloadURL = url else {
+                        // Uh-oh, an error occurred!
+                        return
+                    }
+                    print("halo")
+                    self.gambarBayi = downloadURL.absoluteString
+                    
+                    self.addNewBaby()
+                }
+            }
+        }
+
+
     
     
     func addNewBaby(){
@@ -102,6 +140,8 @@ class addChildViewController: UIViewController, UIImagePickerControllerDelegate,
         tempBaby["momName"] = self.momNameTF.text
         tempBaby["momPhone"] = self.momPhoneTF.text
         tempBaby["babyCheck"] = ""
+        tempBaby["babyPhoto"] = gambarBayi
+        
         
         
         FirebaseReferences.databaseRef.child("kaders/pedongkelan/testKaderID/kaderBaby/\(babyID)").setValue("")

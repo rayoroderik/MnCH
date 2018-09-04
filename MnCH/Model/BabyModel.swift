@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 class BabyModel {
@@ -17,16 +18,18 @@ class BabyModel {
     var momName: String
     var momPhone: String
     var babyCheck: [CheckModel] = []
+    var babyPhoto: UIImage
     var babyID: String
     
     
-    init(babyName: String, babyAddress: String, dobString: String, gender: String, momName: String, momPhone: String, babyID: String) {
+    init(babyName: String, babyAddress: String, dobString: String, gender: String, momName: String, momPhone: String, babyPhoto: UIImage, babyID: String) {
         self.babyName = babyName
         self.babyAddress = babyAddress
         self.dobString = dobString
         self.gender = gender
         self.momName = momName
         self.momPhone = momPhone
+        self.babyPhoto = babyPhoto
         
         self.babyID = babyID
     }

@@ -17,11 +17,14 @@ class CheckModel{
     var height: Float
     var notes: String
     var babyPic: UIImage!
+    var checkID: String
     
-    init(weight: Float, height: Float, notes: String) {
+    init(weight: Float, height: Float, notes: String, checkID: String) {
         self.weight = weight
         self.height = height
         self.notes = notes
+        
+        self.checkID = checkID
     }
     
     func setPic(babyPic: UIImage){

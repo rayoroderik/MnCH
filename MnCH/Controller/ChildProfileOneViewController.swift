@@ -9,9 +9,12 @@
 import UIKit
 
 class ChildProfileOneViewController: UIViewController {
-
+    @IBOutlet weak var btnAdd: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.btnAdd.setBackgroundImage(UIImage(named: "plus"), for: .normal)
 
         // Do any additional setup after loading the view.
     }

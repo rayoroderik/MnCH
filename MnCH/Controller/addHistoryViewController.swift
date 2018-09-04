@@ -8,7 +8,7 @@
 
 import UIKit
 
-class addHistoryViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class addHistoryViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     
     var babyID: String = ""
     var imageUpload: UIImage!
@@ -30,9 +30,19 @@ class addHistoryViewController: UIViewController, UIImagePickerControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        descTV.text = "Keterangan mengenai penampilan anak"
+        descTV.textColor = .lightGray
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        imagePicked.isUserInteractionEnabled = true
+        imagePicked.addGestureRecognizer(tapGestureRecognizer)
+        
+        descTV.delegate = self
         imagePicker.delegate = self
         tampilan()
-        
+        let rightButton = UIBarButtonItem(title: "Simpan", style: .plain, target: self, action: #selector(self.updateHistoryNew))
+        self.navigationItem.rightBarButtonItem = rightButton
+        self.navigationItem.title = "Tambah Data"
     }
     
     @IBAction func imagePickerClicked(_ sender: Any) {
@@ -40,6 +50,40 @@ class addHistoryViewController: UIViewController, UIImagePickerControllerDelegat
         imagePicker.sourceType = .photoLibrary
         
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @objc func addressTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedAddress = tapGestureRecognizer.view as! UIImageView
+        
+        // Your action
+        
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        
+        // Your action
+        
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == .lightGray {
+            textView.text = nil
+            textView.textColor = .black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Keterangan mengenai penampilan anak"
+            textView.textColor = .lightGray
+        }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -51,9 +95,7 @@ class addHistoryViewController: UIViewController, UIImagePickerControllerDelegat
         dismiss(animated: true, completion: nil)
     }
     
-    
-    @IBAction func updateHistoryChildAction(_ sender: Any) {
-        
+    @objc func updateHistoryNew(){
         
         if self.beratBadanTF.text == "" || self.tinggiBadanTF.text == "" || self.descTV.text == "" {
             let alert = UIAlertController(title: "Gagal menambahkan data", message: "Mohon isi semua field!", preferredStyle: .alert)
@@ -78,6 +120,10 @@ class addHistoryViewController: UIViewController, UIImagePickerControllerDelegat
             
         }
 
+    }
+    @IBAction func updateHistoryChildAction(_ sender: Any) {
+        
+        
         
         
         

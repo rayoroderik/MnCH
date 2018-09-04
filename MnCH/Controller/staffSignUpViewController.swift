@@ -86,22 +86,24 @@ class staffSignUpViewController: UIViewController, UIPickerViewDelegate {
         
         var tempStaff: [String:Any] = [:]
         
+        let hashedPassword = SHA1.hexString(from: self.passTextField.text!)
+        
         tempStaff["staffName"] = self.nameTextField.text
         tempStaff["staffPhone"] = self.phoneTextField.text
         tempStaff["staffArea"] = self.areaPicker.text
+        tempStaff["staffPass"] = hashedPassword
         
         FirebaseReferences.databaseRef.child("staffs/\(uniqueID)").setValue(tempStaff)
         
         let alert = UIAlertController(title: "Pendaftaran Berhasil", message: "Anda telah mendaftar di ____!", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
-            return
-        }
+        let okAction = UIAlertAction(title: "OK", style: .default , handler: {(action) in
+            self.performSegue(withIdentifier: "staffSignUpToStaffMain", sender: self)
+            GlobalStaff.loginState = true
+            GlobalStaff.staff = StaffModel(staffName: self.nameTextField.text!, staffPhone: self.phoneTextField.text!, staffArea: self.areaPicker.text!, staffID: uniqueID)
+        })
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
-        GlobalStaff.loginState = true
-        GlobalStaff.staff = StaffModel(staffName: self.nameTextField.text!, staffPhone: self.phoneTextField.text!, staffArea: self.areaPicker.text!, staffID: uniqueID)
-        
-        self.performSegue(withIdentifier: "staffSignUptoStaffMain", sender: nil)
+
     }
 }
 

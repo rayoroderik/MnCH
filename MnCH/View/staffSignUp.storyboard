@@ -102,7 +102,7 @@
                         <outlet property="passTextField" destination="JWm-oL-DrV" id="nhQ-xq-VCJ"/>
                         <outlet property="phoneTextField" destination="74R-Lg-8iO" id="uHS-kO-P0g"/>
                         <outlet property="verifyPassTextField" destination="Sn0-ml-MRW" id="RcD-Zd-aQz"/>
-                        <segue destination="Jwf-zk-8bR" kind="show" identifier="staffSignUptoStaffMain" id="QrN-Pc-0sc"/>
+                        <segue destination="Jwf-zk-8bR" kind="show" identifier="staffSignUpToStaffMain" id="QrN-Pc-0sc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5y-2J-LQl" userLabel="First Responder" sceneMemberID="firstResponder"/>

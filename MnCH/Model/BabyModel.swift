@@ -10,15 +10,15 @@ import Foundation
 
 
 class BabyModel {
-    var name: String
+    var babyName: String
     var dob: Date
     var dobString: String
     var gender: String
     var momName: String
     var momPhone: String
     
-    init(name: String, dob: Date, dobString: String, gender: String, momName: String, momPhone: String) {
-        self.name = name
+    init(babyName: String, dob: Date, dobString: String, gender: String, momName: String, momPhone: String) {
+        self.babyName = babyName
         self.dob = dob
         self.dobString = dobString
         self.gender = gender

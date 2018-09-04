@@ -105,7 +105,6 @@
                                     <constraint firstAttribute="trailing" secondItem="Xqw-Ub-sg8" secondAttribute="trailing" constant="100" id="m5C-mZ-g3e"/>
                                     <constraint firstItem="VCk-XU-Mjj" firstAttribute="leading" secondItem="gZz-PJ-rfg" secondAttribute="leading" id="pQt-dm-QXZ"/>
                                     <constraint firstAttribute="trailing" secondItem="5Tn-Eo-fYw" secondAttribute="trailing" id="qGO-ZH-OHI"/>
-                                    <constraint firstItem="8B1-JF-QRO" firstAttribute="top" secondItem="Xqw-Ub-sg8" secondAttribute="bottom" constant="10" id="tot-ee-AXq"/>
                                 </constraints>
                             </stackView>
                         </subviews>

@@ -20,6 +20,13 @@ class staffMainViewController: UIViewController, UITableViewDelegate, UITableVie
         getData()
         kaderTableView.delegate = self
         kaderTableView.dataSource = self
+        let leftButton = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(self.doSettings))
+        self.navigationItem.leftBarButtonItem = leftButton
+        self.navigationItem.title = GlobalStaff.staff.staffArea
+    }
+    
+    @objc func doSettings(){
+        
     }
     
     func getData(){

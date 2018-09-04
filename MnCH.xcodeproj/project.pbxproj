@@ -10,6 +10,7 @@
 		150BB223ED99C02E40A893EB /* Pods_MnCH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B04E10CFA3D26B2E2B0A2D3E /* Pods_MnCH.framework */; };
 		50A47F8B213D40330076EAF5 /* detailKader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A47F8A213D40330076EAF5 /* detailKader.storyboard */; };
 		50A47F8D213D40680076EAF5 /* detailKaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A47F8C213D40680076EAF5 /* detailKaderViewController.swift */; };
+		8503D54C213E2124005DE254 /* BabyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D54B213E2124005DE254 /* BabyModel.swift */; };
 		85B770F5213D713000D67BE1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85B770F4213D713000D67BE1 /* GoogleService-Info.plist */; };
 		A3B3CC9C213D0C600009E1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3CC9B213D0C600009E1FD /* AppDelegate.swift */; };
 		A3B3CC9E213D0C600009E1FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3CC9D213D0C600009E1FD /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 		50A47F8A213D40330076EAF5 /* detailKader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = detailKader.storyboard; sourceTree = "<group>"; };
 		50A47F8C213D40680076EAF5 /* detailKaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailKaderViewController.swift; sourceTree = "<group>"; };
 		6AD5D120ABC1B3001524BD39 /* Pods-MnCH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MnCH.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MnCH/Pods-MnCH.debug.xcconfig"; sourceTree = "<group>"; };
+		8503D54B213E2124005DE254 /* BabyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyModel.swift; sourceTree = "<group>"; };
 		85B770F4213D713000D67BE1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3B3CC98213D0C600009E1FD /* MnCH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MnCH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B3CC9B213D0C600009E1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		A6BB1E3B213D52B70001228B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8503D54B213E2124005DE254 /* BabyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A61103FD213D33C20046BB44 /* staffMainViewController.swift in Sources */,
+				8503D54C213E2124005DE254 /* BabyModel.swift in Sources */,
 				A6E35F18213D308D00AD6F3A /* kaderLoginViewController.swift in Sources */,
 				A6BB1E38213D45AF0001228B /* addChildViewController.swift in Sources */,
 				A6E35F1E213D317900AD6F3A /* staffLoginViewController.swift in Sources */,

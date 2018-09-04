@@ -18,9 +18,7 @@ class childProfileViewController: UIViewController {
         viewRedFlag.alpha = 0
         // Do any additional setup after loading the view.
     }
-    @IBAction func addHistoryClicked(_ sender: Any) {
-        self.performSegue(withIdentifier: "goToAddHistory", sender: nil)
-    }
+
     
     
     @IBAction func switchViewRescue(_ sender: UISegmentedControl) {

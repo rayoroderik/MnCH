@@ -19,6 +19,7 @@ class childProfileViewController: UIViewController {
         viewData.alpha = 1
         viewRedFlag.alpha = 0
         // Do any additional setup after loading the view.
+        self.navigationItem.title = "Profil Bayi"
     }
 
     

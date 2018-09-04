@@ -92,7 +92,6 @@
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Alamat" translatesAutoresizingMaskIntoConstraints="NO" id="2Bs-hh-mkv">
                                 <rect key="frame" x="50" y="519" width="275" height="121"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="121" id="7hm-Dy-R0K"/>
                                 </constraints>

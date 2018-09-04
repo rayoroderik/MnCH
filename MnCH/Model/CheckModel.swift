@@ -17,12 +17,14 @@ class CheckModel{
     var height: Float
     var notes: String
     var babyPic: UIImage!
+    var dateString: String
     var checkID: String
     
-    init(weight: Float, height: Float, notes: String, checkID: String) {
+    init(weight: Float, height: Float, notes: String, dateString: String, checkID: String) {
         self.weight = weight
         self.height = height
         self.notes = notes
+        self.dateString = dateString
         
         self.checkID = checkID
     }

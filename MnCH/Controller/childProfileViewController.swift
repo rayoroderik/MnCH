@@ -12,6 +12,8 @@ class childProfileViewController: UIViewController {
     @IBOutlet weak var viewData: UIView!
     @IBOutlet weak var viewRedFlag: UIView!
     
+    var currentBaby: BabyModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewData.alpha = 1

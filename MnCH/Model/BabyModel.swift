@@ -17,12 +17,12 @@ class BabyModel {
     var gender: String
     var momName: String
     var momPhone: String
-    var babyCheck: [CheckModel] = []
-    var babyPhoto: UIImage
+    var babyCheck: [String] = []
+    var babyPhoto: UIImage!
     var babyID: String
     
     
-    init(babyName: String, babyAddress: String, dobString: String, gender: String, momName: String, momPhone: String, babyPhoto: UIImage, babyID: String) {
+    init(babyName: String, babyAddress: String, dobString: String, gender: String, momName: String, momPhone: String, babyPhoto: UIImage, babyID: String, babyCheck: [String]) {
         self.babyName = babyName
         self.babyAddress = babyAddress
         self.dobString = dobString
@@ -30,6 +30,7 @@ class BabyModel {
         self.momName = momName
         self.momPhone = momPhone
         self.babyPhoto = babyPhoto
+        self.babyCheck = babyCheck
         
         self.babyID = babyID
     }

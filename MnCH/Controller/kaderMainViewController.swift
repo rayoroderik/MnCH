@@ -17,6 +17,51 @@ class kaderMainViewController: UIViewController, UITableViewDelegate, UITableVie
     var babyName = ""
     var babyAge = ""
     
+    var selectedIndex: Int!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //        getData()
+        kaderMainTableView.delegate = self
+        kaderMainTableView.dataSource = self
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.listBaby.removeAll()
+        
+        for babyID in GlobalKader.kader.kaderBabies{
+            FirebaseReferences.databaseRef.child("babies/\(babyID)").observeSingleEvent(of: .value) { (snap) in
+                let tempBaby = snap.value as! [String:Any]
+                
+                var tempBabyCheck: [String] = []
+                if let tempBabyCheckDict: [String:String] = tempBaby["babyCheck"] as? [String:String]{
+                    for (checkID, _) in tempBabyCheckDict{
+                        tempBabyCheck.append(checkID)
+                    }
+                }
+                
+                let url = URL(string: tempBaby["babyPhoto"] as! String)
+                let data = try? Data(contentsOf: url!)
+                
+                if let imageData = data{
+                    let image = UIImage(data: imageData)
+                    self.listBaby.append(BabyModel(babyName: tempBaby["babyName"] as! String, babyAddress: tempBaby["babyAddress"] as! String, dobString: tempBaby["dobString"] as! String, gender: tempBaby["gender"] as! String, momName: tempBaby["momName"] as! String, momPhone: tempBaby["momPhone"] as! String, babyPhoto: image!, babyID: babyID, babyCheck: tempBabyCheck))
+                    
+                    self.kaderMainTableView.reloadData()
+                }
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToChildProfile"{
+            let destination = segue.destination as! childProfileViewController
+            destination.currentBaby = self.listBaby[self.selectedIndex]
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listBaby.count
         
@@ -24,54 +69,20 @@ class kaderMainViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! kaderMainTableViewCell
-        cell.lblName.text = babyName
+        let cell = self.kaderMainTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! kaderMainTableViewCell
+        cell.lblName.text = listBaby[indexPath.row].babyName
         cell.childImage.layer.cornerRadius = cell.childImage.frame.width / 2
-        
+        cell.childImage.image = listBaby[indexPath.row].babyPhoto
+        cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        self.selectedIndex = indexPath.row
 //       if let cell = tableView.cellForRow(at: indexPath)
         self.performSegue(withIdentifier: "goToChildProfile", sender: self)
     }
     
-    func getData(){
-        print(GlobalKader.kader.kaderArea)
-        print(GlobalKader.kader.kaderBabies)
-        FirebaseReferences.databaseRef.child("kaders/\(GlobalKader.kader.kaderArea)/\(GlobalKader.kader.kaderID)/kaderBaby/\(GlobalKader.kader.kaderBabies)").observeSingleEvent(of: .value, with: { (snap) in
-            if (snap.hasChildren() == false){
-                // no baby
-                return
-            }
-            
-            let babyIDs = snap.value as! [String:Any]
-            
-            for (key, _) in babyIDs{
-                let tempSingleBaby = babyIDs[key] as! [String:Any]
-                
-                
-                self.listBaby.append(BabyModel(babyName: tempSingleBaby["babyName"] as! String, babyAddress: tempSingleBaby["babyAddress"] as! String, dobString: tempSingleBaby["dobString"] as! String, gender: tempSingleBaby["gender"] as! String, momName: tempSingleBaby["momName"] as! String, momPhone: tempSingleBaby["momPhone"] as! String, babyPhoto: tempSingleBaby["babyPhoto"] as! UIImage, babyID: key))
-                
-             
-                self.babyName = tempSingleBaby["babyName"] as! String
-                self.babyAge = tempSingleBaby["babyAge"] as! String
-                self.kaderMainTableView.reloadData()
-            }
-        }
-        
-    )}
-
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        getData()
-        kaderMainTableView.delegate = self
-        kaderMainTableView.dataSource = self
-        
-    }
     @IBAction func moveToAddChild(_ sender: Any) {
         performSegue(withIdentifier: "kaderMainToaddChild", sender: nil)
     }

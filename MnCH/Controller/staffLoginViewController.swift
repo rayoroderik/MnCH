@@ -18,5 +18,8 @@ class staffLoginViewController: UIViewController {
     @IBAction func signInClick(_ sender: Any) {
         self.performSegue(withIdentifier: "goToStaffMain", sender: nil)
     }
+    @IBAction func moveToKaderLogin(_ sender: Any) {
+        performSegue(withIdentifier: "staffLoginTomain", sender: nil)
+    }
     
 }

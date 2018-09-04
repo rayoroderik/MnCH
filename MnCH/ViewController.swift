@@ -60,7 +60,7 @@ class ViewController: UIViewController {
                                     }
                                     
                                     GlobalKader.loginState = true
-                                    GlobalKader.kader = KaderModel(kaderName: tempSingleKader["kaderName"] as! String, kaderPhone: tempSingleKader["kaderPhone"] as! String, kaderAddress: tempSingleKader["kaderAddress"] as! String, kaderArea: tempSingleKader["kaderArea"] as! String, kaderBabies: tempBabyArray, kaderID: key)
+                                    GlobalKader.kader = KaderModel(kaderName: tempSingleKader["kaderName"] as! String, kaderPhone: tempSingleKader["kaderPhone"] as! String, kaderAddress: tempSingleKader["kaderAddress"] as! String, kaderArea: tempSingleKader["kaderArea"] as! String, kaderBabies: tempBabyArray, kaderID: placeKey)
                                     return
                                 }
                                 else{

@@ -12,3 +12,8 @@ struct GlobalKader {
     static var loginState: Bool = false
     static var kader: KaderModel!
 }
+
+struct GlobalStaff {
+    static var loginState: Bool = false
+    static var staff: StaffModel!
+}

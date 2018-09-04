@@ -104,45 +104,44 @@ class kaderSignUpViewController: UIViewController, UIPickerViewDelegate {
             return
         }
         
-        FirebaseReferences.databaseRef.observeSingleEvent(of: .value) { (snap) in
+        FirebaseReferences.databaseRef.child("kaders").observeSingleEvent(of: .value) { (snap) in
             if (snap.hasChildren() == false){
                 // belom ada yg kedaftar
                 self.register()
             }
             else{
                 // udh ada yg daftar
-                FirebaseReferences.databaseRef.child("kaders").observeSingleEvent(of: .value, with: { (snap) in
-                    let tempPlaces = snap.value as! [String:Any]
+                let tempPlaces = snap.value as! [String:Any]
+                
+                // ambil list of kaders dari 1 place
+                for (key, _) in tempPlaces{
+                    let tempKaders = tempPlaces[key] as! [String:Any]
                     
-                    // ambil list of kaders dari 1 place
-                    for (key, _) in tempPlaces{
-                        let tempKaders = tempPlaces[key] as! [String:Any]
+                    // ambil single kader dari list of kaders
+                    for (key, _) in tempKaders{
+                        let tempSingleKader = tempKaders[key] as! [String:Any]
                         
-                        // ambil single kader dari list of kaders
-                        for (key, _) in tempKaders{
-                            let tempSingleKader = tempKaders[key] as! [String:Any]
+                        let kaderPhone: String = tempSingleKader["kaderPhone"] as! String
+                        
+                        if (kaderPhone == self.phoneTextField.text){
+                            // udah ada yg pernah pake phonenya
+                            print("udah ada")
                             
-                            let kaderPhone: String = tempSingleKader["kaderPhone"] as! String
-                            
-                            if (kaderPhone == self.phoneTextField.text){
-                                // udah ada yg pernah pake phonenya
-                                print("udah ada")
-                                
-                                let alert = UIAlertController(title: "Pendaftaran Gagal", message: "Nomor telfon sudah pernah terdaftar!", preferredStyle: .alert)
-                                let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
-                                    return
-                                }
-                                alert.addAction(okAction)
-                                self.present(alert, animated: true, completion: nil)
+                            let alert = UIAlertController(title: "Pendaftaran Gagal", message: "Nomor telfon sudah pernah terdaftar!", preferredStyle: .alert)
+                            let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
                                 return
                             }
+                            alert.addAction(okAction)
+                            self.present(alert, animated: true, completion: nil)
+                            return
                         }
                     }
+                }
+                
+                // aman
+                self.register()
                     
-                    // aman
-                    self.register()
-                    
-                })
+                
             }
         }
     }
@@ -153,17 +152,25 @@ class kaderSignUpViewController: UIViewController, UIPickerViewDelegate {
         
         var tempKader: [String:Any] = [:]
         
+        let hashedPassword = SHA1.hexString(from: self.passwordTextField.text!)!
+        
         tempKader["kaderName"] = self.nameTextField.text
         tempKader["kaderPhone"] = self.phoneTextField.text
         tempKader["kaderAddress"] = self.addressTV.text
         tempKader["kaderArea"] = self.areaTF.text
         tempKader["kaderBabies"] = ""
+        tempKader["password"] = hashedPassword
+        
         
         
         FirebaseReferences.databaseRef.child("kaders/\(self.areaTF.text!)/\(uniqueID)").setValue(tempKader)
         
         let alert = UIAlertController(title: "Pendaftaran Berhasil", message: "Anda telah mendaftar di ____!", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+            
+            GlobalKader.loginState = true
+            GlobalKader.kader = KaderModel(kaderName: self.nameTextField.text!, kaderPhone: self.phoneTextField.text!, kaderAddress: self.addressTV.text!, kaderArea: self.areaTF.text!, kaderBabies: [], kaderID: uniqueID)
+            
             return
         }
         alert.addAction(okAction)

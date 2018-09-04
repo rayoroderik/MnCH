@@ -21,7 +21,7 @@ class CheckModel{
     init(weight: Float, height: Float, notes: String) {
         self.weight = weight
         self.height = height
-        self.notes = height
+        self.notes = notes
     }
     
     func setPic(babyPic: UIImage){

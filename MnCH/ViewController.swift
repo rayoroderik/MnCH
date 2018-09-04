@@ -14,12 +14,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    @IBAction func kaderLogin(_ sender: Any) {
-        self.performSegue(withIdentifier: "goToKaderLogin", sender: nil)
+  
+    @IBAction func doSignInKader(_ sender: Any) {
+        performSegue(withIdentifier: "mainTokaderMain", sender: nil)
     }
     
-    @IBAction func staffLogin(_ sender: Any) {
-        self.performSegue(withIdentifier: "goToStaffLogin", sender: nil)
+    @IBAction func doSignUpKader(_ sender: Any) {
+        performSegue(withIdentifier: "mainTosignUp", sender: nil)
+    }
+    
+    @IBAction func moveToStaffLogin(_ sender: Any) {
+        performSegue(withIdentifier: "mainTostaffLogin", sender: nil)
     }
     
 }

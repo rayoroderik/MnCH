@@ -153,11 +153,15 @@ class kaderSignUpViewController: UIViewController, UIPickerViewDelegate {
         
         var tempKader: [String:Any] = [:]
         
+        let hashedPassword = SHA1.hexString(from: self.passwordTextField.text!)
+        
         tempKader["kaderName"] = self.nameTextField.text
         tempKader["kaderPhone"] = self.phoneTextField.text
         tempKader["kaderAddress"] = self.addressTV.text
         tempKader["kaderArea"] = self.areaTF.text
         tempKader["kaderBabies"] = ""
+        tempKader["password"] = hashedPassword
+        
         
         
         FirebaseReferences.databaseRef.child("kaders/\(self.areaTF.text!)/\(uniqueID)").setValue(tempKader)

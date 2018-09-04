@@ -163,7 +163,6 @@
 				A6BB1E3B213D52B70001228B /* Model */,
 				A6BB1E36213D45800001228B /* View */,
 				50A47F8E213D40780076EAF5 /* Controller */,
-				8503D555213E61A3005DE254 /* GlobalKader.swift */,
 			);
 			path = MnCH;
 			sourceTree = "<group>";
@@ -191,6 +190,7 @@
 				8503D54D213E24C9005DE254 /* CheckModel.swift */,
 				8503D54F213E298E005DE254 /* KaderModel.swift */,
 				8503D551213E2C72005DE254 /* StaffModel.swift */,
+				8503D555213E61A3005DE254 /* GlobalKader.swift */,
 				8503D553213E449F005DE254 /* FirebaseReferences.swift */,
 			);
 			path = Model;

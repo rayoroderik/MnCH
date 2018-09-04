@@ -101,6 +101,16 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewr-L8-z3X">
+                                                        <rect key="frame" x="20" y="124" width="50" height="36"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.92549019610000005" green="0.44705882349999998" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="ADD"/>
+                                                        <connections>
+                                                            <action selector="addHistoryClicked:" destination="V4N-eu-Mhr" eventType="touchUpInside" id="wTc-oa-t4e"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.90980392160000001" green="0.85882352939999995" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
@@ -210,10 +220,21 @@
                         <viewLayoutGuide key="safeArea" id="QRp-8C-42y"/>
                     </view>
                     <navigationItem key="navigationItem" id="F7h-oT-cKC"/>
+                    <connections>
+                        <segue destination="zhV-H3-AR8" kind="show" identifier="goToAddHistory" id="ffG-cW-jur"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v4C-Gv-SV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="884" y="35.467980295566505"/>
+        </scene>
+        <!--addHistory-->
+        <scene sceneID="8ff-mk-X09">
+            <objects>
+                <viewControllerPlaceholder storyboardName="addHistory" id="zhV-H3-AR8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Grs-Y2-wAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1543" y="37"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RoT-gU-SEe">
@@ -241,10 +262,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="359" height="522"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.90980392160000001" green="0.85882352939999995" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="g2c-yN-nn0"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6SD-2y-0Jw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="466" y="648"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yai-rQ-TDc">
@@ -254,6 +277,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="530"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="VJg-bd-vXD"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGz-pd-ztd" userLabel="First Responder" sceneMemberID="firstResponder"/>

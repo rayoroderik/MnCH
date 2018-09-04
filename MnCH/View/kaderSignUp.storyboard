@@ -43,19 +43,19 @@
                                         <rect key="frame" x="0.0" y="242.66666666666669" width="335" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="tel"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kata Sandi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VCk-XU-Mjj">
                                         <rect key="frame" x="0.0" y="292.66666666666669" width="335" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verifikasi Kata Sandi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5p2-Ab-sql">
                                         <rect key="frame" x="0.0" y="342.66666666666669" width="335" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Alamat" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OTn-jW-clc">
                                         <rect key="frame" x="0.0" y="392.66666666666669" width="335" height="100"/>
@@ -124,11 +124,20 @@
                         <outlet property="nameTextField" destination="BP7-Z5-mjV" id="wfv-I8-S9p"/>
                         <outlet property="passwordTextField" destination="VCk-XU-Mjj" id="SKo-Mi-zqj"/>
                         <outlet property="phoneTextField" destination="mlc-lY-WIb" id="nOm-Ni-N61"/>
+                        <segue destination="AJV-UJ-kwP" kind="show" identifier="kaderSignUpToKaderMain" id="jBw-1R-4va"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3X-Fn-TVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="916" y="64.285714285714292"/>
+        </scene>
+        <!--kaderMain-->
+        <scene sceneID="MaI-vz-XM8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="kaderMain" id="AJV-UJ-kwP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5eM-lW-151" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1502" y="37"/>
         </scene>
     </scenes>
     <resources>

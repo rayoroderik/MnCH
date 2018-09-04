@@ -17,44 +17,61 @@ class staffLoginViewController: UIViewController {
     }
     
     @IBAction func signInClick(_ sender: Any) {
-        FirebaseReferences.databaseRef.child("staffs").observeSingleEvent(of: .value, with: { (snap) in
-            let staffIDs = snap.value as! [String:Any]
-            let hashedPassword = SHA1.hexString(from: self.passTextField.text!)
-            
-            // ambil semua nomor hp staff
-            var allStaffPhone = [String]()
-            for (key, _) in staffIDs{
-                let tempSingleStaff = staffIDs[key] as! [String:Any]
-                let staffPhone: String = tempSingleStaff["staffPhone"] as! String
-                allStaffPhone.append(staffPhone)
-                if allStaffPhone.contains(self.phoneTextField.text!){
-                    for (key, _) in staffIDs{
-                        let tempSingleStaff = staffIDs[key] as! [String:Any]
-                        let staffPhone: String = tempSingleStaff["staffPhone"] as! String
-                        let staffPass: String = tempSingleStaff["staffPass"] as! String
-                        
-                        
-                        if (staffPhone == self.phoneTextField.text) && (staffPass == hashedPassword){
-                            self.performSegue(withIdentifier: "staffLoginTostaffMain", sender: nil)
-                        }else{
-                            let alert = UIAlertController(title: "Masuk Gagal", message: "Kata sandi salah!", preferredStyle: .alert)
-                            let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
-                                return
-                            }
-                            alert.addAction(okAction)
-                            self.present(alert, animated: true, completion: nil)
-                        }
-                    }
-                }else{
-                    let alert = UIAlertController(title: "Masuk Gagal", message: "Nomor handphone tidak ada!", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
-                        return
-                    }
-                    alert.addAction(okAction)
-                    self.present(alert, animated: true, completion: nil)
+        FirebaseReferences.databaseRef.child("staffs").observe(.value) { (snap) in
+            if (snap.hasChildren() == false){
+                
+                // phone not registered
+                let alert = UIAlertController(title: "Masuk Gagal", message: "Nomor handphone tidak ada!", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+                    return
                 }
+                alert.addAction(okAction)
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            
+            let tempStaffs = snap.value as! [String:Any]
+            
+            for (key, _) in tempStaffs{
+                let tempSingleStaff = tempStaffs[key] as! [String:Any]
+                let tempPhone = tempSingleStaff["staffPhone"] as! String
+                
+                if (tempPhone == self.phoneTextField.text!){
+                    
+                    // found
+                    let tempPass = tempSingleStaff["staffPass"] as! String
+                    let tempHashed = SHA1.hexString(from: self.passTextField.text!)!
+                    
+                    if(tempHashed == tempPass){
+                        // correct
+                        let staffName = tempSingleStaff["staffName"] as! String
+                        let staffArea = tempSingleStaff["staffArea"] as! String
+                        
+                        self.performSegue(withIdentifier: "staffLoginTostaffMain", sender: nil)
+                        GlobalStaff.loginState = true
+                        GlobalStaff.staff = StaffModel(staffName: staffName, staffPhone: self.phoneTextField.text!, staffArea: staffArea, staffID: key)
+                    }
+                    else{
+                        // wrong password
+                        let alert = UIAlertController(title: "Masuk Gagal", message: "Kata sandi salah!", preferredStyle: .alert)
+                        let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+                            return
+                        }
+                        alert.addAction(okAction)
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                    return
+                }
+            }
+            // phone not registered
+            let alert = UIAlertController(title: "Masuk Gagal", message: "Nomor handphone tidak ada!", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+                return
+            }
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+            return
         }
-        })
     }
     
     @IBAction func moveToKaderLogin(_ sender: Any) {

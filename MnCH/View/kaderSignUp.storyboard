@@ -106,6 +106,7 @@
                     </view>
                     <connections>
                         <outlet property="addressTV" destination="OTn-jW-clc" id="bDL-AZ-31G"/>
+                        <outlet property="areaTF" destination="5Tn-Eo-fYw" id="5Ah-rg-lF8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3X-Fn-TVD" userLabel="First Responder" sceneMemberID="firstResponder"/>

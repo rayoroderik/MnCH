@@ -70,7 +70,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Keterangan mengenai penampilan anak" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="F6o-1w-GaA">
                                 <rect key="frame" x="45" y="387" width="289" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -99,13 +98,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Kirim data"/>
+                                <connections>
+                                    <action selector="updateHistoryChildAction:" destination="Dvl-fD-o9w" eventType="touchUpInside" id="N76-H0-KZH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="adi-l1-6CH"/>
                     </view>
                     <connections>
+                        <outlet property="beratBadanTF" destination="g5E-o2-deY" id="Fwi-nK-3MY"/>
+                        <outlet property="descTV" destination="F6o-1w-GaA" id="MiP-OF-ail"/>
                         <outlet property="imagePicked" destination="9PT-Wa-uFY" id="5QN-PU-mLP"/>
+                        <outlet property="tinggiBadanTF" destination="1lL-de-Wir" id="AJ5-wr-f1K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6eu-wA-pQe" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -46,37 +46,36 @@ class staffSignUpViewController: UIViewController, UIPickerViewDelegate {
         }
         
         FirebaseReferences.databaseRef.child("staffs").observeSingleEvent(of: .value) { (snap) in
-            if (snap == nil || snap.hasChildren() == false){
+            if (snap.hasChildren() == false){
                 // belom ada yg kedaftar
                 self.register()
             }
             else{
                 // udh ada yg daftar
-                FirebaseReferences.databaseRef.child("staffs").observeSingleEvent(of: .value, with: { (snap) in
-                    let staffIDs = snap.value as! [String:Any]
-                    
-                    // ambil list of staffs
-                    for (key, _) in staffIDs{
-                        let tempSingleStaff = staffIDs[key] as! [String:Any]
-                        let staffPhone: String = tempSingleStaff["staffPhone"] as! String
-                        if (staffPhone == self.phoneTextField.text){
-                            // udah ada yg pernah pake phonenya
-                            print("udah ada")
-                            
-                            let alert = UIAlertController(title: "Pendaftaran Gagal", message: "Nomor telfon sudah pernah terdaftar!", preferredStyle: .alert)
-                            let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
-                                return
-                            }
-                            alert.addAction(okAction)
-                            self.present(alert, animated: true, completion: nil)
+                let staffIDs = snap.value as! [String:Any]
+                
+                // ambil list of staffs
+                for (key, _) in staffIDs{
+                    let tempSingleStaff = staffIDs[key] as! [String:Any]
+                    let staffPhone: String = tempSingleStaff["staffPhone"] as! String
+                    if (staffPhone == self.phoneTextField.text){
+                        // udah ada yg pernah pake phonenya
+                        print("udah ada")
+                        
+                        let alert = UIAlertController(title: "Pendaftaran Gagal", message: "Nomor telfon sudah pernah terdaftar!", preferredStyle: .alert)
+                        let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
                             return
                         }
+                        alert.addAction(okAction)
+                        self.present(alert, animated: true, completion: nil)
+                        return
                     }
-                    // aman
-                    self.register()
-                })
+                }
+                // aman
+                self.register()
+                
             }
-    }
+        }
     }
     
     
@@ -86,7 +85,7 @@ class staffSignUpViewController: UIViewController, UIPickerViewDelegate {
         
         var tempStaff: [String:Any] = [:]
         
-        let hashedPassword = SHA1.hexString(from: self.passTextField.text!)
+        let hashedPassword = SHA1.hexString(from: self.passTextField.text!)!
         
         tempStaff["staffName"] = self.nameTextField.text
         tempStaff["staffPhone"] = self.phoneTextField.text

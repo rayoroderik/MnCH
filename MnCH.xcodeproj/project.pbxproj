@@ -42,6 +42,7 @@
 		A6E35F1E213D317900AD6F3A /* staffLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E35F1D213D317900AD6F3A /* staffLoginViewController.swift */; };
 		A6E35F21213D31FC00AD6F3A /* kaderMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E35F20213D31FC00AD6F3A /* kaderMainViewController.swift */; };
 		A6E35F23213D323400AD6F3A /* kaderMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E35F22213D323400AD6F3A /* kaderMain.storyboard */; };
+		DCBF9E23213EAF62001ADE99 /* ChildProfileOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBF9E22213EAF62001ADE99 /* ChildProfileOneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		A6E35F22213D323400AD6F3A /* kaderMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = kaderMain.storyboard; sourceTree = "<group>"; };
 		B04E10CFA3D26B2E2B0A2D3E /* Pods_MnCH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MnCH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF71959BF328AD80BEDDFCAE /* Pods-MnCH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MnCH.release.xcconfig"; path = "Pods/Target Support Files/Pods-MnCH/Pods-MnCH.release.xcconfig"; sourceTree = "<group>"; };
+		DCBF9E22213EAF62001ADE99 /* ChildProfileOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileOneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				A6E35F20213D31FC00AD6F3A /* kaderMainViewController.swift */,
 				A6BB1E3E213D56280001228B /* kaderMainTableViewCell.swift */,
 				A61103F7213D334C0046BB44 /* childProfileViewController.swift */,
+				DCBF9E22213EAF62001ADE99 /* ChildProfileOneViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				A6BB1E3F213D56280001228B /* kaderMainTableViewCell.swift in Sources */,
 				50A47F8D213D40680076EAF5 /* detailKaderViewController.swift in Sources */,
 				A62D4398213DA16400A299FD /* addHistoryViewController.swift in Sources */,
+				DCBF9E23213EAF62001ADE99 /* ChildProfileOneViewController.swift in Sources */,
 				8503D554213E449F005DE254 /* FirebaseReferences.swift in Sources */,
 				A3B3CC9E213D0C600009E1FD /* ViewController.swift in Sources */,
 				A62D43A0213E1E9900A299FD /* kaderSignUpViewController.swift in Sources */,
@@ -501,7 +505,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 98R673PJSG;
+				DEVELOPMENT_TEAM = H66ABT9385;
 				INFOPLIST_FILE = MnCH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -520,7 +524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 98R673PJSG;
+				DEVELOPMENT_TEAM = H66ABT9385;
 				INFOPLIST_FILE = MnCH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

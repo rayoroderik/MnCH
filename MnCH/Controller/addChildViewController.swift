@@ -37,9 +37,13 @@ class addChildViewController: UIViewController, UIImagePickerControllerDelegate,
         pickImage.delegate = self
         babyAddressTF.delegate = self
         // Do any additional setup after loading the view.
+        
+        let rightButton = UIBarButtonItem(title: "Simpan", style: .plain, target: self, action: #selector(self.addBabyNew))
+        self.navigationItem.rightBarButtonItem = rightButton
+        self.navigationItem.title = "Tambah Bayi"
     }
     
-    @IBAction func addBaby(_ sender: Any) {
+    @objc func addBabyNew(){
         if self.babyNameTF.text == nil || self.babyAddressTF == nil || self.jenisKelaminTF.text == nil || self.momNameTF.text == nil || self.momPhoneTF.text == nil || self.hariLahirTF.text == nil || self.bulanLahirTF.text == nil || self.tahunLahirTF.text == nil {
             let alert = UIAlertController(title: "Gagal", message: "Mohon isi semua kotak terlebih dahulu", preferredStyle: .alert)
             let okaction = UIAlertAction(title: "OK", style: .default)
@@ -50,6 +54,19 @@ class addChildViewController: UIViewController, UIImagePickerControllerDelegate,
         else {
             testUploadImage()
         }
+    }
+    
+    @IBAction func addBaby(_ sender: Any) {
+//        if self.babyNameTF.text == nil || self.babyAddressTF == nil || self.jenisKelaminTF.text == nil || self.momNameTF.text == nil || self.momPhoneTF.text == nil || self.hariLahirTF.text == nil || self.bulanLahirTF.text == nil || self.tahunLahirTF.text == nil {
+//            let alert = UIAlertController(title: "Gagal", message: "Mohon isi semua kotak terlebih dahulu", preferredStyle: .alert)
+//            let okaction = UIAlertAction(title: "OK", style: .default)
+//            alert.addAction(okaction)
+//            self.present(alert, animated: true, completion: nil)
+//
+//        }
+//        else {
+//            testUploadImage()
+//        }
         
     }
     

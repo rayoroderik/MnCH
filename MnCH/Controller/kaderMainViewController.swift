@@ -26,9 +26,14 @@ class kaderMainViewController: UIViewController, UITableViewDelegate, UITableVie
         kaderMainTableView.delegate = self
         kaderMainTableView.dataSource = self
         
+        self.getInitialData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
+    func getInitialData(){
         self.listBaby.removeAll()
         
         for babyID in GlobalKader.kader.kaderBabies{

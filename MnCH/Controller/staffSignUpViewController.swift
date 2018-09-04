@@ -8,28 +8,77 @@
 
 import UIKit
 
-class staffSignUpViewController: UIViewController {
-
+class staffSignUpViewController: UIViewController, UIPickerViewDelegate {
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var passTextField: UITextField!
+    @IBOutlet weak var verifyPassTextField: UITextField!
+    @IBOutlet weak var areaPicker: UITextField!
+    
+    var dataArea = ["Pedongkelan", "Kali Baru", "Cilincing", "Marunda", "Rusunawa Albo", "Tanah Merah"]
+    var pickerArea = UIPickerView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        addPickerArea()
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension staffSignUpViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //banyaknya data pickerview
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        var toReturn: Int = 0
+        if pickerView == pickerArea {
+            toReturn = dataArea.count
+        }
+        
+        return toReturn
     }
-    */
-
+    
+    //ketika pickerview dipilih
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if pickerView == pickerArea {
+            self.areaPicker.text = dataArea[row]
+        }
+    }
+    
+    
+    //title data pickerview
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        var toReturn: String = ""
+        if pickerView == pickerArea {
+            toReturn = dataArea[row]
+        }
+        return toReturn
+    }
+    
+    
+    //func panggil pickerview area
+    func addPickerArea (){
+        pickerArea.delegate = self
+        pickerArea.dataSource = self
+        areaPicker.inputView = pickerArea
+        
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneClick))
+        //toolbar.setItems([doneButton], animated: true)
+        toolbar.items = [flexible, doneButton]
+        
+        areaPicker.inputView = pickerArea
+        areaPicker.inputAccessoryView = toolbar
+        
+        
+    }
+    
+    @objc func doneClick(){
+        self.view.endEditing(true)
+    }
 }

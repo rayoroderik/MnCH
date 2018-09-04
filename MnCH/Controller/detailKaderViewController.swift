@@ -14,7 +14,7 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var lblKaderName: UILabel!
     @IBOutlet weak var lblKaderPhone: UILabel!
     
-    var currentUserPhone = ""
+    var currentUser = GlobalKader.loginState
     var kaderArray = [String]()
     
 
@@ -23,7 +23,9 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
         detailKaderTableView.delegate = self
         detailKaderTableView.dataSource = self
         
-        getSnap()
+        if currentUser == true {
+            getSnap()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,7 +45,7 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func getSnap(){
-    FirebaseReferences.databaseRef.child("kaders").observeSingleEvent(of: .value) { (snap) in
+        FirebaseReferences.databaseRef.child("kaders").observeSingleEvent(of: .value) { (snap) in
         let tempPlaces = snap.value as! [String:Any]
         
         for (key, _) in tempPlaces{

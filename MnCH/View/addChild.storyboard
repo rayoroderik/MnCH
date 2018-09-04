@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OfO-Rt-ikT">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Add Child View Controller-->
         <scene sceneID="RER-6q-etz">
             <objects>
-                <viewController id="OfO-Rt-ikT" sceneMemberID="viewController">
+                <viewController id="OfO-Rt-ikT" customClass="addChildViewController" customModule="MnCH" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x7a-Yc-xlH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hari" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FGd-eP-Awz">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tanggal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FGd-eP-Awz">
                                 <rect key="frame" x="50" y="279" width="85" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="SUC-aS-Dpd"/>
@@ -78,13 +78,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Bs-hh-mkv">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Alamat" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Bs-hh-mkv">
                                 <rect key="frame" x="50" y="519" width="275" height="121"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="121" id="7hm-Dy-R0K"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -125,6 +124,15 @@
                         <viewLayoutGuide key="safeArea" id="cQK-h1-m33"/>
                     </view>
                     <connections>
+                        <outlet property="babyAddressTF" destination="2Bs-hh-mkv" id="b9B-Xp-9oT"/>
+                        <outlet property="babyNameTF" destination="EVp-ab-E5a" id="xOm-V1-O8Q"/>
+                        <outlet property="bulanLahirTF" destination="U2p-Uq-sqa" id="vnq-VC-dnL"/>
+                        <outlet property="hariLahirTF" destination="FGd-eP-Awz" id="5L0-Y5-dpF"/>
+                        <outlet property="jenisKelaminTF" destination="Huj-Wz-KRi" id="6uZ-6x-glw"/>
+                        <outlet property="momNameTF" destination="zYv-VJ-E2s" id="0OF-Kp-iAO"/>
+                        <outlet property="momPhoneTF" destination="a7Y-ip-En9" id="Oso-Tj-H0u"/>
+                        <outlet property="pickBabyImage" destination="ck3-1p-s3j" id="Rvl-jJ-WrY"/>
+                        <outlet property="tahunLahirTF" destination="wO2-3B-SVG" id="WQj-le-7fS"/>
                         <segue destination="pIz-DG-Sh0" kind="show" identifier="addChildtokaderMain" id="YSt-mE-LDk"/>
                     </connections>
                 </viewController>

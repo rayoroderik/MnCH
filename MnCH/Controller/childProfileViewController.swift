@@ -9,14 +9,28 @@
 import UIKit
 
 class childProfileViewController: UIViewController {
-
+    @IBOutlet weak var viewData: UIView!
+    @IBOutlet weak var viewRedFlag: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewData.alpha = 1
+        viewRedFlag.alpha = 0
         // Do any additional setup after loading the view.
     }
     @IBAction func addHistoryClicked(_ sender: Any) {
         self.performSegue(withIdentifier: "goToAddHistory", sender: nil)
     }
     
+    
+    @IBAction func switchViewRescue(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0{
+            viewData.alpha = 1
+            viewRedFlag.alpha = 0
+        }else if sender.selectedSegmentIndex == 1{
+            viewData.alpha = 0
+            viewRedFlag.alpha = 1
+        }
+
+    }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V4N-eu-Mhr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PLK-jo-9hS">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -164,6 +164,9 @@
                                                     <segment title="Data"/>
                                                     <segment title="Red Flag"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="switchViewRescue:" destination="V4N-eu-Mhr" eventType="valueChanged" id="QQB-5r-Xql"/>
+                                                </connections>
                                             </segmentedControl>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39O-R4-19y">
                                                 <rect key="frame" x="8" y="290" width="359" height="522"/>
@@ -172,7 +175,7 @@
                                                 </connections>
                                             </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMT-Of-sYq">
-                                                <rect key="frame" x="0.0" y="282" width="375" height="530"/>
+                                                <rect key="frame" x="8" y="290" width="359" height="522"/>
                                                 <connections>
                                                     <segue destination="0My-gQ-Ltc" kind="embed" id="WZU-jM-ToZ"/>
                                                 </connections>
@@ -190,11 +193,11 @@
                                             <constraint firstItem="Rhh-Vj-Da3" firstAttribute="top" secondItem="w37-xS-Ueg" secondAttribute="top" constant="8" id="Lp5-xf-HhZ"/>
                                             <constraint firstItem="B3m-JP-fXR" firstAttribute="top" secondItem="gxZ-g8-uWD" secondAttribute="bottom" constant="8" id="V4j-dV-IHm"/>
                                             <constraint firstAttribute="trailing" secondItem="39O-R4-19y" secondAttribute="trailing" constant="8" id="Xzf-Ya-SwX"/>
-                                            <constraint firstItem="jMT-Of-sYq" firstAttribute="leading" secondItem="w37-xS-Ueg" secondAttribute="leading" id="fiU-gO-Qz4"/>
+                                            <constraint firstItem="jMT-Of-sYq" firstAttribute="leading" secondItem="w37-xS-Ueg" secondAttribute="leading" constant="8" id="fiU-gO-Qz4"/>
                                             <constraint firstAttribute="trailing" secondItem="gxZ-g8-uWD" secondAttribute="trailing" constant="8" id="g0o-7p-k5p"/>
                                             <constraint firstItem="B3m-JP-fXR" firstAttribute="leading" secondItem="w37-xS-Ueg" secondAttribute="leading" constant="8" id="ikE-HT-9sn"/>
-                                            <constraint firstItem="jMT-Of-sYq" firstAttribute="top" secondItem="B3m-JP-fXR" secondAttribute="bottom" id="jae-vs-thp"/>
-                                            <constraint firstAttribute="trailing" secondItem="jMT-Of-sYq" secondAttribute="trailing" id="mWS-5t-HsL"/>
+                                            <constraint firstItem="jMT-Of-sYq" firstAttribute="top" secondItem="B3m-JP-fXR" secondAttribute="bottom" constant="8" id="jae-vs-thp"/>
+                                            <constraint firstAttribute="trailing" secondItem="jMT-Of-sYq" secondAttribute="trailing" constant="8" id="mWS-5t-HsL"/>
                                             <constraint firstItem="39O-R4-19y" firstAttribute="leading" secondItem="w37-xS-Ueg" secondAttribute="leading" constant="8" id="oSI-Uo-tn7"/>
                                             <constraint firstItem="39O-R4-19y" firstAttribute="top" secondItem="B3m-JP-fXR" secondAttribute="bottom" constant="8" id="tmV-Xi-ybY"/>
                                         </constraints>
@@ -221,6 +224,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="F7h-oT-cKC"/>
                     <connections>
+                        <outlet property="viewData" destination="39O-R4-19y" id="OLa-2a-j5q"/>
+                        <outlet property="viewRedFlag" destination="jMT-Of-sYq" id="9AS-Ks-jc6"/>
                         <segue destination="zhV-H3-AR8" kind="show" identifier="goToAddHistory" id="ffG-cW-jur"/>
                     </connections>
                 </viewController>
@@ -239,6 +244,7 @@
         <!--Navigation Controller-->
         <scene sceneID="RoT-gU-SEe">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Mm-Ve-TIH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PLK-jo-9hS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="58i-6z-HKj">
@@ -250,7 +256,6 @@
                         <segue destination="V4N-eu-Mhr" kind="relationship" relationship="rootViewController" id="icP-dq-3ch"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Mm-Ve-TIH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-58.399999999999999" y="35.467980295566505"/>
         </scene>
@@ -274,7 +279,7 @@
             <objects>
                 <viewController id="0My-gQ-Ltc" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G0q-HM-bkc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="530"/>
+                        <rect key="frame" x="0.0" y="0.0" width="359" height="522"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="VJg-bd-vXD"/>

@@ -19,6 +19,7 @@ class kaderMainViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! kaderMainTableViewCell
         cell.lblName.text = "Nama Anak \(indexPath.row)"
+        cell.childImage.layer.cornerRadius = cell.childImage.frame.width / 2
         
         return cell
     }
@@ -26,7 +27,7 @@ class kaderMainViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
 //       if let cell = tableView.cellForRow(at: indexPath)
-        self.performSegue(withIdentifier: "goToChildProfile", sender: nil)
+        self.performSegue(withIdentifier: "goToChildProfile", sender: self)
     }
     
 

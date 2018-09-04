@@ -16,7 +16,7 @@ class staffLoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func signInClick(_ sender: Any) {
-        self.performSegue(withIdentifier: "goToStaffMain", sender: nil)
+        self.performSegue(withIdentifier: "staffLoginTostaffMain", sender: nil)
     }
     @IBAction func moveToKaderLogin(_ sender: Any) {
         performSegue(withIdentifier: "staffLoginTomain", sender: nil)

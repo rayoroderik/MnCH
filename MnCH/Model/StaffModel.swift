@@ -13,4 +13,14 @@ class StaffModel {
     var staffPhone: String
     var staffArea: String
     var staffAddress: String
+    var staffID: String
+    
+    init(staffName: String, staffPhone: String, staffArea: String, staffAddress: String, staffID: String) {
+        self.staffName = staffName
+        self.staffPhone = staffPhone
+        self.staffArea = staffArea
+        self.staffAddress = staffAddress
+        
+        self.staffID = staffID
+    }
 }

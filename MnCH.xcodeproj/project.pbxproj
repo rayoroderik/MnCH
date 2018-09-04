@@ -35,8 +35,6 @@
 		A6BB1E3F213D56280001228B /* kaderMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB1E3E213D56280001228B /* kaderMainTableViewCell.swift */; };
 		A6BB1E41213D63310001228B /* detailKaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB1E40213D63310001228B /* detailKaderTableViewCell.swift */; };
 		A6BB1E43213D81220001228B /* staffMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB1E42213D81220001228B /* staffMainTableViewCell.swift */; };
-		A6E35F16213D307000AD6F3A /* kaderLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E35F15213D307000AD6F3A /* kaderLogin.storyboard */; };
-		A6E35F18213D308D00AD6F3A /* kaderLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E35F17213D308D00AD6F3A /* kaderLoginViewController.swift */; };
 		A6E35F1C213D315300AD6F3A /* staffLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E35F1B213D315300AD6F3A /* staffLogin.storyboard */; };
 		A6E35F1E213D317900AD6F3A /* staffLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E35F1D213D317900AD6F3A /* staffLoginViewController.swift */; };
 		A6E35F21213D31FC00AD6F3A /* kaderMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E35F20213D31FC00AD6F3A /* kaderMainViewController.swift */; };
@@ -74,8 +72,6 @@
 		A6BB1E3E213D56280001228B /* kaderMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kaderMainTableViewCell.swift; sourceTree = "<group>"; };
 		A6BB1E40213D63310001228B /* detailKaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailKaderTableViewCell.swift; sourceTree = "<group>"; };
 		A6BB1E42213D81220001228B /* staffMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staffMainTableViewCell.swift; sourceTree = "<group>"; };
-		A6E35F15213D307000AD6F3A /* kaderLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = kaderLogin.storyboard; sourceTree = "<group>"; };
-		A6E35F17213D308D00AD6F3A /* kaderLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kaderLoginViewController.swift; sourceTree = "<group>"; };
 		A6E35F1B213D315300AD6F3A /* staffLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = staffLogin.storyboard; sourceTree = "<group>"; };
 		A6E35F1D213D317900AD6F3A /* staffLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staffLoginViewController.swift; sourceTree = "<group>"; };
 		A6E35F20213D31FC00AD6F3A /* kaderMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kaderMainViewController.swift; sourceTree = "<group>"; };
@@ -116,7 +112,6 @@
 				A6E35F1D213D317900AD6F3A /* staffLoginViewController.swift */,
 				A61103FC213D33C20046BB44 /* staffMainViewController.swift */,
 				A6BB1E42213D81220001228B /* staffMainTableViewCell.swift */,
-				A6E35F17213D308D00AD6F3A /* kaderLoginViewController.swift */,
 				A6E35F20213D31FC00AD6F3A /* kaderMainViewController.swift */,
 				A6BB1E3E213D56280001228B /* kaderMainTableViewCell.swift */,
 				A61103F7213D334C0046BB44 /* childProfileViewController.swift */,
@@ -178,7 +173,6 @@
 				50A47F8A213D40330076EAF5 /* detailKader.storyboard */,
 				A6E35F1B213D315300AD6F3A /* staffLogin.storyboard */,
 				A61103FE213D33D70046BB44 /* staffMain.storyboard */,
-				A6E35F15213D307000AD6F3A /* kaderLogin.storyboard */,
 				A6E35F22213D323400AD6F3A /* kaderMain.storyboard */,
 				A61103F9213D335B0046BB44 /* childProfile.storyboard */,
 			);
@@ -259,7 +253,6 @@
 				A62D4396213DA15600A299FD /* addHistory.storyboard in Resources */,
 				A62D439E213E1E6600A299FD /* staffSignUp.storyboard in Resources */,
 				A62D439C213E1E0700A299FD /* kaderSignUp.storyboard in Resources */,
-				A6E35F16213D307000AD6F3A /* kaderLogin.storyboard in Resources */,
 				A3B3CCA6213D0C610009E1FD /* LaunchScreen.storyboard in Resources */,
 				A6E35F1C213D315300AD6F3A /* staffLogin.storyboard in Resources */,
 				A3B3CCA3213D0C610009E1FD /* Assets.xcassets in Resources */,
@@ -328,7 +321,6 @@
 				8503D552213E2C72005DE254 /* StaffModel.swift in Sources */,
 				A61103FD213D33C20046BB44 /* staffMainViewController.swift in Sources */,
 				8503D54C213E2124005DE254 /* BabyModel.swift in Sources */,
-				A6E35F18213D308D00AD6F3A /* kaderLoginViewController.swift in Sources */,
 				A6BB1E38213D45AF0001228B /* addChildViewController.swift in Sources */,
 				A6E35F1E213D317900AD6F3A /* staffLoginViewController.swift in Sources */,
 				A6BB1E3F213D56280001228B /* kaderMainTableViewCell.swift in Sources */,

@@ -53,7 +53,7 @@
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Alamat" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OTn-jW-clc">
                                         <rect key="frame" x="0.0" y="190.33333333333331" width="335" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="1vE-ys-6aX"/>
                                         </constraints>

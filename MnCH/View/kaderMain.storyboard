@@ -12,7 +12,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Kader Main View Controller-->
+        <!--Data Bayi-->
         <scene sceneID="Sae-Pn-2Pp">
             <objects>
                 <viewController id="zHd-6q-KLB" customClass="kaderMainViewController" customModule="MnCH" customModuleProvider="target" sceneMemberID="viewController">
@@ -81,17 +81,8 @@
                         <viewLayoutGuide key="safeArea" id="vZo-Rs-fXs"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Gtc-BA-48u">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="dJJ-3t-7Uh">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fJj-pg-lbd">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="moveToAddChild:" destination="zHd-6q-KLB" eventType="touchUpInside" id="RyO-lo-MDB"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Data Bayi" id="Gtc-BA-48u">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="dJJ-3t-7Uh"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

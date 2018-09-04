@@ -25,7 +25,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rhh-Vj-Da3">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mq6-Aq-J2M">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="topbayi" translatesAutoresizingMaskIntoConstraints="NO" id="Mq6-Aq-J2M">
                                                 <rect key="frame" x="134" y="8" width="90" height="90"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -193,13 +193,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Az8-Sd-e1k">
-                                                    <rect key="frame" x="10" y="64.666666666666671" width="339" height="16.333333333333329"/>
+                                                    <rect key="frame" x="10" y="64.666666666666671" width="355" height="16.333333333333329"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/08/18" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vD-CI-eUK">
-                                                    <rect key="frame" x="249" y="9.9999999999999982" width="100" height="16.333333333333329"/>
+                                                    <rect key="frame" x="265" y="9.9999999999999982" width="100" height="16.333333333333329"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="3fT-aQ-PgG"/>
                                                     </constraints>
@@ -290,4 +290,7 @@
             <point key="canvasLocation" x="1729" y="687"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="topbayi" width="750" height="526"/>
+    </resources>
 </document>

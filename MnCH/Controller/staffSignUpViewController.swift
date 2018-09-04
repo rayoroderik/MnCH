@@ -23,7 +23,7 @@ class staffSignUpViewController: UIViewController, UIPickerViewDelegate {
         addPickerArea()
 //        let leftButton = UIBarButtonItem(title: "Simpan", style: .plain, target: self, action: #selector(self.addBabyNew))
 //        self.navigationItem.leftBarButtonItem = leftButton
-        self.navigationItem.leftBarButtonItem = self.navigationItem.backBarButtonItem
+        self.navigationItem.leftBarButtonItem = navigationItem.backBarButtonItem
         self.navigationItem.title = "Buat Akun"
     }
     @IBAction func signUpClicked(_ sender: Any) {

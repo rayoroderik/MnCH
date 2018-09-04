@@ -29,6 +29,8 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
         imgKader.layer.cornerRadius = 50
         imgKader.clipsToBounds = true
         
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        self.navigationItem.title = "Profil Kader"
         self.getData()
     }
     
@@ -85,6 +87,8 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView , didSelectRowAt: IndexPath){
         self.performSegue(withIdentifier: "goToChildProfile", sender: nil)
     }
+    
+    
     
     
 }

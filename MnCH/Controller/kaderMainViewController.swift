@@ -11,19 +11,21 @@ import Firebase
 
 class kaderMainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var kaderMainTableView: UITableView!
-    var totalBaby = 0
-    var babi = ""
+    var listBaby = [BabyModel]()
+    var kaderName = ""
+    var kaderPhone = ""
+    var babyName = ""
+    var babyAge = ""
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("sekarang \(totalBaby)")
-        return totalBaby
+        return listBaby.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! kaderMainTableViewCell
-        cell.lblName.text = "Nama Anak \(babi)"
+        cell.lblName.text = babyName
         cell.childImage.layer.cornerRadius = cell.childImage.frame.width / 2
         
         return cell
@@ -36,53 +38,38 @@ class kaderMainViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func getData(){
-        FirebaseReferences.databaseRef.child("kaders/pedongkelan/testKaderID/kaderBaby").observeSingleEvent(of: .value, with: { (snap) in
-            let babyID = snap.value as! [String:Any]
-            for (key, _) in babyID{
-                let tempSingleBabies = babyID[key] as! String
-                self.babi.append(tempSingleBabies)
+        print(GlobalKader.kader.kaderArea)
+        print(GlobalKader.kader.kaderBabies)
+        FirebaseReferences.databaseRef.child("kaders/\(GlobalKader.kader.kaderArea)/\(GlobalKader.kader.kaderID)/kaderBaby/\(GlobalKader.kader.kaderBabies)").observeSingleEvent(of: .value, with: { (snap) in
+            if (snap.hasChildren() == false){
+                // no baby
+                return
             }
-            // ambil list of staffs
-//            for (key, _) in allBabies{
-//                let tempSingleStaff = staffIDs[key] as! [String:Any]
-//                let staffPhone: String = tempSingleStaff["staffPhone"] as! String
-                //                if (staffPhone == self.phoneTextField.text){
-                //                    // udah ada yg pernah pake phonenya
-                //                    print("udah ada")
-                //
-                //                    let alert = UIAlertController(title: "Pendaftaran Gagal", message: "Nomor telfon sudah pernah terdaftar!", preferredStyle: .alert)
-                //                    let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
-                //                        return
-                //                    }
-                //                    alert.addAction(okAction)
-                //                    self.present(alert, animated: true, completion: nil)
-                //                    return
-                //                }
-            })
-            // aman
-            //
-        
-    }
-
-    func getTotalBaby()
-    {
-        FirebaseReferences.databaseRef.child("kaders/pedongkelan/testKaderID/kaderBaby").observeSingleEvent(of: .value) { (snapshot) in
-            if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
-                self.totalBaby = snapshots.count
-                print(self.totalBaby)
-                DispatchQueue.main.async(execute: {
-                    self.kaderMainTableView.delegate = self
-                    self.kaderMainTableView.dataSource = self
-                    self.kaderMainTableView.reloadData()
-                })
+            
+            let babyIDs = snap.value as! [String:Any]
+            
+            for (key, _) in babyIDs{
+                let tempSingleBaby = babyIDs[key] as! [String:Any]
+                
+                
+                self.listBaby.append(BabyModel(babyName: tempSingleBaby["babyName"] as! String, babyAddress: tempSingleBaby["babyAddress"] as! String, dobString: tempSingleBaby["dobString"] as! String, gender: tempSingleBaby["gender"] as! String, momName: tempSingleBaby["momName"] as! String, momPhone: tempSingleBaby["momPhone"] as! String, babyPhoto: tempSingleBaby["babyPhoto"] as! UIImage, babyID: key))
+                
+             
+                self.babyName = tempSingleBaby["babyName"] as! String
+                self.babyAge = tempSingleBaby["babyAge"] as! String
+                self.kaderMainTableView.reloadData()
             }
         }
-    }
+        
+    )}
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getTotalBaby()
         getData()
+        kaderMainTableView.delegate = self
+        kaderMainTableView.dataSource = self
         
     }
     @IBAction func moveToAddChild(_ sender: Any) {

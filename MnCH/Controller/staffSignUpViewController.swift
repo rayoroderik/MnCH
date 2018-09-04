@@ -46,37 +46,36 @@ class staffSignUpViewController: UIViewController, UIPickerViewDelegate {
         }
         
         FirebaseReferences.databaseRef.child("staffs").observeSingleEvent(of: .value) { (snap) in
-            if (snap == nil || snap.hasChildren() == false){
+            if (snap.hasChildren() == false){
                 // belom ada yg kedaftar
                 self.register()
             }
             else{
                 // udh ada yg daftar
-                FirebaseReferences.databaseRef.child("staffs").observeSingleEvent(of: .value, with: { (snap) in
-                    let staffIDs = snap.value as! [String:Any]
-                    
-                    // ambil list of staffs
-                    for (key, _) in staffIDs{
-                        let tempSingleStaff = staffIDs[key] as! [String:Any]
-                        let staffPhone: String = tempSingleStaff["staffPhone"] as! String
-                        if (staffPhone == self.phoneTextField.text){
-                            // udah ada yg pernah pake phonenya
-                            print("udah ada")
-                            
-                            let alert = UIAlertController(title: "Pendaftaran Gagal", message: "Nomor telfon sudah pernah terdaftar!", preferredStyle: .alert)
-                            let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
-                                return
-                            }
-                            alert.addAction(okAction)
-                            self.present(alert, animated: true, completion: nil)
+                let staffIDs = snap.value as! [String:Any]
+                
+                // ambil list of staffs
+                for (key, _) in staffIDs{
+                    let tempSingleStaff = staffIDs[key] as! [String:Any]
+                    let staffPhone: String = tempSingleStaff["staffPhone"] as! String
+                    if (staffPhone == self.phoneTextField.text){
+                        // udah ada yg pernah pake phonenya
+                        print("udah ada")
+                        
+                        let alert = UIAlertController(title: "Pendaftaran Gagal", message: "Nomor telfon sudah pernah terdaftar!", preferredStyle: .alert)
+                        let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
                             return
                         }
+                        alert.addAction(okAction)
+                        self.present(alert, animated: true, completion: nil)
+                        return
                     }
-                    // aman
-                    self.register()
-                })
+                }
+                // aman
+                self.register()
+                
             }
-    }
+        }
     }
     
     
@@ -86,19 +85,24 @@ class staffSignUpViewController: UIViewController, UIPickerViewDelegate {
         
         var tempStaff: [String:Any] = [:]
         
+        let hashedPassword = SHA1.hexString(from: self.passTextField.text!)!
+        
         tempStaff["staffName"] = self.nameTextField.text
         tempStaff["staffPhone"] = self.phoneTextField.text
         tempStaff["staffArea"] = self.areaPicker.text
+        tempStaff["staffPass"] = hashedPassword
         
         FirebaseReferences.databaseRef.child("staffs/\(uniqueID)").setValue(tempStaff)
         
         let alert = UIAlertController(title: "Pendaftaran Berhasil", message: "Anda telah mendaftar di ____!", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
-            return
-        }
+        let okAction = UIAlertAction(title: "OK", style: .default , handler: {(action) in
+            self.performSegue(withIdentifier: "staffSignUpToStaffMain", sender: self)
+            GlobalStaff.loginState = true
+            GlobalStaff.staff = StaffModel(staffName: self.nameTextField.text!, staffPhone: self.phoneTextField.text!, staffArea: self.areaPicker.text!, staffID: uniqueID)
+        })
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
-        print("registered")
+
     }
 }
 

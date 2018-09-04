@@ -16,6 +16,7 @@
 		8503D552213E2C72005DE254 /* StaffModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D551213E2C72005DE254 /* StaffModel.swift */; };
 		8503D554213E449F005DE254 /* FirebaseReferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D553213E449F005DE254 /* FirebaseReferences.swift */; };
 		8503D556213E61A3005DE254 /* GlobalKader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D555213E61A3005DE254 /* GlobalKader.swift */; };
+		8503D559213E8950005DE254 /* SHA1Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D558213E8950005DE254 /* SHA1Extension.swift */; };
 		85B770F5213D713000D67BE1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85B770F4213D713000D67BE1 /* GoogleService-Info.plist */; };
 		A3B3CC9C213D0C600009E1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3CC9B213D0C600009E1FD /* AppDelegate.swift */; };
 		A3B3CC9E213D0C600009E1FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3CC9D213D0C600009E1FD /* ViewController.swift */; };
@@ -53,6 +54,7 @@
 		8503D551213E2C72005DE254 /* StaffModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffModel.swift; sourceTree = "<group>"; };
 		8503D553213E449F005DE254 /* FirebaseReferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReferences.swift; sourceTree = "<group>"; };
 		8503D555213E61A3005DE254 /* GlobalKader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalKader.swift; sourceTree = "<group>"; };
+		8503D558213E8950005DE254 /* SHA1Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1Extension.swift; sourceTree = "<group>"; };
 		85B770F4213D713000D67BE1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3B3CC98213D0C600009E1FD /* MnCH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MnCH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B3CC9B213D0C600009E1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8503D557213E88E5005DE254 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8503D558213E8950005DE254 /* SHA1Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		A3B3CC8F213D0C600009E1FD = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +173,7 @@
 				A6BB1E3B213D52B70001228B /* Model */,
 				A6BB1E36213D45800001228B /* View */,
 				50A47F8E213D40780076EAF5 /* Controller */,
+				8503D557213E88E5005DE254 /* Extension */,
 			);
 			path = MnCH;
 			sourceTree = "<group>";
@@ -339,6 +350,7 @@
 				A61103F8213D334C0046BB44 /* childProfileViewController.swift in Sources */,
 				A6E35F21213D31FC00AD6F3A /* kaderMainViewController.swift in Sources */,
 				A62D43A2213E1EA700A299FD /* staffSignUpViewController.swift in Sources */,
+				8503D559213E8950005DE254 /* SHA1Extension.swift in Sources */,
 				A6BB1E41213D63310001228B /* detailKaderTableViewCell.swift in Sources */,
 				8503D556213E61A3005DE254 /* GlobalKader.swift in Sources */,
 				8503D54E213E24C9005DE254 /* CheckModel.swift in Sources */,
@@ -489,7 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 98R673PJSG;
+				DEVELOPMENT_TEAM = H66ABT9385;
 				INFOPLIST_FILE = MnCH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -508,7 +520,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 98R673PJSG;
+				DEVELOPMENT_TEAM = H66ABT9385;
 				INFOPLIST_FILE = MnCH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

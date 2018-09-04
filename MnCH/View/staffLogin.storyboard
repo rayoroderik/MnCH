@@ -100,6 +100,8 @@
                         <viewLayoutGuide key="safeArea" id="llC-uh-ddd"/>
                     </view>
                     <connections>
+                        <outlet property="passTextField" destination="ii5-7b-Y4Y" id="Ley-X0-0tG"/>
+                        <outlet property="phoneTextField" destination="ckw-lY-uJ0" id="FCw-SY-Tx9"/>
                         <segue destination="qsi-TT-z9r" kind="show" identifier="staffLoginTostaffMain" id="GWr-Ew-aAj"/>
                         <segue destination="Pav-Bo-kDo" kind="show" identifier="staffLoginTomain" id="80H-II-8vv"/>
                         <segue destination="kgT-0L-QKY" kind="show" identifier="staffLoginToStaffSignUp" id="c41-Zs-nbc"/>

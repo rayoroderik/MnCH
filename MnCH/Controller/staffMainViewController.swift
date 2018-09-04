@@ -12,6 +12,40 @@ class staffMainViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var kaderTableView: UITableView!
     
+    var listKader = [String]()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        kaderTableView.delegate = self
+        kaderTableView.dataSource = self
+    }
+    
+    func getData(){
+        FirebaseReferences.databaseRef.child("kaders/ped").observeSingleEvent(of: .value, with: { (snap) in
+            let staffIDs = snap.value as! [String:Any]
+            
+            // ambil list of staffs
+            for (key, _) in staffIDs{
+                let tempSingleStaff = staffIDs[key] as! [String:Any]
+                let staffPhone: String = tempSingleStaff["staffPhone"] as! String
+//                if (staffPhone == self.phoneTextField.text){
+//                    // udah ada yg pernah pake phonenya
+//                    print("udah ada")
+//
+//                    let alert = UIAlertController(title: "Pendaftaran Gagal", message: "Nomor telfon sudah pernah terdaftar!", preferredStyle: .alert)
+//                    let okAction = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+//                        return
+//                    }
+//                    alert.addAction(okAction)
+//                    self.present(alert, animated: true, completion: nil)
+//                    return
+//                }
+            }
+            // aman
+            //
+        })
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
@@ -21,13 +55,6 @@ class staffMainViewController: UIViewController, UITableViewDelegate, UITableVie
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! staffMainTableViewCell
         
         return cell
-    }
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        kaderTableView.delegate = self
-        kaderTableView.dataSource = self
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

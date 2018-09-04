@@ -22,25 +22,35 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
         detailKaderTableView.delegate = self
         detailKaderTableView.dataSource = self
         
-        lblKaderName.text = kader?.kaderName
-        lblKaderPhone.text = kader?.kaderPhone
+        lblKaderName.text = kader.kaderName
+        lblKaderPhone.text = kader.kaderPhone
+        
+        self.getData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return kader!.kaderBabies.count
+        return self.listBabies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! detailKaderTableViewCell
-//        cell.lblBabyName.
+        let cell = self.detailKaderTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! detailKaderTableViewCell
+        cell.lblBabyName.text = self.listBabies[indexPath.row].babyName
+        cell.imgBaby.image = self.listBabies[indexPath.row].babyPhoto
         
+        cell.selectionStyle = .none
         return cell
     }
     
     func getData(){
-
+        self.listBabies.removeAll()
+        
         for babyID in self.kader.kaderBabies{
+            print("baby: \(babyID)")
             FirebaseReferences.databaseRef.child("babies/\(babyID)").observeSingleEvent(of: .value) { (snap) in
                 let tempSingleBaby = snap.value as! [String:Any]
                 
@@ -57,7 +67,9 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
                 if let imageData = data{
                     let image = UIImage(data: imageData)
                     
-                    self.listBabies.append(BabyModel(babyName: tempSingleBaby["babyName"] as! String, babyAddress: tempSingleBaby["babyAddress"] as! String, dobString: tempSingleBaby["dobString"] as! String, gender: tempSingleBaby["gender"] as! String, momName: tempSingleBaby["momName"] as! String, momPhone: tempSingleBaby["momPhone"] as! String, babyID: babyID))
+                    self.listBabies.append(BabyModel(babyName: tempSingleBaby["babyName"] as! String, babyAddress: tempSingleBaby["babyAddress"] as! String, dobString: tempSingleBaby["dobString"] as! String, gender: tempSingleBaby["gender"] as! String, momName: tempSingleBaby["momName"] as! String, momPhone: tempSingleBaby["momPhone"] as! String, babyPhoto: image!, babyID: babyID, babyCheck: tempBabyCheck))
+                    
+                    self.detailKaderTableView.reloadData()
                 }
                 
             }

@@ -14,6 +14,7 @@ class staffMainViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var staffArea: UILabel!
     
     var listKader = [KaderModel]()
+    var selectedIndex: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,13 +66,14 @@ class staffMainViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedIndex = indexPath.row
         self.performSegue(withIdentifier: "goToDetailKader", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let dest = segue.destination as? detailKaderViewController{
-            let ip = sender as! IndexPath
-            dest.kader = self.listKader[ip.row]
+        if segue.identifier == "goToDetailKader"{
+            let destination = segue.destination as! detailKaderViewController
+            destination.kader = self.listKader[self.selectedIndex]
         }
     }
 }

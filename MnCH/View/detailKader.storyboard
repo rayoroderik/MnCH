@@ -26,15 +26,21 @@
                                         <rect key="frame" x="20" y="20" width="334" height="158"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="faM-yX-FmU">
-                                                <rect key="frame" x="8" y="8" width="100" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdM-PA-p7h">
-                                                <rect key="frame" x="129" y="15" width="197" height="30"/>
+                                                <rect key="frame" x="123" y="8" width="197" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dw3-5f-ecP">
+                                                <rect key="frame" x="8" y="8" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYE-QI-6Fh">
+                                                <rect key="frame" x="123" y="46" width="197" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -84,6 +90,9 @@
                     </view>
                     <connections>
                         <outlet property="detailKaderTableView" destination="kvz-p0-NoS" id="YVy-s7-YnB"/>
+                        <outlet property="imgKader" destination="dw3-5f-ecP" id="dDq-bm-IIY"/>
+                        <outlet property="lblKaderName" destination="qdM-PA-p7h" id="KNm-xi-gMa"/>
+                        <outlet property="lblKaderPhone" destination="jYE-QI-6Fh" id="hYP-dc-5Kx"/>
                         <segue destination="1Sw-2R-zPo" kind="show" identifier="goToChildProfile" id="Zve-wr-nOL"/>
                     </connections>
                 </viewController>

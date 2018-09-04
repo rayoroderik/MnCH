@@ -14,8 +14,6 @@ class staffMainViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var staffArea: UILabel!
     
     var listKader = [KaderModel]()
-    var kaderName = ""
-    var kaderPhone = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +44,8 @@ class staffMainViewController: UIViewController, UITableViewDelegate, UITableVie
                 }
                 
                 self.listKader.append(KaderModel(kaderName: tempSingleKader["kaderName"] as! String, kaderPhone: tempSingleKader["kaderPhone"] as! String, kaderAddress: tempSingleKader["kaderAddress"] as! String, kaderArea: tempSingleKader["kaderArea"] as! String, kaderBabies: tempBabyArray, kaderID: key))
-                self.kaderName = tempSingleKader["kaderName"] as! String
-                self.kaderPhone = tempSingleKader["kaderPhone"] as! String
+                print(tempBabyArray)
+                
                 self.kaderTableView.reloadData()
             }
         }
@@ -60,8 +58,8 @@ class staffMainViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! staffMainTableViewCell
-        cell.lblKader.text = kaderName
-        cell.lblKaderHP.text = kaderPhone
+        cell.lblKader.text = listKader[indexPath.row].kaderName
+        cell.lblKaderHP.text = listKader[indexPath.row].kaderPhone
         
         return cell
     }

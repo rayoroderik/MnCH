@@ -99,7 +99,7 @@ class staffSignUpViewController: UIViewController, UIPickerViewDelegate {
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
         GlobalStaff.loginState = true
-        GlobalStaff.staff = StaffModel(staffName: self.nameTextField.text!, staffPhone: self.phoneTextField.text!, staffArea: self.areaPicker.text, staffID: uniqueID)
+        GlobalStaff.staff = StaffModel(staffName: self.nameTextField.text!, staffPhone: self.phoneTextField.text!, staffArea: self.areaPicker.text!, staffID: uniqueID)
         
         self.performSegue(withIdentifier: "staffSignUptoStaffMain", sender: nil)
     }

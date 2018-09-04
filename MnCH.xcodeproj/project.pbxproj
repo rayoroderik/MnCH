@@ -33,6 +33,8 @@
 		A62D439E213E1E6600A299FD /* staffSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62D439D213E1E6600A299FD /* staffSignUp.storyboard */; };
 		A62D43A0213E1E9900A299FD /* kaderSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62D439F213E1E9900A299FD /* kaderSignUpViewController.swift */; };
 		A62D43A2213E1EA700A299FD /* staffSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62D43A1213E1EA700A299FD /* staffSignUpViewController.swift */; };
+		A62D43A4213F0B0E00A299FD /* settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62D43A3213F0B0E00A299FD /* settings.storyboard */; };
+		A62D43A6213F0B1E00A299FD /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62D43A5213F0B1E00A299FD /* settingsViewController.swift */; };
 		A6BB1E38213D45AF0001228B /* addChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB1E37213D45AF0001228B /* addChildViewController.swift */; };
 		A6BB1E3A213D45B50001228B /* addChild.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6BB1E39213D45B50001228B /* addChild.storyboard */; };
 		A6BB1E3F213D56280001228B /* kaderMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB1E3E213D56280001228B /* kaderMainTableViewCell.swift */; };
@@ -74,6 +76,8 @@
 		A62D439D213E1E6600A299FD /* staffSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = staffSignUp.storyboard; sourceTree = "<group>"; };
 		A62D439F213E1E9900A299FD /* kaderSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kaderSignUpViewController.swift; sourceTree = "<group>"; };
 		A62D43A1213E1EA700A299FD /* staffSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staffSignUpViewController.swift; sourceTree = "<group>"; };
+		A62D43A3213F0B0E00A299FD /* settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = settings.storyboard; sourceTree = "<group>"; };
+		A62D43A5213F0B1E00A299FD /* settingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
 		A6BB1E37213D45AF0001228B /* addChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addChildViewController.swift; sourceTree = "<group>"; };
 		A6BB1E39213D45B50001228B /* addChild.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = addChild.storyboard; sourceTree = "<group>"; };
 		A6BB1E3E213D56280001228B /* kaderMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kaderMainTableViewCell.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 		50A47F8E213D40780076EAF5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A62D43A5213F0B1E00A299FD /* settingsViewController.swift */,
 				A62D439F213E1E9900A299FD /* kaderSignUpViewController.swift */,
 				A62D43A1213E1EA700A299FD /* staffSignUpViewController.swift */,
 				A62D4397213DA16400A299FD /* addHistoryViewController.swift */,
@@ -184,6 +189,7 @@
 		A6BB1E36213D45800001228B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A62D43A3213F0B0E00A299FD /* settings.storyboard */,
 				A62D439B213E1E0700A299FD /* kaderSignUp.storyboard */,
 				A62D439D213E1E6600A299FD /* staffSignUp.storyboard */,
 				A62D4395213DA15600A299FD /* addHistory.storyboard */,
@@ -281,6 +287,7 @@
 				50A47F8B213D40330076EAF5 /* detailKader.storyboard in Resources */,
 				A61103FA213D335B0046BB44 /* childProfile.storyboard in Resources */,
 				85B770F5213D713000D67BE1 /* GoogleService-Info.plist in Resources */,
+				A62D43A4213F0B0E00A299FD /* settings.storyboard in Resources */,
 				A3B3CCA1213D0C600009E1FD /* Main.storyboard in Resources */,
 				A6E35F23213D323400AD6F3A /* kaderMain.storyboard in Resources */,
 			);
@@ -351,6 +358,7 @@
 				A3B3CC9E213D0C600009E1FD /* ViewController.swift in Sources */,
 				A62D43A0213E1E9900A299FD /* kaderSignUpViewController.swift in Sources */,
 				A3B3CC9C213D0C600009E1FD /* AppDelegate.swift in Sources */,
+				A62D43A6213F0B1E00A299FD /* settingsViewController.swift in Sources */,
 				A61103F8213D334C0046BB44 /* childProfileViewController.swift in Sources */,
 				A6E35F21213D31FC00AD6F3A /* kaderMainViewController.swift in Sources */,
 				A62D43A2213E1EA700A299FD /* staffSignUpViewController.swift in Sources */,

@@ -105,6 +105,7 @@
                     <connections>
                         <segue destination="pfc-6Z-q11" kind="show" identifier="mainTostaffLogin" id="5v6-Du-DZl"/>
                         <segue destination="bjg-gR-ad2" kind="show" identifier="mainTokaderMain" id="eQo-yf-bF1"/>
+                        <segue destination="ZYq-bL-G9W" kind="show" identifier="mainTosignUp" id="y4D-Ei-GSz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -118,6 +119,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lEo-Jy-9jW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2126" y="-147"/>
+        </scene>
+        <!--kaderSignUp-->
+        <scene sceneID="Pwg-nF-GJS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="kaderSignUp" id="ZYq-bL-G9W" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ERj-gB-C4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2157" y="35"/>
         </scene>
         <!--staffLogin-->
         <scene sceneID="TPn-8I-ZOy">

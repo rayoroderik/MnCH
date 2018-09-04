@@ -13,6 +13,7 @@
 		8503D54C213E2124005DE254 /* BabyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D54B213E2124005DE254 /* BabyModel.swift */; };
 		8503D54E213E24C9005DE254 /* CheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D54D213E24C9005DE254 /* CheckModel.swift */; };
 		8503D550213E298E005DE254 /* KaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D54F213E298E005DE254 /* KaderModel.swift */; };
+		8503D552213E2C72005DE254 /* StaffModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D551213E2C72005DE254 /* StaffModel.swift */; };
 		85B770F5213D713000D67BE1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85B770F4213D713000D67BE1 /* GoogleService-Info.plist */; };
 		A3B3CC9C213D0C600009E1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3CC9B213D0C600009E1FD /* AppDelegate.swift */; };
 		A3B3CC9E213D0C600009E1FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3CC9D213D0C600009E1FD /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 		8503D54B213E2124005DE254 /* BabyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyModel.swift; sourceTree = "<group>"; };
 		8503D54D213E24C9005DE254 /* CheckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckModel.swift; sourceTree = "<group>"; };
 		8503D54F213E298E005DE254 /* KaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaderModel.swift; sourceTree = "<group>"; };
+		8503D551213E2C72005DE254 /* StaffModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffModel.swift; sourceTree = "<group>"; };
 		85B770F4213D713000D67BE1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3B3CC98213D0C600009E1FD /* MnCH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MnCH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B3CC9B213D0C600009E1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				8503D54B213E2124005DE254 /* BabyModel.swift */,
 				8503D54D213E24C9005DE254 /* CheckModel.swift */,
 				8503D54F213E298E005DE254 /* KaderModel.swift */,
+				8503D551213E2C72005DE254 /* StaffModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8503D552213E2C72005DE254 /* StaffModel.swift in Sources */,
 				A61103FD213D33C20046BB44 /* staffMainViewController.swift in Sources */,
 				8503D54C213E2124005DE254 /* BabyModel.swift in Sources */,
 				A6BB1E38213D45AF0001228B /* addChildViewController.swift in Sources */,

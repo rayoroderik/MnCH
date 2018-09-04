@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KH5-rJ-09D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="deL-lP-EjY">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rh5-cv-mb0">
-                                <rect key="frame" x="20" y="108.00000000000003" width="335" height="337.66666666666674"/>
+                                <rect key="frame" x="20" y="64" width="335" height="337.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daftar sebagai Staf Baru" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sS9-TC-9sl">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="17.666666666666668"/>
@@ -31,7 +31,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nama Lengkap" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZR-WZ-v2U">
-                                        <rect key="frame" x="0.0" y="37.666666666666657" width="335" height="30"/>
+                                        <rect key="frame" x="0.0" y="37.666666666666671" width="335" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="335" id="SV6-lZ-ID1"/>
                                         </constraints>
@@ -58,7 +58,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verifikasi Kata Sandi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sn0-ml-MRW">
-                                        <rect key="frame" x="0.0" y="187.66666666666669" width="335" height="30"/>
+                                        <rect key="frame" x="0.0" y="187.66666666666666" width="335" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="335" id="L01-gN-4Cr"/>
                                         </constraints>
@@ -121,24 +121,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGd-H1-0Gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1550.4000000000001" y="160.34482758620689"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="cFU-JJ-3Jg">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KH5-rJ-09D" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8DY-rP-hga">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="deL-lP-EjY" kind="relationship" relationship="rootViewController" id="TOU-kh-qfS"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h4R-tu-kEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="125.61576354679804"/>
         </scene>
     </scenes>
     <resources>

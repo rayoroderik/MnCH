@@ -10,12 +10,17 @@ import UIKit
 
 class detailKaderTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var imgBaby: UIImageView!
+    @IBOutlet weak var lblBabyName: UILabel!
+    @IBOutlet weak var lblBabyAge: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.imgBaby.layer.cornerRadius = 30
+        self.imgBaby.clipsToBounds = true
     }
-    @IBOutlet weak var imgBaby: UIImageView!
-    @IBOutlet weak var lblBabyName: UILabel!
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

@@ -22,8 +22,12 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
         detailKaderTableView.delegate = self
         detailKaderTableView.dataSource = self
         
+        detailKaderTableView.rowHeight = UITableViewAutomaticDimension
+        
         lblKaderName.text = kader.kaderName
         lblKaderPhone.text = kader.kaderPhone
+        imgKader.layer.cornerRadius = 50
+        imgKader.clipsToBounds = true
         
         self.getData()
     }
@@ -41,6 +45,7 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = self.detailKaderTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! detailKaderTableViewCell
         cell.lblBabyName.text = self.listBabies[indexPath.row].babyName
         cell.imgBaby.image = self.listBabies[indexPath.row].babyPhoto
+//        cell.lblBabyAge.text = self.listBabies[indexPath.row].
         
         cell.selectionStyle = .none
         return cell
@@ -50,7 +55,6 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
         self.listBabies.removeAll()
         
         for babyID in self.kader.kaderBabies{
-            print("baby: \(babyID)")
             FirebaseReferences.databaseRef.child("babies/\(babyID)").observeSingleEvent(of: .value) { (snap) in
                 let tempSingleBaby = snap.value as! [String:Any]
                 

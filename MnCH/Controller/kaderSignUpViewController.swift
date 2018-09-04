@@ -31,6 +31,7 @@ class kaderSignUpViewController: UIViewController, UIPickerViewDelegate {
         self.addressTV.layer.borderWidth = 0.5
         
         addPickerArea()
+        self.navigationItem.leftBarButtonItem = navigationItem.backBarButtonItem
         self.navigationItem.title = "Buat Akun"
         // Do any additional setup after loading the view.
     }

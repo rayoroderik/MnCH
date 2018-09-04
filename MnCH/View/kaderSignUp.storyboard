@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iig-Rs-hc8">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kader Sign Up View Controller-->
+        <scene sceneID="Sn4-b0-RxM">
+            <objects>
+                <viewController id="Iig-Rs-hc8" customClass="kaderSignUpViewController" customModule="MnCH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0gH-Es-gvL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gZz-PJ-rfg">
+                                <rect key="frame" x="20" y="143.99999999999997" width="335" height="370.33333333333326"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daftar Kader baru" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8B1-JF-QRO">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nama Lengkap" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BP7-Z5-mjV">
+                                        <rect key="frame" x="0.0" y="30.333333333333343" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nomor Handphone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mlc-lY-WIb">
+                                        <rect key="frame" x="0.0" y="70.333333333333343" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kata Sandi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VCk-XU-Mjj">
+                                        <rect key="frame" x="0.0" y="110.33333333333334" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verifikasi Kata Sandi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5p2-Ab-sql">
+                                        <rect key="frame" x="0.0" y="150.33333333333331" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Alamat" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OTn-jW-clc">
+                                        <rect key="frame" x="0.0" y="190.33333333333331" width="335" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="1vE-ys-6aX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" address="YES"/>
+                                    </textView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Area" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Tn-Eo-fYw">
+                                        <rect key="frame" x="0.0" y="300.33333333333331" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xn9-GC-MMV">
+                                        <rect key="frame" x="107.66666666666669" y="340.33333333333331" width="120" height="30"/>
+                                        <color key="backgroundColor" red="0.26594999580000001" green="0.65992279970000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="Su3-Ta-Sza"/>
+                                        </constraints>
+                                        <state key="normal" title="Daftarkan">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="mlc-lY-WIb" secondAttribute="trailing" id="1Kd-Ae-dRD"/>
+                                    <constraint firstAttribute="trailing" secondItem="VCk-XU-Mjj" secondAttribute="trailing" id="DYO-W4-wo8"/>
+                                    <constraint firstItem="5p2-Ab-sql" firstAttribute="leading" secondItem="gZz-PJ-rfg" secondAttribute="leading" id="Hc3-QD-wno"/>
+                                    <constraint firstItem="OTn-jW-clc" firstAttribute="leading" secondItem="gZz-PJ-rfg" secondAttribute="leading" id="MJe-aX-eVR"/>
+                                    <constraint firstAttribute="trailing" secondItem="OTn-jW-clc" secondAttribute="trailing" id="Op2-58-XGL"/>
+                                    <constraint firstItem="BP7-Z5-mjV" firstAttribute="leading" secondItem="gZz-PJ-rfg" secondAttribute="leading" id="QpK-01-Jor"/>
+                                    <constraint firstAttribute="trailing" secondItem="8B1-JF-QRO" secondAttribute="trailing" id="RJn-uV-bNr"/>
+                                    <constraint firstAttribute="trailing" secondItem="BP7-Z5-mjV" secondAttribute="trailing" id="XwU-5C-bvQ"/>
+                                    <constraint firstItem="mlc-lY-WIb" firstAttribute="leading" secondItem="gZz-PJ-rfg" secondAttribute="leading" id="XzN-sU-eUO"/>
+                                    <constraint firstItem="8B1-JF-QRO" firstAttribute="leading" secondItem="gZz-PJ-rfg" secondAttribute="leading" id="Z8o-PW-gLI"/>
+                                    <constraint firstAttribute="trailing" secondItem="5p2-Ab-sql" secondAttribute="trailing" id="kmM-YM-kcc"/>
+                                    <constraint firstItem="5Tn-Eo-fYw" firstAttribute="leading" secondItem="gZz-PJ-rfg" secondAttribute="leading" id="lVi-nN-3NB"/>
+                                    <constraint firstItem="VCk-XU-Mjj" firstAttribute="leading" secondItem="gZz-PJ-rfg" secondAttribute="leading" id="pQt-dm-QXZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Tn-Eo-fYw" secondAttribute="trailing" id="qGO-ZH-OHI"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gZz-PJ-rfg" firstAttribute="top" secondItem="MZL-8a-sBH" secondAttribute="top" constant="100" id="H7i-KX-Z0E"/>
+                            <constraint firstItem="MZL-8a-sBH" firstAttribute="trailing" secondItem="gZz-PJ-rfg" secondAttribute="trailing" constant="20" id="Kip-a2-9Td"/>
+                            <constraint firstItem="gZz-PJ-rfg" firstAttribute="leading" secondItem="MZL-8a-sBH" secondAttribute="leading" constant="20" id="N2g-d7-WsI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MZL-8a-sBH"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressTV" destination="OTn-jW-clc" id="bDL-AZ-31G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U3X-Fn-TVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26" y="65"/>
+        </scene>
+    </scenes>
+</document>

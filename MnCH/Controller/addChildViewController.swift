@@ -144,7 +144,7 @@ class addChildViewController: UIViewController, UIImagePickerControllerDelegate,
         
         
         
-        FirebaseReferences.databaseRef.child("kaders/pedongkelan/testKaderID/kaderBaby/\(babyID)").setValue("")
+        FirebaseReferences.databaseRef.child("kaders/\(GlobalKader.kader.kaderArea)/\(GlobalKader.kader.kaderID)/kaderBaby/\(babyID)").setValue("")
         FirebaseReferences.databaseRef.child("babies/\(babyID)").setValue(tempBaby)
         
         print("baby added")

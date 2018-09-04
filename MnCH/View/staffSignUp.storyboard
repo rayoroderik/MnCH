@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="deL-lP-EjY">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Staff Sign Up View Controller-->
+        <scene sceneID="2D0-aj-TNU">
+            <objects>
+                <viewController id="deL-lP-EjY" customClass="staffSignUpViewController" customModule="MnCH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BLN-Hz-c37">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rh5-cv-mb0">
+                                <rect key="frame" x="20" y="123" width="335" height="260.33333333333331"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Daftar Staf baru" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sS9-TC-9sl">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="20.333333333333332"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="335" id="O85-pw-1fk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nama Lengkap" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZR-WZ-v2U">
+                                        <rect key="frame" x="0.0" y="30.333333333333329" width="335" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="335" id="SV6-lZ-ID1"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nomor Handphone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="74R-Lg-8iO">
+                                        <rect key="frame" x="0.0" y="70.333333333333329" width="335" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="335" id="Ema-ev-CSI"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kata Sandi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JWm-oL-DrV">
+                                        <rect key="frame" x="0.0" y="110.33333333333333" width="335" height="29.999999999999986"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="335" id="vDv-yP-uAA"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verifikasi Kata Sandi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sn0-ml-MRW">
+                                        <rect key="frame" x="0.0" y="150.33333333333334" width="335" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="335" id="L01-gN-4Cr"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Area" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="blj-qS-PHC">
+                                        <rect key="frame" x="0.0" y="190.33333333333334" width="335" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="335" id="lnB-N5-hkQ"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T76-C8-dy4">
+                                        <rect key="frame" x="107.66666666666669" y="230.33333333333334" width="120" height="30.000000000000028"/>
+                                        <color key="backgroundColor" red="0.26594999580000001" green="0.65992279970000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Agf-KL-MxA"/>
+                                            <constraint firstAttribute="width" constant="120" id="SG1-EQ-MrL"/>
+                                        </constraints>
+                                        <state key="normal" title="Daftarkan">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signUpClicked:" destination="deL-lP-EjY" eventType="touchUpInside" id="eYQ-h5-NiS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="NLr-cB-X6J"/>
+                    </view>
+                    <connections>
+                        <outlet property="areaPicker" destination="blj-qS-PHC" id="sl3-8q-jDJ"/>
+                        <outlet property="nameTextField" destination="tZR-WZ-v2U" id="hQ2-ux-Pzo"/>
+                        <outlet property="passTextField" destination="JWm-oL-DrV" id="nhQ-xq-VCJ"/>
+                        <outlet property="phoneTextField" destination="74R-Lg-8iO" id="uHS-kO-P0g"/>
+                        <outlet property="verifyPassTextField" destination="Sn0-ml-MRW" id="RcD-Zd-aQz"/>
+                        <segue destination="Jwf-zk-8bR" kind="show" identifier="staffSignUpToStaffMain" id="QrN-Pc-0sc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g5y-2J-LQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55" y="126"/>
+        </scene>
+        <!--staffMain-->
+        <scene sceneID="dUm-YR-hXV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="staffMain" id="Jwf-zk-8bR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGd-H1-0Gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="609" y="161"/>
+        </scene>
+    </scenes>
+</document>

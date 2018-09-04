@@ -10,6 +10,14 @@
 		150BB223ED99C02E40A893EB /* Pods_MnCH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B04E10CFA3D26B2E2B0A2D3E /* Pods_MnCH.framework */; };
 		50A47F8B213D40330076EAF5 /* detailKader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A47F8A213D40330076EAF5 /* detailKader.storyboard */; };
 		50A47F8D213D40680076EAF5 /* detailKaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A47F8C213D40680076EAF5 /* detailKaderViewController.swift */; };
+		8503D54C213E2124005DE254 /* BabyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D54B213E2124005DE254 /* BabyModel.swift */; };
+		8503D54E213E24C9005DE254 /* CheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D54D213E24C9005DE254 /* CheckModel.swift */; };
+		8503D550213E298E005DE254 /* KaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D54F213E298E005DE254 /* KaderModel.swift */; };
+		8503D552213E2C72005DE254 /* StaffModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D551213E2C72005DE254 /* StaffModel.swift */; };
+		8503D554213E449F005DE254 /* FirebaseReferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D553213E449F005DE254 /* FirebaseReferences.swift */; };
+		8503D556213E61A3005DE254 /* GlobalKader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D555213E61A3005DE254 /* GlobalKader.swift */; };
+		8503D559213E8950005DE254 /* SHA1Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8503D558213E8950005DE254 /* SHA1Extension.swift */; };
+		85B770F5213D713000D67BE1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85B770F4213D713000D67BE1 /* GoogleService-Info.plist */; };
 		A3B3CC9C213D0C600009E1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3CC9B213D0C600009E1FD /* AppDelegate.swift */; };
 		A3B3CC9E213D0C600009E1FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3CC9D213D0C600009E1FD /* ViewController.swift */; };
 		A3B3CCA1213D0C600009E1FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B3CC9F213D0C600009E1FD /* Main.storyboard */; };
@@ -19,20 +27,36 @@
 		A61103FA213D335B0046BB44 /* childProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A61103F9213D335B0046BB44 /* childProfile.storyboard */; };
 		A61103FD213D33C20046BB44 /* staffMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61103FC213D33C20046BB44 /* staffMainViewController.swift */; };
 		A61103FF213D33D70046BB44 /* staffMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A61103FE213D33D70046BB44 /* staffMain.storyboard */; };
+		A62D4396213DA15600A299FD /* addHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62D4395213DA15600A299FD /* addHistory.storyboard */; };
+		A62D4398213DA16400A299FD /* addHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62D4397213DA16400A299FD /* addHistoryViewController.swift */; };
+		A62D439C213E1E0700A299FD /* kaderSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62D439B213E1E0700A299FD /* kaderSignUp.storyboard */; };
+		A62D439E213E1E6600A299FD /* staffSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62D439D213E1E6600A299FD /* staffSignUp.storyboard */; };
+		A62D43A0213E1E9900A299FD /* kaderSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62D439F213E1E9900A299FD /* kaderSignUpViewController.swift */; };
+		A62D43A2213E1EA700A299FD /* staffSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62D43A1213E1EA700A299FD /* staffSignUpViewController.swift */; };
 		A6BB1E38213D45AF0001228B /* addChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB1E37213D45AF0001228B /* addChildViewController.swift */; };
 		A6BB1E3A213D45B50001228B /* addChild.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6BB1E39213D45B50001228B /* addChild.storyboard */; };
-		A6E35F16213D307000AD6F3A /* kaderLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E35F15213D307000AD6F3A /* kaderLogin.storyboard */; };
-		A6E35F18213D308D00AD6F3A /* kaderLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E35F17213D308D00AD6F3A /* kaderLoginViewController.swift */; };
+		A6BB1E3F213D56280001228B /* kaderMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB1E3E213D56280001228B /* kaderMainTableViewCell.swift */; };
+		A6BB1E41213D63310001228B /* detailKaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB1E40213D63310001228B /* detailKaderTableViewCell.swift */; };
+		A6BB1E43213D81220001228B /* staffMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BB1E42213D81220001228B /* staffMainTableViewCell.swift */; };
 		A6E35F1C213D315300AD6F3A /* staffLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E35F1B213D315300AD6F3A /* staffLogin.storyboard */; };
 		A6E35F1E213D317900AD6F3A /* staffLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E35F1D213D317900AD6F3A /* staffLoginViewController.swift */; };
 		A6E35F21213D31FC00AD6F3A /* kaderMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E35F20213D31FC00AD6F3A /* kaderMainViewController.swift */; };
 		A6E35F23213D323400AD6F3A /* kaderMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E35F22213D323400AD6F3A /* kaderMain.storyboard */; };
+		DCBF9E23213EAF62001ADE99 /* ChildProfileOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBF9E22213EAF62001ADE99 /* ChildProfileOneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		50A47F8A213D40330076EAF5 /* detailKader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = detailKader.storyboard; sourceTree = "<group>"; };
 		50A47F8C213D40680076EAF5 /* detailKaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailKaderViewController.swift; sourceTree = "<group>"; };
 		6AD5D120ABC1B3001524BD39 /* Pods-MnCH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MnCH.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MnCH/Pods-MnCH.debug.xcconfig"; sourceTree = "<group>"; };
+		8503D54B213E2124005DE254 /* BabyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyModel.swift; sourceTree = "<group>"; };
+		8503D54D213E24C9005DE254 /* CheckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckModel.swift; sourceTree = "<group>"; };
+		8503D54F213E298E005DE254 /* KaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaderModel.swift; sourceTree = "<group>"; };
+		8503D551213E2C72005DE254 /* StaffModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffModel.swift; sourceTree = "<group>"; };
+		8503D553213E449F005DE254 /* FirebaseReferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReferences.swift; sourceTree = "<group>"; };
+		8503D555213E61A3005DE254 /* GlobalKader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalKader.swift; sourceTree = "<group>"; };
+		8503D558213E8950005DE254 /* SHA1Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1Extension.swift; sourceTree = "<group>"; };
+		85B770F4213D713000D67BE1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3B3CC98213D0C600009E1FD /* MnCH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MnCH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B3CC9B213D0C600009E1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3B3CC9D213D0C600009E1FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,16 +68,24 @@
 		A61103F9213D335B0046BB44 /* childProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = childProfile.storyboard; sourceTree = "<group>"; };
 		A61103FC213D33C20046BB44 /* staffMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staffMainViewController.swift; sourceTree = "<group>"; };
 		A61103FE213D33D70046BB44 /* staffMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = staffMain.storyboard; sourceTree = "<group>"; };
+		A62D4395213DA15600A299FD /* addHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = addHistory.storyboard; sourceTree = "<group>"; };
+		A62D4397213DA16400A299FD /* addHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addHistoryViewController.swift; sourceTree = "<group>"; };
+		A62D439B213E1E0700A299FD /* kaderSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = kaderSignUp.storyboard; sourceTree = "<group>"; };
+		A62D439D213E1E6600A299FD /* staffSignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = staffSignUp.storyboard; sourceTree = "<group>"; };
+		A62D439F213E1E9900A299FD /* kaderSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kaderSignUpViewController.swift; sourceTree = "<group>"; };
+		A62D43A1213E1EA700A299FD /* staffSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staffSignUpViewController.swift; sourceTree = "<group>"; };
 		A6BB1E37213D45AF0001228B /* addChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addChildViewController.swift; sourceTree = "<group>"; };
 		A6BB1E39213D45B50001228B /* addChild.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = addChild.storyboard; sourceTree = "<group>"; };
-		A6E35F15213D307000AD6F3A /* kaderLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = kaderLogin.storyboard; sourceTree = "<group>"; };
-		A6E35F17213D308D00AD6F3A /* kaderLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kaderLoginViewController.swift; sourceTree = "<group>"; };
+		A6BB1E3E213D56280001228B /* kaderMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kaderMainTableViewCell.swift; sourceTree = "<group>"; };
+		A6BB1E40213D63310001228B /* detailKaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailKaderTableViewCell.swift; sourceTree = "<group>"; };
+		A6BB1E42213D81220001228B /* staffMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staffMainTableViewCell.swift; sourceTree = "<group>"; };
 		A6E35F1B213D315300AD6F3A /* staffLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = staffLogin.storyboard; sourceTree = "<group>"; };
 		A6E35F1D213D317900AD6F3A /* staffLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staffLoginViewController.swift; sourceTree = "<group>"; };
 		A6E35F20213D31FC00AD6F3A /* kaderMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kaderMainViewController.swift; sourceTree = "<group>"; };
 		A6E35F22213D323400AD6F3A /* kaderMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = kaderMain.storyboard; sourceTree = "<group>"; };
 		B04E10CFA3D26B2E2B0A2D3E /* Pods_MnCH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MnCH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF71959BF328AD80BEDDFCAE /* Pods-MnCH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MnCH.release.xcconfig"; path = "Pods/Target Support Files/Pods-MnCH/Pods-MnCH.release.xcconfig"; sourceTree = "<group>"; };
+		DCBF9E22213EAF62001ADE99 /* ChildProfileOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildProfileOneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,13 +108,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		50A47F8E213D40780076EAF5 /* detailKader */ = {
+		50A47F8E213D40780076EAF5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A62D439F213E1E9900A299FD /* kaderSignUpViewController.swift */,
+				A62D43A1213E1EA700A299FD /* staffSignUpViewController.swift */,
+				A62D4397213DA16400A299FD /* addHistoryViewController.swift */,
+				A6BB1E37213D45AF0001228B /* addChildViewController.swift */,
 				50A47F8C213D40680076EAF5 /* detailKaderViewController.swift */,
-				50A47F8A213D40330076EAF5 /* detailKader.storyboard */,
+				A6BB1E40213D63310001228B /* detailKaderTableViewCell.swift */,
+				A6E35F1D213D317900AD6F3A /* staffLoginViewController.swift */,
+				A61103FC213D33C20046BB44 /* staffMainViewController.swift */,
+				A6BB1E42213D81220001228B /* staffMainTableViewCell.swift */,
+				A6E35F20213D31FC00AD6F3A /* kaderMainViewController.swift */,
+				A6BB1E3E213D56280001228B /* kaderMainTableViewCell.swift */,
+				A61103F7213D334C0046BB44 /* childProfileViewController.swift */,
+				DCBF9E22213EAF62001ADE99 /* ChildProfileOneViewController.swift */,
 			);
-			path = detailKader;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5A698E8FDE8ADDF2BF05DEB5 /* Pods */ = {
@@ -92,6 +135,14 @@
 				BF71959BF328AD80BEDDFCAE /* Pods-MnCH.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8503D557213E88E5005DE254 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8503D558213E8950005DE254 /* SHA1Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		A3B3CC8F213D0C600009E1FD = {
@@ -121,69 +172,42 @@
 				A3B3CCA2213D0C610009E1FD /* Assets.xcassets */,
 				A3B3CCA4213D0C610009E1FD /* LaunchScreen.storyboard */,
 				A3B3CCA7213D0C610009E1FD /* Info.plist */,
-				A6BB1E36213D45800001228B /* addChild */,
-				50A47F8E213D40780076EAF5 /* detailKader */,
-				A6E35F1A213D313700AD6F3A /* staffLogin */,
-				A61103FB213D33750046BB44 /* staffMain */,
-				A6E35F19213D309500AD6F3A /* kaderLogin */,
-				A6E35F1F213D319200AD6F3A /* kaderMain */,
-				A6E35F24213D328C00AD6F3A /* childProfile */,
+				85B770F4213D713000D67BE1 /* GoogleService-Info.plist */,
+				A6BB1E3B213D52B70001228B /* Model */,
+				A6BB1E36213D45800001228B /* View */,
+				50A47F8E213D40780076EAF5 /* Controller */,
+				8503D557213E88E5005DE254 /* Extension */,
 			);
 			path = MnCH;
 			sourceTree = "<group>";
 		};
-		A61103FB213D33750046BB44 /* staffMain */ = {
+		A6BB1E36213D45800001228B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A61103FC213D33C20046BB44 /* staffMainViewController.swift */,
-				A61103FE213D33D70046BB44 /* staffMain.storyboard */,
-			);
-			path = staffMain;
-			sourceTree = "<group>";
-		};
-		A6BB1E36213D45800001228B /* addChild */ = {
-			isa = PBXGroup;
-			children = (
-				A6BB1E37213D45AF0001228B /* addChildViewController.swift */,
+				A62D439B213E1E0700A299FD /* kaderSignUp.storyboard */,
+				A62D439D213E1E6600A299FD /* staffSignUp.storyboard */,
+				A62D4395213DA15600A299FD /* addHistory.storyboard */,
 				A6BB1E39213D45B50001228B /* addChild.storyboard */,
-			);
-			path = addChild;
-			sourceTree = "<group>";
-		};
-		A6E35F19213D309500AD6F3A /* kaderLogin */ = {
-			isa = PBXGroup;
-			children = (
-				A6E35F17213D308D00AD6F3A /* kaderLoginViewController.swift */,
-				A6E35F15213D307000AD6F3A /* kaderLogin.storyboard */,
-			);
-			path = kaderLogin;
-			sourceTree = "<group>";
-		};
-		A6E35F1A213D313700AD6F3A /* staffLogin */ = {
-			isa = PBXGroup;
-			children = (
-				A6E35F1D213D317900AD6F3A /* staffLoginViewController.swift */,
+				50A47F8A213D40330076EAF5 /* detailKader.storyboard */,
 				A6E35F1B213D315300AD6F3A /* staffLogin.storyboard */,
-			);
-			path = staffLogin;
-			sourceTree = "<group>";
-		};
-		A6E35F1F213D319200AD6F3A /* kaderMain */ = {
-			isa = PBXGroup;
-			children = (
-				A6E35F20213D31FC00AD6F3A /* kaderMainViewController.swift */,
+				A61103FE213D33D70046BB44 /* staffMain.storyboard */,
 				A6E35F22213D323400AD6F3A /* kaderMain.storyboard */,
-			);
-			path = kaderMain;
-			sourceTree = "<group>";
-		};
-		A6E35F24213D328C00AD6F3A /* childProfile */ = {
-			isa = PBXGroup;
-			children = (
-				A61103F7213D334C0046BB44 /* childProfileViewController.swift */,
 				A61103F9213D335B0046BB44 /* childProfile.storyboard */,
 			);
-			path = childProfile;
+			path = View;
+			sourceTree = "<group>";
+		};
+		A6BB1E3B213D52B70001228B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8503D54B213E2124005DE254 /* BabyModel.swift */,
+				8503D54D213E24C9005DE254 /* CheckModel.swift */,
+				8503D54F213E298E005DE254 /* KaderModel.swift */,
+				8503D551213E2C72005DE254 /* StaffModel.swift */,
+				8503D555213E61A3005DE254 /* GlobalKader.swift */,
+				8503D553213E449F005DE254 /* FirebaseReferences.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,7 +270,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6E35F16213D307000AD6F3A /* kaderLogin.storyboard in Resources */,
+				A62D4396213DA15600A299FD /* addHistory.storyboard in Resources */,
+				A62D439E213E1E6600A299FD /* staffSignUp.storyboard in Resources */,
+				A62D439C213E1E0700A299FD /* kaderSignUp.storyboard in Resources */,
 				A3B3CCA6213D0C610009E1FD /* LaunchScreen.storyboard in Resources */,
 				A6E35F1C213D315300AD6F3A /* staffLogin.storyboard in Resources */,
 				A3B3CCA3213D0C610009E1FD /* Assets.xcassets in Resources */,
@@ -254,6 +280,7 @@
 				A6BB1E3A213D45B50001228B /* addChild.storyboard in Resources */,
 				50A47F8B213D40330076EAF5 /* detailKader.storyboard in Resources */,
 				A61103FA213D335B0046BB44 /* childProfile.storyboard in Resources */,
+				85B770F5213D713000D67BE1 /* GoogleService-Info.plist in Resources */,
 				A3B3CCA1213D0C600009E1FD /* Main.storyboard in Resources */,
 				A6E35F23213D323400AD6F3A /* kaderMain.storyboard in Resources */,
 			);
@@ -311,15 +338,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8503D552213E2C72005DE254 /* StaffModel.swift in Sources */,
 				A61103FD213D33C20046BB44 /* staffMainViewController.swift in Sources */,
-				A6E35F18213D308D00AD6F3A /* kaderLoginViewController.swift in Sources */,
+				8503D54C213E2124005DE254 /* BabyModel.swift in Sources */,
 				A6BB1E38213D45AF0001228B /* addChildViewController.swift in Sources */,
 				A6E35F1E213D317900AD6F3A /* staffLoginViewController.swift in Sources */,
+				A6BB1E3F213D56280001228B /* kaderMainTableViewCell.swift in Sources */,
 				50A47F8D213D40680076EAF5 /* detailKaderViewController.swift in Sources */,
+				A62D4398213DA16400A299FD /* addHistoryViewController.swift in Sources */,
+				DCBF9E23213EAF62001ADE99 /* ChildProfileOneViewController.swift in Sources */,
+				8503D554213E449F005DE254 /* FirebaseReferences.swift in Sources */,
 				A3B3CC9E213D0C600009E1FD /* ViewController.swift in Sources */,
+				A62D43A0213E1E9900A299FD /* kaderSignUpViewController.swift in Sources */,
 				A3B3CC9C213D0C600009E1FD /* AppDelegate.swift in Sources */,
 				A61103F8213D334C0046BB44 /* childProfileViewController.swift in Sources */,
 				A6E35F21213D31FC00AD6F3A /* kaderMainViewController.swift in Sources */,
+				A62D43A2213E1EA700A299FD /* staffSignUpViewController.swift in Sources */,
+				8503D559213E8950005DE254 /* SHA1Extension.swift in Sources */,
+				A6BB1E41213D63310001228B /* detailKaderTableViewCell.swift in Sources */,
+				8503D556213E61A3005DE254 /* GlobalKader.swift in Sources */,
+				8503D54E213E24C9005DE254 /* CheckModel.swift in Sources */,
+				A6BB1E43213D81220001228B /* staffMainTableViewCell.swift in Sources */,
+				8503D550213E298E005DE254 /* KaderModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +505,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 98R673PJSG;
+				DEVELOPMENT_TEAM = H66ABT9385;
 				INFOPLIST_FILE = MnCH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -484,7 +524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 98R673PJSG;
+				DEVELOPMENT_TEAM = H66ABT9385;
 				INFOPLIST_FILE = MnCH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

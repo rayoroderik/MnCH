@@ -18,61 +18,117 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Amh-HV-hgd">
-                                <rect key="frame" x="50" y="336" width="275" height="140"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtj-Gp-lc2">
+                                <rect key="frame" x="100" y="728" width="175" height="30"/>
+                                <state key="normal" title="Masuk sebagai staf Hope"/>
+                                <connections>
+                                    <action selector="moveToStaffLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ab-vT-Tyq"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QlU-3z-Bby">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="288"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="jD7-Xx-2aK">
+                                <rect key="frame" x="20" y="308" width="335" height="197"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="jgM-JV-rY9">
-                                        <rect key="frame" x="0.0" y="0.0" width="275" height="140"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhF-Ar-0Qh">
-                                                <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
-                                                <color key="backgroundColor" red="0.26594999580000001" green="0.65992279970000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="V8x-0N-xLO"/>
-                                                </constraints>
-                                                <state key="normal" title="Kader">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZo-e9-mP0">
-                                                <rect key="frame" x="0.0" y="90" width="275" height="50"/>
-                                                <color key="backgroundColor" red="0.26594999580000001" green="0.65992279970000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="OnZ-q5-Yix"/>
-                                                </constraints>
-                                                <state key="normal" title="Hope">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masuk Akun sebagai Kader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vb2-ou-MSF">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No. Handphone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Lz-m8-YAa">
+                                        <rect key="frame" x="0.0" y="32" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kata Sandi" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wc3-Qq-CaP">
+                                        <rect key="frame" x="0.0" y="77" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEy-v0-gKV">
+                                        <rect key="frame" x="117.66666666666666" y="122" width="100" height="30"/>
+                                        <color key="backgroundColor" red="0.26594999580000001" green="0.65992279970000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="PYE-hS-3fy"/>
+                                        </constraints>
+                                        <state key="normal" title="Masuk">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doSignInKader:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PDb-JP-tjT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEr-Pg-IB9">
+                                        <rect key="frame" x="117.66666666666666" y="167" width="100" height="30"/>
+                                        <color key="backgroundColor" red="0.26594999580000001" green="0.65992279970000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="WPe-cC-fga"/>
+                                        </constraints>
+                                        <state key="normal" title="Daftar">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doSignUpKader:" destination="BYZ-38-t0r" eventType="touchUpInside" id="16y-GM-Oga"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Wc3-Qq-CaP" firstAttribute="leading" secondItem="jD7-Xx-2aK" secondAttribute="leading" id="2sJ-y2-vd7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wc3-Qq-CaP" secondAttribute="trailing" id="Awa-gR-Vf0"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Lz-m8-YAa" secondAttribute="trailing" id="Gu2-fq-giU"/>
+                                    <constraint firstItem="7Lz-m8-YAa" firstAttribute="leading" secondItem="jD7-Xx-2aK" secondAttribute="leading" id="HAa-C9-lId"/>
+                                    <constraint firstItem="vb2-ou-MSF" firstAttribute="leading" secondItem="jD7-Xx-2aK" secondAttribute="leading" id="h70-fp-PTz"/>
+                                    <constraint firstAttribute="trailing" secondItem="vb2-ou-MSF" secondAttribute="trailing" id="zIF-0l-LkW"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Amh-HV-hgd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1e1-B0-xZH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Amh-HV-hgd" secondAttribute="trailing" constant="50" id="5XJ-Fm-mbj"/>
-                            <constraint firstItem="Amh-HV-hgd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jrS-EY-U6k"/>
-                            <constraint firstItem="Amh-HV-hgd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="zMS-kB-XDc"/>
+                            <constraint firstItem="QlU-3z-Bby" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0Aq-yt-a1F"/>
+                            <constraint firstItem="wtj-Gp-lc2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Cu6-IB-gtp"/>
+                            <constraint firstItem="QlU-3z-Bby" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="as0-lV-hCZ"/>
+                            <constraint firstItem="jD7-Xx-2aK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bfQ-Ng-gWG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QlU-3z-Bby" secondAttribute="trailing" id="fM1-L4-aeF"/>
+                            <constraint firstItem="jD7-Xx-2aK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ngG-QH-1Hb"/>
+                            <constraint firstItem="jD7-Xx-2aK" firstAttribute="top" secondItem="QlU-3z-Bby" secondAttribute="bottom" constant="20" id="pA7-OV-AfB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wtj-Gp-lc2" secondAttribute="bottom" constant="20" id="rEn-hf-Ux8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wtj-Gp-lc2" secondAttribute="trailing" constant="100" id="uhS-eV-Tbt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jD7-Xx-2aK" secondAttribute="trailing" constant="20" id="y0v-JW-9X8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="di4-VT-MjL"/>
                     <connections>
-                        <segue destination="MTx-RD-o2A" kind="show" identifier="goToKaderLogin" id="ZzQ-or-ogp"/>
-                        <segue destination="pfc-6Z-q11" kind="show" identifier="goToStaffLogin" id="5v6-Du-DZl"/>
+                        <outlet property="passwordTextField" destination="Wc3-Qq-CaP" id="U6z-sz-vyz"/>
+                        <outlet property="phoneTextField" destination="7Lz-m8-YAa" id="Pyg-cH-jAf"/>
+                        <segue destination="pfc-6Z-q11" kind="show" identifier="mainTostaffLogin" id="5v6-Du-DZl"/>
+                        <segue destination="bjg-gR-ad2" kind="show" identifier="mainTokaderMain" id="eQo-yf-bF1"/>
+                        <segue destination="ZYq-bL-G9W" kind="show" identifier="mainTosignUp" id="y4D-Ei-GSz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1989.5999999999999" y="35.467980295566505"/>
         </scene>
-        <!--kaderLogin-->
-        <scene sceneID="gL1-P4-vr4">
+        <!--kaderMain-->
+        <scene sceneID="fJP-MF-saz">
             <objects>
-                <viewControllerPlaceholder storyboardName="kaderLogin" id="MTx-RD-o2A" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vGv-er-aaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="kaderMain" id="bjg-gR-ad2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lEo-Jy-9jW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="736" y="-140"/>
+            <point key="canvasLocation" x="3067.1999999999998" y="-147.04433497536945"/>
+        </scene>
+        <!--kaderSignUp-->
+        <scene sceneID="Pwg-nF-GJS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="kaderSignUp" id="ZYq-bL-G9W" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ERj-gB-C4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3099.1999999999998" y="34.729064039408868"/>
         </scene>
         <!--staffLogin-->
         <scene sceneID="TPn-8I-ZOy">
@@ -80,7 +136,7 @@
                 <viewControllerPlaceholder storyboardName="staffLogin" id="pfc-6Z-q11" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rwe-yh-F9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="742" y="443"/>
+            <point key="canvasLocation" x="2651.1999999999998" y="121.92118226600985"/>
         </scene>
     </scenes>
 </document>

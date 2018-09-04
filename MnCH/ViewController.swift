@@ -41,7 +41,7 @@ class ViewController: UIViewController {
                         for (placeKey, _) in tempSinglePlace{
                             let tempSingleKader = tempSinglePlace[placeKey] as! [String:Any]
                             
-                            if ((tempSingleKader["kaderName"] as! String) == self.phoneTextField.text){
+                            if ((tempSingleKader["kaderPhone"] as! String) == self.phoneTextField.text){
                                 if (tempSingleKader["password"] as! String == tempHashedPassword){
                                     // success login
                                     let alert = UIAlertController(title: "Berhasil", message: "Anda telah login!", preferredStyle: .alert)
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
                                     }
                                     
                                     GlobalKader.loginState = true
-                                    GlobalKader.kader = KaderModel(kaderName: tempSingleKader["kaderName"] as! String, kaderPhone: tempSingleKader["kaderPhone"] as! String, kaderAddress: tempSingleKader["kaderAddress"] as! String, kaderArea: tempSingleKader["kaderArea"] as! String, kaderBabies: tempBabyArray, kaderID: key)
+                                    GlobalKader.kader = KaderModel(kaderName: tempSingleKader["kaderName"] as! String, kaderPhone: tempSingleKader["kaderPhone"] as! String, kaderAddress: tempSingleKader["kaderAddress"] as! String, kaderArea: tempSingleKader["kaderArea"] as! String, kaderBabies: tempBabyArray, kaderID: placeKey)
                                     return
                                 }
                                 else{

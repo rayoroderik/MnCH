@@ -14,7 +14,9 @@ class detailKaderTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    @IBOutlet weak var imgBaby: UIImageView!
+    @IBOutlet weak var lblBabyName: UILabel!
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

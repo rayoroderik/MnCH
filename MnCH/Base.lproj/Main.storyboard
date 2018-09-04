@@ -103,6 +103,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="di4-VT-MjL"/>
                     <connections>
+                        <outlet property="passwordTextField" destination="Wc3-Qq-CaP" id="U6z-sz-vyz"/>
+                        <outlet property="phoneTextField" destination="7Lz-m8-YAa" id="Pyg-cH-jAf"/>
                         <segue destination="pfc-6Z-q11" kind="show" identifier="mainTostaffLogin" id="5v6-Du-DZl"/>
                         <segue destination="bjg-gR-ad2" kind="show" identifier="mainTokaderMain" id="eQo-yf-bF1"/>
                         <segue destination="ZYq-bL-G9W" kind="show" identifier="mainTosignUp" id="y4D-Ei-GSz"/>

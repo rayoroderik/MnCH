@@ -98,7 +98,10 @@ class staffSignUpViewController: UIViewController, UIPickerViewDelegate {
         }
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
-        print("registered")
+        GlobalStaff.loginState = true
+        GlobalStaff.staff = StaffModel(staffName: self.nameTextField.text!, staffPhone: self.phoneTextField.text!, staffArea: self.areaPicker.text, staffID: uniqueID)
+        
+        self.performSegue(withIdentifier: "staffSignUptoStaffMain", sender: nil)
     }
 }
 

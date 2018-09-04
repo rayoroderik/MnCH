@@ -11,6 +11,7 @@ import UIKit
 class kaderMainTableViewCell: UITableViewCell {
     @IBOutlet weak var childImage: UIImageView!
     @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblUmur: UILabel!
     
     
     override func awakeFromNib() {

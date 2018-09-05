@@ -25,6 +25,7 @@ class kaderMainViewController: UIViewController, UITableViewDelegate, UITableVie
         //        getData()
         kaderMainTableView.delegate = self
         kaderMainTableView.dataSource = self
+        kaderMainTableView.rowHeight = UITableViewAutomaticDimension
         
         self.getInitialData()
     }

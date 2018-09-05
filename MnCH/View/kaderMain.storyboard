@@ -32,20 +32,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gBn-Dz-ZTX">
-                                                    <rect key="frame" x="10" y="5" width="80" height="80"/>
+                                                    <rect key="frame" x="10" y="8.3333333333333357" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="s2T-Dx-16S"/>
                                                         <constraint firstAttribute="width" secondItem="gBn-Dz-ZTX" secondAttribute="height" multiplier="1:1" id="uMD-2E-Rof"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama anak 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERB-A9-84G">
-                                                    <rect key="frame" x="100" y="10" width="265" height="30"/>
+                                                    <rect key="frame" x="100" y="10.333333333333336" width="265" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Umur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhA-dn-QDR">
-                                                    <rect key="frame" x="100" y="45" width="250" height="21"/>
+                                                    <rect key="frame" x="100" y="45.333333333333336" width="250" height="21.000000000000007"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -55,11 +55,13 @@
                                                 <constraint firstItem="bhA-dn-QDR" firstAttribute="top" secondItem="ERB-A9-84G" secondAttribute="bottom" constant="5" id="6fw-Jd-z5t"/>
                                                 <constraint firstItem="ERB-A9-84G" firstAttribute="top" secondItem="o6J-mY-4zp" secondAttribute="top" constant="10" id="AnQ-xb-H3f"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="bhA-dn-QDR" secondAttribute="trailing" constant="10" id="bPq-Kn-LmW"/>
+                                                <constraint firstAttribute="bottom" secondItem="gBn-Dz-ZTX" secondAttribute="bottom" constant="8" id="d5Q-hJ-csH"/>
                                                 <constraint firstItem="gBn-Dz-ZTX" firstAttribute="leading" secondItem="o6J-mY-4zp" secondAttribute="leading" constant="10" id="dRD-pJ-bx0"/>
                                                 <constraint firstItem="ERB-A9-84G" firstAttribute="leading" secondItem="gBn-Dz-ZTX" secondAttribute="trailing" constant="10" id="frM-Sf-EFb"/>
                                                 <constraint firstAttribute="trailing" secondItem="ERB-A9-84G" secondAttribute="trailing" constant="10" id="mdW-Gz-1bO"/>
                                                 <constraint firstItem="gBn-Dz-ZTX" firstAttribute="centerY" secondItem="o6J-mY-4zp" secondAttribute="centerY" id="t4u-gd-OG5"/>
                                                 <constraint firstItem="bhA-dn-QDR" firstAttribute="leading" secondItem="gBn-Dz-ZTX" secondAttribute="trailing" constant="10" id="uAc-Qh-F1A"/>
+                                                <constraint firstItem="gBn-Dz-ZTX" firstAttribute="top" secondItem="o6J-mY-4zp" secondAttribute="top" constant="8" id="zrw-PW-eaw"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

@@ -25,47 +25,64 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rhh-Vj-Da3">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="topbayi" translatesAutoresizingMaskIntoConstraints="NO" id="Mq6-Aq-J2M">
-                                                <rect key="frame" x="134" y="8" width="90" height="90"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topbayi" translatesAutoresizingMaskIntoConstraints="NO" id="Mq6-Aq-J2M">
+                                                <rect key="frame" x="142.66666666666666" y="8" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="apN-MV-Fy3"/>
+                                                    <constraint firstAttribute="width" secondItem="Mq6-Aq-J2M" secondAttribute="height" multiplier="1:1" id="fgp-Ql-vcl"/>
+                                                </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mashok Pak Eko" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="od7-lh-NXM">
-                                                <rect key="frame" x="93" y="106" width="173" height="18"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mashok Pak Eko" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="od7-lh-NXM">
+                                                <rect key="frame" x="20" y="106" width="335" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Palmerah, 23 Agustus 2018" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAY-wy-EgL">
-                                                <rect key="frame" x="85" y="132" width="189" height="18"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Palmerah, 23 Agustus 2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAY-wy-EgL">
+                                                <rect key="frame" x="20" y="141.33333333333334" width="335" height="15.666666666666657"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Laki-laki" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z04-FA-CAC">
-                                                <rect key="frame" x="93" y="155" width="173" height="18"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laki-laki" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z04-FA-CAC">
+                                                <rect key="frame" x="20" y="162" width="335" height="15.666666666666657"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlX-Re-Axa">
-                                                <rect key="frame" x="156" y="211" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlX-Re-Axa">
+                                                <rect key="frame" x="137.66666666666666" y="208.33333333333334" width="100" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="EXg-f9-z9V"/>
+                                                </constraints>
                                                 <state key="normal" title="Telpon"/>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pedongkelan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsA-Ac-dcD">
-                                                <rect key="frame" x="132" y="175" width="94" height="28"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pedongkelan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsA-Ac-dcD">
+                                                <rect key="frame" x="20" y="182.66666666666666" width="335" height="15.666666666666657"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.90980392160000001" green="0.85882352939999995" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.6470588235294118" green="0.83137254901960789" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="Z04-FA-CAC" firstAttribute="top" secondItem="hAY-wy-EgL" secondAttribute="bottom" constant="5" id="7fM-Em-dzL"/>
+                                            <constraint firstAttribute="trailing" secondItem="od7-lh-NXM" secondAttribute="trailing" constant="20" id="7xF-E9-0qH"/>
+                                            <constraint firstItem="Mq6-Aq-J2M" firstAttribute="centerX" secondItem="Rhh-Vj-Da3" secondAttribute="centerX" id="8co-vJ-bTO"/>
+                                            <constraint firstItem="od7-lh-NXM" firstAttribute="top" secondItem="Mq6-Aq-J2M" secondAttribute="bottom" constant="8" id="E2v-eu-sMK"/>
+                                            <constraint firstItem="KsA-Ac-dcD" firstAttribute="leading" secondItem="Rhh-Vj-Da3" secondAttribute="leading" constant="20" id="FIM-Uw-Y9e"/>
+                                            <constraint firstItem="MlX-Re-Axa" firstAttribute="top" secondItem="KsA-Ac-dcD" secondAttribute="bottom" constant="10" id="KIE-X2-86K"/>
+                                            <constraint firstItem="hAY-wy-EgL" firstAttribute="leading" secondItem="Rhh-Vj-Da3" secondAttribute="leading" constant="20" id="KkJ-GH-lfs"/>
+                                            <constraint firstItem="MlX-Re-Axa" firstAttribute="centerX" secondItem="Rhh-Vj-Da3" secondAttribute="centerX" id="P68-9Z-IQz"/>
+                                            <constraint firstItem="Z04-FA-CAC" firstAttribute="leading" secondItem="Rhh-Vj-Da3" secondAttribute="leading" constant="20" id="QHC-Us-ifm"/>
+                                            <constraint firstItem="hAY-wy-EgL" firstAttribute="top" secondItem="od7-lh-NXM" secondAttribute="bottom" constant="15" id="axj-zT-mGz"/>
+                                            <constraint firstItem="KsA-Ac-dcD" firstAttribute="top" secondItem="Z04-FA-CAC" secondAttribute="bottom" constant="5" id="azY-Gk-gml"/>
+                                            <constraint firstAttribute="trailing" secondItem="Z04-FA-CAC" secondAttribute="trailing" constant="20" id="ddZ-N2-WKt"/>
                                             <constraint firstAttribute="height" constant="260" id="fPV-6E-OIQ"/>
+                                            <constraint firstItem="Mq6-Aq-J2M" firstAttribute="top" secondItem="Rhh-Vj-Da3" secondAttribute="top" constant="8" id="hfm-bO-eiR"/>
+                                            <constraint firstAttribute="trailing" secondItem="hAY-wy-EgL" secondAttribute="trailing" constant="20" id="j5E-tl-KaC"/>
+                                            <constraint firstAttribute="trailing" secondItem="KsA-Ac-dcD" secondAttribute="trailing" constant="20" id="kPE-6c-pVb"/>
+                                            <constraint firstItem="od7-lh-NXM" firstAttribute="leading" secondItem="Rhh-Vj-Da3" secondAttribute="leading" constant="20" id="uI4-rQ-R0N"/>
                                         </constraints>
                                     </view>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="B3m-JP-fXR">
@@ -121,6 +138,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="F7h-oT-cKC"/>
                     <connections>
+                        <outlet property="btnTelepon" destination="MlX-Re-Axa" id="cDD-yF-30y"/>
+                        <outlet property="imgBaby" destination="Mq6-Aq-J2M" id="O6J-De-RoZ"/>
+                        <outlet property="lblAddress" destination="KsA-Ac-dcD" id="Q17-Yg-XLj"/>
+                        <outlet property="lblBabyName" destination="od7-lh-NXM" id="bo3-GU-zHC"/>
+                        <outlet property="lblDOB" destination="hAY-wy-EgL" id="hcZ-V2-2r0"/>
+                        <outlet property="lblGender" destination="Z04-FA-CAC" id="gzI-8m-bzb"/>
                         <outlet property="viewData" destination="39O-R4-19y" id="OLa-2a-j5q"/>
                         <outlet property="viewRedFlag" destination="jMT-Of-sYq" id="9AS-Ks-jc6"/>
                         <segue destination="zhV-H3-AR8" kind="show" identifier="goToAddHistory" id="ffG-cW-jur"/>

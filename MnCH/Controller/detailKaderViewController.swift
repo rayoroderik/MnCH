@@ -16,6 +16,7 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
     
     var kader: KaderModel!
     var listBabies = [BabyModel]()
+    var selectedIndex: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
         
         lblKaderName.text = kader.kaderName
         lblKaderPhone.text = kader.kaderPhone
-        imgKader.layer.cornerRadius = 50
+        imgKader.layer.cornerRadius = self.imgKader.frame.height/2
         imgKader.clipsToBounds = true
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
@@ -84,11 +85,17 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     
-    func tableView(_ tableView: UITableView , didSelectRowAt: IndexPath){
+    func tableView(_ tableView: UITableView , didSelectRowAt indexPath: IndexPath){
+        self.selectedIndex = indexPath.row
         self.performSegue(withIdentifier: "goToChildProfile", sender: nil)
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToChildProfile"{
+            let destination = segue.destination as! childProfileViewController
+            destination.currentBaby = self.listBabies[self.selectedIndex]
+        }
+    }
     
     
 }

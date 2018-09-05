@@ -65,8 +65,8 @@ class staffMainViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! staffMainTableViewCell
         cell.lblKader.text = listKader[indexPath.row].kaderName
-        cell.lblKaderHP.text = listKader[indexPath.row].kaderPhone
         
+        cell.selectionStyle = .none
         return cell
     }
     

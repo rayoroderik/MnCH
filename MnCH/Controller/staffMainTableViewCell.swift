@@ -10,7 +10,6 @@ import UIKit
 
 class staffMainTableViewCell: UITableViewCell {
     @IBOutlet weak var lblKader: UILabel!
-    @IBOutlet weak var lblKaderHP: UILabel!
     @IBOutlet weak var imgKader: UIImageView!
     
     override func awakeFromNib() {

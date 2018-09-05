@@ -26,7 +26,7 @@ class detailKaderViewController: UIViewController, UITableViewDelegate, UITableV
         
         lblKaderName.text = kader.kaderName
         lblKaderPhone.text = kader.kaderPhone
-        imgKader.layer.cornerRadius = 50
+        imgKader.layer.cornerRadius = imgKader.layer.frame.height/2
         imgKader.clipsToBounds = true
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)

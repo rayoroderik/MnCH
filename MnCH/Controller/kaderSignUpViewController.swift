@@ -8,7 +8,7 @@
 
 import UIKit
 
-class kaderSignUpViewController: UIViewController, UIPickerViewDelegate {
+class kaderSignUpViewController: UIViewController, UIPickerViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var addressTV: UITextView!
     @IBOutlet weak var areaTF: UITextField!
@@ -17,11 +17,12 @@ class kaderSignUpViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
-    
+    @IBOutlet weak var pickKaderImage: UIImageView!
     
     //untuk pickerview
     var dataArea = ["Pedongkelan", "Kali Baru", "Cilincing", "Marunda", "Rusunawa Albo", "Tanah Merah"]
     var pickerArea = UIPickerView()
+    let pickImage = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,10 @@ class kaderSignUpViewController: UIViewController, UIPickerViewDelegate {
         addPickerArea()
         self.navigationItem.leftBarButtonItem = navigationItem.backBarButtonItem
         self.navigationItem.title = "Buat Akun"
-        // Do any additional setup after loading the view.
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        pickKaderImage.isUserInteractionEnabled = true
+        pickKaderImage.addGestureRecognizer(tapGestureRecognizer)
+        pickImage.delegate = self
     }
     
 //    func testUploadImage(){
@@ -244,6 +248,32 @@ extension kaderSignUpViewController: UIPickerViewDataSource {
         self.view.endEditing(true)
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            pickKaderImage.contentMode = .scaleAspectFit
+            pickKaderImage.image = selectedImage
+        }
+        dismiss(animated: true, completion: nil)
+    }
     
+    @objc func addressTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedAddress = tapGestureRecognizer.view as! UIImageView
+        
+        // Your action
+        
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        
+        // Your action
+        
+        pickImage.allowsEditing = false
+        pickImage.sourceType = .photoLibrary
+        
+        present(pickImage, animated: true, completion: nil)
+    }
     
 }

@@ -124,6 +124,7 @@
                         <outlet property="nameTextField" destination="BP7-Z5-mjV" id="wfv-I8-S9p"/>
                         <outlet property="passwordTextField" destination="VCk-XU-Mjj" id="SKo-Mi-zqj"/>
                         <outlet property="phoneTextField" destination="mlc-lY-WIb" id="nOm-Ni-N61"/>
+                        <outlet property="pickKaderImage" destination="Xqw-Ub-sg8" id="Ebu-7p-CkR"/>
                         <segue destination="AJV-UJ-kwP" kind="show" identifier="kaderSignUpToKaderMain" id="jBw-1R-4va"/>
                     </connections>
                 </viewController>

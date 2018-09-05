@@ -32,20 +32,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gBn-Dz-ZTX">
-                                                    <rect key="frame" x="10" y="8.3333333333333357" width="80" height="80"/>
+                                                    <rect key="frame" x="10" y="8.3333333333333286" width="207" height="207.33333333333337"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="s2T-Dx-16S"/>
                                                         <constraint firstAttribute="width" secondItem="gBn-Dz-ZTX" secondAttribute="height" multiplier="1:1" id="uMD-2E-Rof"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama anak 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERB-A9-84G">
-                                                    <rect key="frame" x="100" y="10.333333333333336" width="265" height="30"/>
+                                                    <rect key="frame" x="227" y="10.333333333333336" width="138" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Umur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhA-dn-QDR">
-                                                    <rect key="frame" x="100" y="45.333333333333336" width="250" height="21.000000000000007"/>
+                                                    <rect key="frame" x="227" y="45.333333333333329" width="123" height="21.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -84,7 +84,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Data Bayi" id="Gtc-BA-48u">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="dJJ-3t-7Uh"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="dJJ-3t-7Uh">
+                            <connections>
+                                <action selector="moveToAddChild:" destination="zHd-6q-KLB" id="Y4E-Kh-ckF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

@@ -165,6 +165,13 @@ class addChildViewController: UIViewController, UIImagePickerControllerDelegate,
         FirebaseReferences.databaseRef.child("babies/\(babyID)").setValue(tempBaby)
         
         print("baby added")
+        
+        let successAlert = UIAlertController(title: "Sukses", message: "Bayi telah berhasil didata", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { action in
+            self.performSegue(withIdentifier: "addChildtokaderMain", sender: nil)
+        }
+        successAlert.addAction(okAction)
+        self.present(successAlert, animated: true, completion: nil)
     }
     
 }
